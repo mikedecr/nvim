@@ -22,5 +22,5 @@ call plug#begin()
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-r-lsp', 'coc-python']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-r-lsp', 'coc-python', 'coc-julia']
 
