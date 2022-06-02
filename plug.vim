@@ -6,7 +6,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
 
   " code completion
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " send to interpreter
   Plug 'jalvesaq/vimcmdline'
@@ -19,8 +19,10 @@ call plug#begin()
   Plug 'jalvesaq/Nvim-R', {'branch': 'master'}
   Plug 'jalvesaq/R-Vim-runtime'
 
+  Plug 'neovim/nvim-lspconfig'
+
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-r-lsp', 'coc-python', 'coc-julia']
+" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-r-lsp', 'coc-python', 'coc-julia']
 
