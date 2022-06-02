@@ -3,7 +3,8 @@
 " https://missing.csail.mit.edu/2020/editors/
 " -------------------------------------------
 
-" --- general / inherent functionality ---
+" --- GENERAL / INHERENT FUNCTIONALITY ---
+
 " always use Vim features instead of Vi-compatibility mode
 " seems this is also set in system .vimrc but better safe than sorry
 set nocompatible
@@ -16,12 +17,30 @@ set undodir=~/.vim/undo_dir
 set undofile
 
 
-" --- lines ---
+" --- APPEARANCE ---
+
+set title
+
+" number of offset lines at buffers top/bottom
+set scrolloff=2 
+
+" italic comments
+highlight Comment cterm=italic gui=italic
+
+
+" line number / highlight
 set number 
 set relativenumber
 set cursorline
 
-" --- tabstop vs. level of indendation ---
+" set ruler
+" set textwidth=90
+" set colorcolumn=90
+" highlight ColorColumn ctermbg=0 guibg=darkgrey
+
+
+" --- TABSTOP VS. LEVEL OF INDENDATION ---
+
 " <https://developpaper.com/vim-technique-explain-the-difference-between-tabstop-softtabstop-and-expandtab/>
 set tabstop=4
 set shiftwidth=4
@@ -31,25 +50,11 @@ set expandtab          " tabs as spaces
 set autoindent
 set smartindent
 
-" --- wrapping behavior ---
+
+" --- WRAPPING BEHAVIOR ---
 set linebreak
 set whichwrap+=<,>,h,l,[,]
 set backspace=indent,eol,start
-
-" set ruler
-" set textwidth=90
-" set colorcolumn=90
-" highlight ColorColumn ctermbg=0 guibg=darkgrey
-
-" ------------------------------------------------------------
-"   appearance
-" ------------------------------------------------------------
-
-" number of offset lines at buffers top/bottom
-set scrolloff=2   
-
-" italic comments
-highlight Comment cterm=italic gui=italic
 
 
 " --- INTERACTIVITY ---
@@ -58,15 +63,13 @@ set paste                    " enable system paste
 set clipboard+=unnamedplus   " yank to system clipboard
 
 
-" --- search ---
+" --- SEARCH ---
 set ignorecase   " ignore case in searches 
 set smartcase    " UNLESS search contains capitalization
 
-" yank to system clipboard
-set clipboard+=unnamedplus
 
+" --- IMPORTS ---
 
-" plugins
 runtime ./plug.vim
 
 " --- Old stuff ---
