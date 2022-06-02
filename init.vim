@@ -41,11 +41,18 @@ set backspace=indent,eol,start
 " set colorcolumn=90
 " highlight ColorColumn ctermbg=0 guibg=darkgrey
 
+" ------------------------------------------------------------
+"   appearance
+" ------------------------------------------------------------
 
-" --- buffer behaviors ---
-set scrolloff=1   " scroll offset
+" number of offset lines at buffers top/bottom
+set scrolloff=2   
 
-" --- interactivity ---
+" italic comments
+highlight Comment cterm=italic gui=italic
+
+
+" --- INTERACTIVITY ---
 set mouse=a                  " click around
 set paste                    " enable system paste
 set clipboard+=unnamedplus   " yank to system clipboard
