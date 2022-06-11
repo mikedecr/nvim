@@ -43,27 +43,28 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 
-  -- general packer
+  -- ::: packer
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-  -- git stuff
+  -- ::: general
+  use "vim-airline/vim-airline" -- status line
+
+  -- ::: git
   use "tpope/vim-fugitive"
 
-  -- stats
+  -- ::: stats
   use "jalvesaq/vimcmdline"   -- send to cmdline / repl
   use "JuliaEditorSupport/julia-vim" -- julia
   use "jalvesaq/Nvim-R"              -- R basic
   use "jalvesaq/R-Vim-runtime"       -- R cutting edge
-
-  -- move me
-  -- use "vim-airline/vim-airline" -- status line
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
+
 end)
 
