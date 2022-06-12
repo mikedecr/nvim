@@ -54,6 +54,14 @@ return packer.startup(function(use)
   -- ::: git
   use "tpope/vim-fugitive"
 
+  -- ::: completion
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "saadparwaiz1/cmp_luasnip"
+  use "L3MON4D3/LuaSnip"          -- snippet engine req'd
+
   -- ::: stats
   use "jalvesaq/vimcmdline"   -- send to cmdline / repl
   use "JuliaEditorSupport/julia-vim" -- julia
