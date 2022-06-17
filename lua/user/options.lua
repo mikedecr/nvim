@@ -64,8 +64,9 @@ vo.updatetime = 300                        -- faster completion (4000ms default)
 vo.undodir = "$HOME/.undo_dir"
 vo.undofile = true
 
--- fonts
+-- colors, fonts
 vim.cmd "highlight Comment cterm=italic gui=italic"
+vo.termguicolors = true
 
 -- move me
 -- vo.shortmess:append "c"
