@@ -51,6 +51,11 @@ return packer.startup(function(use)
   -- ::: general
   use "vim-airline/vim-airline" -- status line
 
+  -- ::: color schemes
+  use "shaunsingh/nord.nvim"
+  use "LunarVim/Colorschemes"
+
+
   -- ::: git
   use "tpope/vim-fugitive"
 
