@@ -54,6 +54,7 @@ return packer.startup(function(use)
   -- ::: color schemes
   use "shaunsingh/nord.nvim"
   use "LunarVim/Colorschemes"
+  use "folke/tokyonight.nvim"
 
 
   -- ::: git
