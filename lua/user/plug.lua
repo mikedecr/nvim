@@ -26,10 +26,8 @@ vim.cmd [[
 
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
+local packer_ok, packer = pcall(require, "packer")
+if not packer_ok then return end
 
 -- Have packer use a popup window
 packer.init {
@@ -76,9 +74,7 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
+  if PACKER_BOOTSTRAP then require("packer").sync() end
 
 end)
 
