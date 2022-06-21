@@ -80,6 +80,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
+  vim.notify("using " .. client.name .. " language server")
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
