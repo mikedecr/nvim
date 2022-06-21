@@ -43,28 +43,36 @@ return packer.startup(function(use)
 
   -- ::: packer
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
 
   -- ::: general
-  use "vim-airline/vim-airline" -- status line
+  -- use "vim-airline/vim-airline" -- status line
 
   -- ::: color schemes
   use "shaunsingh/nord.nvim"
   use "LunarVim/Colorschemes"
   use "folke/tokyonight.nvim"
 
-
-  -- ::: git
-  use "tpope/vim-fugitive"
-
+  -- ::: snippets
+  use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
+ 
   -- ::: completion
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
-  use "L3MON4D3/LuaSnip"          -- snippet engine req'd
+
+
+  -- ::: LSP
+  use "neovim/nvim-lspconfig"           -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple lang server installer
+
+  -- ::: git
+  use "tpope/vim-fugitive"
 
   -- ::: stats
   use "jalvesaq/vimcmdline"   -- send to cmdline / repl
