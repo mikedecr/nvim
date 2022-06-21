@@ -61,7 +61,7 @@ vo.timeoutlen = 1000                       -- time to wait for a mapped sequence
 vo.updatetime = 300                        -- faster completion (4000ms default)
 
 -- undo
-vo.undodir = "$HOME/.undo_dir"
+vo.undodir = ".undo"
 vo.undofile = true
 
 -- colors, fonts
