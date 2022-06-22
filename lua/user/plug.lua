@@ -79,6 +79,7 @@ return packer.startup(function(use)
   use "JuliaEditorSupport/julia-vim" -- julia
   use "jalvesaq/Nvim-R"              -- R basic
   use "jalvesaq/R-Vim-runtime"       -- R cutting edge
+  use "eigenfoo/stan-vim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
