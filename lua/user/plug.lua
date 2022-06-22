@@ -69,10 +69,13 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
 
-
   -- ::: LSP
   use "neovim/nvim-lspconfig"           -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple lang server installer
+
+  -- ::: fuzzy finder
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- ::: git
   use "tpope/vim-fugitive"
