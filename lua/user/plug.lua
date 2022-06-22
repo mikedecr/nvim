@@ -77,6 +77,14 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
 
+  -- ::: tree sitter / syntax
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+
+
   -- ::: git
   use "tpope/vim-fugitive"
 
