@@ -47,7 +47,10 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
 
   -- ::: general
-  -- use "vim-airline/vim-airline" -- status line
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- ::: color schemes
   use "shaunsingh/nord.nvim"
