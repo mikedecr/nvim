@@ -59,7 +59,7 @@ return packer.startup(function(use)
 
   -- ::: snippets
   use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
- 
+
   -- ::: completion
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
@@ -83,6 +83,11 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
+
+
+  -- ::: sidebar :::
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
 
 
   -- ::: git
