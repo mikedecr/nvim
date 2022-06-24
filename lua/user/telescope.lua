@@ -1,7 +1,7 @@
 local telescope_ok, telescope = pcall(require, "telescope")
 if not telescope_ok then return end
 
-telescope.load_extension('media_files')
+-- telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
 

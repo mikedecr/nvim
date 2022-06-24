@@ -74,8 +74,8 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple lang server installer
 
   -- ::: fuzzy finder
-  use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
+  use "nvim-telescope/telescope.nvim"   -- core fzf infra
+  use "BurntSushi/ripgrep"              -- live grep
 
   -- ::: tree sitter / syntax
   use {
