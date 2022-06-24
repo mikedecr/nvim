@@ -95,7 +95,8 @@ return packer.startup(function(use)
   use "tpope/vim-fugitive"
 
   -- ::: stats
-  use "jalvesaq/vimcmdline"   -- send to cmdline / repl
+  -- use "jalvesaq/vimcmdline"   -- send to cmdline / repl
+  use "HiPhish/repl.nvim"
   use "JuliaEditorSupport/julia-vim" -- julia
   use "jalvesaq/Nvim-R"              -- R basic
   use "jalvesaq/R-Vim-runtime"       -- R cutting edge
