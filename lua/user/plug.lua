@@ -76,6 +76,7 @@ return packer.startup(function(use)
   -- ::: fuzzy finder
   use "nvim-telescope/telescope.nvim"   -- core fzf infra
   use "BurntSushi/ripgrep"              -- live grep
+  use "sharkdp/fd"                      -- improved file finding
 
   -- ::: tree sitter / syntax
   use {
