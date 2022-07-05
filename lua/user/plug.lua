@@ -94,6 +94,7 @@ return packer.startup(function(use)
 
   -- ::: git
   use "tpope/vim-fugitive"
+  use "lewis6991/gitsigns.nvim"
 
   -- ::: stats
   -- use "jalvesaq/vimcmdline"   -- send to cmdline / repl
