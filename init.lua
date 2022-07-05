@@ -14,7 +14,7 @@ require "user.lsp"           -- language servers (this is a dir)
 require "user.telescope"     -- fuzzy finder engine
 require "user.treesitter"    -- syntax improvements
 require "user.nvim-tree"     -- sidebar
--- require "user.gitsigns"      -- git integration
+require "user.gitsigns"      -- git integration
 require "user.project"       -- project awareness (e.g. adding to fzf paths)
 require "user.snippets"      -- configure and write snippets
 require "user.lualine"       -- project awareness (e.g. adding to fzf paths)
