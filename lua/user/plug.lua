@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
 
   -- ::: general
+  use "rcarriga/nvim-notify"
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
