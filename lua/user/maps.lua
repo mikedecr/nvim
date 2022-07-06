@@ -1,11 +1,8 @@
 -----------------------------------------------------
 -- ::: VARIABLES / ALIASES :::
 
--- fn to write a map
-local keymap = vim.api.nvim_set_keymap
-
--- list of map options
-local opts = {noremap = true, silent = true}
+local keymap = vim.api.nvim_set_keymap          -- fn to write a map
+local opts = {noremap = true, silent = true}    -- table of map options
 
 
 -----------------------------------------------------
