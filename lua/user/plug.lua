@@ -100,11 +100,8 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- ::: stats
-  -- use "jalvesaq/vimcmdline"   -- send to cmdline / repl
-  use "HiPhish/repl.nvim"
-  use "JuliaEditorSupport/julia-vim" -- julia
-  use "jalvesaq/Nvim-R"              -- R basic
-  use "jalvesaq/R-Vim-runtime"       -- R cutting edge
+  use "hkupty/iron.nvim"            -- REPL
+  -- use "JuliaEditorSupport/julia-vim" -- julia
   use "eigenfoo/stan-vim"
 
   -- Automatically set up your configuration after cloning packer.nvim
