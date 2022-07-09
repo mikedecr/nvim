@@ -54,7 +54,9 @@ return packer.startup(function(use)
   }
 
   -- ::: color schemes
+  use "tssm/fairyfloss.vim"
   use "shaunsingh/nord.nvim"
+  use "sainnhe/everforest"
   use "LunarVim/Colorschemes"
   use "folke/tokyonight.nvim"
 
