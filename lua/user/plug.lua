@@ -88,9 +88,14 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
 
-  -- ::: sidebar :::
+  -- ::: sidebar / tree :::
   use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  -- use 'kyazdani42/nvim-tree.lua'
+  use {
+    'ms-jpq/chadtree',
+    branch = 'chad',
+    run = 'python3 -m chadtree deps'
+  }
 
   -- :: project
   use "ahmedkhalf/project.nvim"
