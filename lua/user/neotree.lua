@@ -10,11 +10,11 @@ nt.setup({
           noremap = true,
           nowait = true,
         },
-    }
+    },
     filesystem = {
-        window = {
-            width = 30
-        },
+      window = {
+        width = 30
+      },
     }
 })
 
