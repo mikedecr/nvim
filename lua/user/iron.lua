@@ -18,7 +18,7 @@ iron.setup {
       sh = {
         command = {"zsh"}
       },
-      R = {
+      r = {
         command = {"radian"}
       },
     },
