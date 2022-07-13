@@ -113,6 +113,10 @@ return packer.startup(function(use)
   -- use "JuliaEditorSupport/julia-vim" -- julia
   use "eigenfoo/stan-vim"
 
+  -- writing
+  use "vim-pandoc/vim-pandoc-syntax"
+  use "quarto-dev/quarto-vim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then require("packer").sync() end
