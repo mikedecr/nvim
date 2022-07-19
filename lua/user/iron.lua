@@ -21,6 +21,9 @@ iron.setup {
       r = {
         command = {"radian"}
       },
+      python = {
+        command = {'ipython', '--no-autoindent'}
+      }
     },
     repl_open_cmd = require('iron.view').curry.bottom(40),
     -- how the REPL window will be opened, the default is opening
