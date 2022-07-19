@@ -101,6 +101,9 @@ return packer.startup(function(use)
     }
   }
 
+  -- file operations
+  use 'kovetskiy/neovim-move'
+
   -- :: project
   use "ahmedkhalf/project.nvim"
 
