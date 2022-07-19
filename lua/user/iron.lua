@@ -25,7 +25,7 @@ iron.setup {
         command = {'ipython', '--no-autoindent'}
       }
     },
-    repl_open_cmd = require('iron.view').curry.bottom(40),
+    repl_open_cmd = 'belowright 20 split',
     -- how the REPL window will be opened, the default is opening
     -- a float window of height 40 at the bottom.
   },
