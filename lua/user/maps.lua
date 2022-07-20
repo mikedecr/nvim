@@ -21,6 +21,10 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 -- tree
 keymap("n", "<leader>e", ":NeoTreeFocus<cr>", opts)
 
+-- select rmd/qmd chunk
+keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
+keymap("n", "vik", "/```<cr>NVn", opts)   -- select chunk + delimiters
+
 
 -----------------------------------------------------
 -- ::: TERMINAL :::
