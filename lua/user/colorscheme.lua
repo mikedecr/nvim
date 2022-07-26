@@ -13,7 +13,7 @@ vim.g.nord_italic = false     -- italic flourishes
 
 -- everforest
 if scheme == "everforest" then
-    background = light
+    background = 'light'
 end
 
 -- .set() the theme
