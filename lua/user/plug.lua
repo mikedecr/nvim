@@ -101,6 +101,10 @@ return packer.startup(function(use)
     }
   }
 
+
+  -- buffer stuff
+  use 'kwkarlwang/bufjump.nvim'
+
   -- file operations
   use 'kovetskiy/neovim-move'
 
