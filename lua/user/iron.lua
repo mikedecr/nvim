@@ -7,31 +7,15 @@ if not iron_ok then
 end
 
 
-iron.setup {
-  config = {
-    -- If iron should expose `<plug>(...)` mappings for the plugins
-    should_map_plug = false,
-    -- Whether a repl should be discarded or not
-    scratch_repl = true,
-    -- Your repl definitions come here
-    repl_definition = {
-      sh = {
-        command = {"zsh"}
-      },
-      r = {
-        command = {"radian"}
-      },
-      python = {
-        command = {'ipython', '--no-autoindent'}
-      }
-    },
-    repl_open_cmd = 'belowright 20 split',
-    -- how the REPL window will be opened, the default is opening
-    -- a float window of height 40 at the bottom.
-  },
-  -- Iron doesn't set keymaps by default anymore. Set them here
-  -- or use `should_map_plug = true` and map from you vim files
-  keymaps = {
+-- table of filetype: REPL binary
+local repls = {
+    sh     = {command = {"zsh"}},
+    r      = {command = {"radian"}},
+    python = {command = {"ipython", "--no-autoindent"}}
+}
+
+-- keymaps for sending cmds and controlling REPL behavior
+local maps = {
     send_motion = "<space>sc",
     visual_send = "<space>sc",
     send_file = "<space>sf",
@@ -44,10 +28,21 @@ iron.setup {
     interrupt = "<space>s<space>",
     exit = "<space>sq",
     clear = "<space>cl",
+}
+
+
+iron.setup {
+  config = {
+    repl_definition = repls,
+    should_map_plug = false, -- expose `<plug>(...)` mappings for the plugins
+    scratch_repl = true,     -- should a repl be discarded
+    repl_open_cmd = 'belowright 20 split', -- the default is a float window, bottom, height 40
   },
+  keymaps = maps, -- or use `should_map_plug = true` and map from you vim files
   -- If the highlight is on, you can change how it looks
   -- For the available options, check nvim_set_hl
   -- highlight = {
   --   italic = true
   -- }
 }
+
