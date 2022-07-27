@@ -63,13 +63,13 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
 
   -- ::: completion
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/nvim-cmp"          -- this is the completion brain
+  use "saadparwaiz1/cmp_luasnip"  -- need a snippet engine to deliver completions
+  use "hrsh7th/cmp-buffer"        -- sources to complete:
+  use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
-  use "saadparwaiz1/cmp_luasnip"
 
   -- ::: LSP
   use "neovim/nvim-lspconfig"           -- enable LSP
