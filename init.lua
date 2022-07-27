@@ -14,10 +14,11 @@ require "user.colorscheme"   -- color themes
 require "user.lsp"           -- language servers (this is a dir)
 require "user.telescope"     -- fuzzy finder engine
 require "user.treesitter"    -- syntax improvements
-require "user.neotree"     -- sidebar
+require "user.neotree"       -- sidebar
 require "user.gitsigns"      -- git integration
 require "user.project"       -- project awareness (e.g. adding to fzf paths)
 require "user.snippets"      -- configure and write snippets
 require "user.lualine"       -- project awareness (e.g. adding to fzf paths)
-require "user.iron"
+require "user.bufjump"       -- jump to previous buffer
+require "user.iron"          -- cross-language REPL
 
