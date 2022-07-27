@@ -31,5 +31,3 @@ It does not need to be a bare repo---we keep no files in `$HOME` (we bypass `.vi
     - symbol sets
     - markdown completion
 
-
-
