@@ -8,8 +8,8 @@ local actions = require "telescope.actions"
 telescope.setup {
   defaults = {
 
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = "? > ",
+    selection_caret = "-> ",
     path_display = { "smart" },
 
     mappings = {
@@ -78,6 +78,11 @@ telescope.setup {
     },
   },
   pickers = {
+    find_files = { theme = "ivy" },
+    oldfiles = { theme = "dropdown" },
+    projects = { theme = "dropdown" },
+    live_grep = { theme = "ivy" },
+    git_commits = { theme = "ivy" }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
