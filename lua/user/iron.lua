@@ -11,7 +11,8 @@ end
 local repls = {
     sh     = {command = {"zsh"}},
     r      = {command = {"radian"}},
-    python = {command = {"ipython", "--no-autoindent"}}
+    python = {command = {"ipython", "--no-autoindent"}},
+    quarto = {command = {"zsh"}}
 }
 
 -- keymaps for sending cmds and controlling REPL behavior
