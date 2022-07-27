@@ -15,11 +15,11 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- telescope
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- tree
-keymap("n", "<leader>e", ":NeoTreeFocus<cr>", opts)
+keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
 
 -- select rmd/qmd chunk
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
