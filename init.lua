@@ -7,6 +7,7 @@
 
 require "user.options"       -- basic vimrc stuff
 require "user.plug"          -- plugin manager
+require "user.alpha"         -- startup screen
 require "user.notify"        -- pass notifications to other modules
 require "user.maps"          -- keymaps
 require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
