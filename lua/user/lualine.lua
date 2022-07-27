@@ -18,16 +18,17 @@ local diagnostics = {
 local diff = {
 	"diff",
 	colored = false,
-	symbols = { added = "(+)", modified = "(·)", removed = "(-)" }, -- changes diff symbols
+	symbols = { added = "(+)", modified = "(Δ)", removed = "(-)" }, -- changes diff symbols
     cond = hide_in_width
 }
 
-local mode = {
-	"mode",
-	fmt = function(str)
-		return "-- " .. str .. " --"
-	end,
-}
+-- local mode = {
+-- 	"mode",
+-- 	fmt = function(str)
+-- 		return "" .. str .. " "
+-- 	end,
+-- }
+
 
 local filetype = {
 	"filetype",
@@ -63,11 +64,10 @@ lualine.setup({
 		disabled_filetypes = { "dashboard", "neo-tree", "NvimTree", "Outline" },
 	},
 	sections = {
-        lualine_a = { mode },
+        lualine_a = { "mode" },
 		lualine_b = {'filename'},
 		lualine_c = { branch, diff },
 		lualine_d = {},
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diagnostics },
         lualine_y = { filetype, spaces },
 		lualine_z = { 'location' },
