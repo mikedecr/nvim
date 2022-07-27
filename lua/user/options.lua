@@ -4,7 +4,7 @@
 local vo = vim.opt
 
 -- menus, modes
-vo.showmode = true                         -- we don't need to see things like -- INSERT -- anymore
+vo.showmode = false                         -- we don't need to see things like -- INSERT -- anymore
 vo.cmdheight = 1                           -- more space in the neovim command line for displaying messages
 vo.pumheight = 10                          -- pop up menu height
 
