@@ -1,5 +1,4 @@
 local scheme = "nord"
--- local scheme = "everforest"
 -- local scheme = "fairyfloss"
 -- local scheme = "peachpuff"
 
@@ -11,10 +10,6 @@ vim.g.nord_borders = true     -- vertical split border
 vim.g.nord_contrast = true    -- popups/bars different background
 vim.g.nord_italic = false     -- italic flourishes
 
--- everforest
-if scheme == "everforest" then
-    background = 'light'
-end
 
 -- .set() the theme
 -- scheme_ok describes state of the pcall
