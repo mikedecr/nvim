@@ -27,6 +27,7 @@ require "user.alpha"         -- startup screen
 require "user.notify"        -- pass notifications to other modules
 require "user.maps"          -- keymaps
 require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
+require "user.surround"      -- sandwich/surround with characters
 require "user.colorscheme"   -- color themes
 require "user.lsp"           -- language servers (this is a dir)
 require "user.telescope"     -- fuzzy finder engine

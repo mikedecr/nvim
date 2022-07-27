@@ -100,6 +100,9 @@ return packer.startup(function(use)
     }
   }
 
+  -- surround
+  use "ur4ltz/surround.nvim"
+
 
   -- buffer stuff
   use 'kwkarlwang/bufjump.nvim'
