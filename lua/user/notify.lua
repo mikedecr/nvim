@@ -1,4 +1,6 @@
--- sets nvim-notify as the default notification client
-vim.notify = require("notify")
--- vim.notify("Notifications handled by nvim-notify")
+local check, notify = pcall(require, "notify")
+if not check then
+    vim.notify("notify overwrite fails, see lua/user/notify")
+    return
+end
 
