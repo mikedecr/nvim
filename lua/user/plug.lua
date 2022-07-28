@@ -54,6 +54,7 @@ return packer.startup(function(use)
   }
 
   -- ::: color schemes
+  use "rakr/vim-two-firewatch"
   use "tssm/fairyfloss.vim"
   use "shaunsingh/nord.nvim"
   use "LunarVim/Colorschemes"
