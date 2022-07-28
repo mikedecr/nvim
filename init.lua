@@ -37,6 +37,7 @@ require "user.gitsigns"      -- git integration
 require "user.project"       -- project awareness (e.g. adding to fzf paths)
 require "user.snippets"      -- configure and write snippets
 require "user.lualine"       -- project awareness (e.g. adding to fzf paths)
+require "user.winbar"        -- top winbar
 require "user.bufjump"       -- jump to previous buffer
 require "user.iron"          -- cross-language REPL
 
