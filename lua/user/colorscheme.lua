@@ -1,4 +1,5 @@
-local scheme = "nord"
+local scheme = "two-firewatch"
+-- local scheme = "nord"
 -- local scheme = "fairyfloss"
 -- local scheme = "peachpuff"
 
