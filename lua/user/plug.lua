@@ -101,7 +101,8 @@ return packer.startup(function(use)
     }
   }
 
-  -- surround
+  -- text tricks
+  use "numToStr/Comment.nvim"
   use "ur4ltz/surround.nvim"
 
 
