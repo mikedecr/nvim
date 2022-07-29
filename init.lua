@@ -5,22 +5,6 @@
 -- We may write as many assorted config files as we want in lua/*,
 -- but they won't be activated unless we require them here or somewhere else.
 
--- missing:
--- packer
--- popup
--- plenary
--- Luasnip
--- ripgrep
--- fd
--- ts-rainbow?
--- nvim-web-devicons
--- nui
--- neovim-move
--- project
--- stan
--- pandoc
--- quartorequire("notify")require("notify")
-
 require "user.options"       -- basic vimrc stuff
 require "user.plug"          -- plugin manager
 require "user.alpha"         -- startup screen
@@ -41,4 +25,20 @@ require "user.winbar"        -- top winbar
 require "user.comment"       -- comment controls
 require "user.bufjump"       -- jump to previous buffer
 require "user.iron"          -- cross-language REPL
+
+-- missing:
+-- packer
+-- popup
+-- plenary
+-- Luasnip
+-- ripgrep
+-- fd
+-- ts-rainbow?
+-- nvim-web-devicons
+-- nui
+-- neovim-move
+-- project
+-- stan
+-- pandoc
+-- quartorequire("notify")require("notify")
 
