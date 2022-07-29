@@ -1,1 +1,3 @@
-vim.cmd "set winbar=%m\\ [\\ %f\\ ]"
+vim.opt.winbar = "%f %m"
+
+
