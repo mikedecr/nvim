@@ -4,12 +4,9 @@ local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
+    "git", "clone",
+    "--depth", "1",
+    "https://github.com/wbthomason/packer.nvim", install_path,
   }
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
@@ -41,19 +38,22 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 
-  -- ::: packer
+  -- ::: packer & basic lua
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
 
-  -- ::: general
+  -- ::: appearance
   use "rcarriga/nvim-notify"
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  -- startup
+  use {"goolord/alpha-nvim",
+       requires = {'kyazdani42/nvim-web-devicons'}}
 
-  -- ::: color schemes
+  -- color schemes
   use "rakr/vim-two-firewatch"
   use "tssm/fairyfloss.vim"
   use "shaunsingh/nord.nvim"
@@ -90,21 +90,16 @@ return packer.startup(function(use)
 
   -- ::: sidebar / tree :::
   use 'kyazdani42/nvim-web-devicons'
-  -- use 'kyazdani42/nvim-tree.lua'
   use {
-  "nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim"
-    }
+    requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" }
   }
 
   -- text tricks
   use "numToStr/Comment.nvim"
   use "ur4ltz/surround.nvim"
-
+  use "Vonr/align.nvim"
 
   -- buffer stuff
   use 'kwkarlwang/bufjump.nvim'
@@ -121,17 +116,12 @@ return packer.startup(function(use)
 
   -- ::: stats
   use "hkupty/iron.nvim"            -- REPL
-  -- use "JuliaEditorSupport/julia-vim" -- julia
   use "eigenfoo/stan-vim"
+  -- use "JuliaEditorSupport/julia-vim" -- julia
 
   -- writing
   use "vim-pandoc/vim-pandoc-syntax"
   use "quarto-dev/quarto-vim"
-
-  use {
-    "goolord/alpha-nvim",
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

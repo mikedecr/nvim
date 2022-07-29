@@ -4,9 +4,8 @@
 local vo = vim.opt
 
 -- menus, modes
-vo.showmode = false                         -- we don't need to see things like -- INSERT -- anymore
-vo.cmdheight = 1                           -- more space in the neovim command line for displaying messages
-vo.pumheight = 10                          -- pop up menu height
+vo.showmode = false     -- hide mode from cmd line (statusline has it)
+vo.pumheight = 10       -- pop up menu height
 
 -- file behavior
 vo.fileencoding = "utf-8"                  -- the encoding written to a file
