@@ -16,6 +16,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- telescope
 keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
+keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- tree
