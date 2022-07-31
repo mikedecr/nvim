@@ -26,10 +26,20 @@ keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
 keymap("n", "vik", "/```<cr>NVn", opts)   -- select chunk + delimiters
 
+-----------------------------------------------------
+-- ::: INSERT :::
+
+keymap("i", "<C-,>", "<-", opts)        -- assignment
+keymap("i", "<C-.>", "|>", opts)        -- |> pipe
+keymap("i", "<C-.><C-.>", "%>%", opts)  -- %>% pipe
+keymap("i", "<C-i><C-n>", "%in%", opts) -- %in%, TODO unsure about masking C-i
+
 
 -----------------------------------------------------
 -- ::: TERMINAL :::
 
 -- Esc exits terminal's Insert mode
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+
+
 
