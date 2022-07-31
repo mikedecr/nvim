@@ -17,6 +17,7 @@ vo.swapfile = false                        -- creates a swapfile
 vo.ignorecase = true                       -- ignore case in search patterns
 vo.smartcase = true                        -- smart case
 vo.hlsearch = true                         -- highlight all matches on previous search pattern
+vo.incsearch = true
 
 -- buffers / splits
 vo.title = true
@@ -31,6 +32,7 @@ vo.relativenumber = true
 
 -- gutter
 vo.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
+vim.cmd "set colorcolumn=90"
 vo.numberwidth = 3                         -- set number column width to 2 {default 4}
 
 -- tabstop
