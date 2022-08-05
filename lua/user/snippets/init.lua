@@ -15,12 +15,13 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- jump forward/backward in snippet
-keymap({"i", "s"}, "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-keymap({"i", "s"}, "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+keymap({"i", "s"}, "<c-l>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+-- keymap({"i", "s"}, "<S-c-h>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 keymap("n", "<leader><leader>s", "<cmd>source $HOME/.config/nvim/lua/user/snippets/init.lua<CR>", opts)
 
 -- TODO loop filetype-specific files
 
 require("user.snippets.comments")
+-- require("user.snippets.py")
 -- require("users.snippets.r")
 
