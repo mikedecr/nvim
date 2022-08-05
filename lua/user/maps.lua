@@ -32,7 +32,7 @@ keymap("n", "vik", "/```<cr>NVn", opts)   -- select chunk + delimiters
 keymap("i", "<C-,>", "<-", opts)        -- assignment
 keymap("i", "<C-.>", "|>", opts)        -- |> pipe
 keymap("i", "<C-.><C-.>", "%>%", opts)  -- %>% pipe
-keymap("i", "<C-i><C-n>", "%in%", opts) -- %in%, TODO unsure about masking C-i
+-- keymap("i", "<C-i><C-n>", "%in%", opts) -- %in%, TODO unsure about masking C-i
 
 
 -----------------------------------------------------
