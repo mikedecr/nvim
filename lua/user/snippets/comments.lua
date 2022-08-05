@@ -52,7 +52,7 @@ ls.add_snippets(nil, {
         --       text({" " .. dashes(10), "" })
         --     }
         -- ),
-        ls.parser.parse_snippet("com", "# fuck ----- $1 ----------$0")
+        ls.parser.parse_snippet("com", "# ----- $1 ----------$0")
         
         -- snip({ trig = "comment", namr = "new comment", dscr = "new comment" },
         --      { text({get_cstring(1)}) }
