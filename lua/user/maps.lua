@@ -8,6 +8,13 @@ local opts = {noremap = true, silent = true}    -- table of map options
 -----------------------------------------------------
 -- ::: NORMAL :::
 
+-- easier write / source
+keymap("n", "<space>ww", "<cmd>w<cr>", opts)
+-- keymap("n", "<space>so", "<cmd>source %<cr>", opts)
+
+-- easier cmds
+keymap("n", "<space>;", ":", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
