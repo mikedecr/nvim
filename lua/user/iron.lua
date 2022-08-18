@@ -48,3 +48,12 @@ iron.setup {
   -- }
 }
 
+--------------------------------------------------
+-- other maps
+
+local keymap = vim.api.nvim_set_keymap          -- fn to write a map
+local opts = {noremap = true, silent = true}    -- table of map options
+
+keymap('n', '<space>irh', '<cmd>IronReplHere<cr>', opts)
+keymap('n', '<space>irs', '<cmd>IronRestart<cr>', opts)
+
