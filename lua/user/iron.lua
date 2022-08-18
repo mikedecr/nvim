@@ -38,6 +38,7 @@ iron.setup {
     should_map_plug = false, -- expose `<plug>(...)` mappings for the plugins
     scratch_repl = true,     -- should a repl be discarded
     repl_open_cmd = 'belowright 20 split', -- the default is a float window, bottom, height 40
+    highlight_last = false,
   },
   keymaps = maps, -- or use `should_map_plug = true` and map from you vim files
   -- If the highlight is on, you can change how it looks
