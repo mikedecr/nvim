@@ -28,6 +28,8 @@ require "user.project"       -- project awareness (e.g. adding to fzf paths)
 require "user.surround"      -- sandwich/surround with characters
 require "user.comment"       -- comment controls
 require "user.bufjump"       -- jump to previous buffer
+-- TODO: this is ALMOST good.
+require "user.neoclip"       -- yank/macro history
 
 require "user.iron"          -- cross-language REPL
 

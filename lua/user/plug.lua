@@ -98,6 +98,19 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim"
     use "ur4ltz/surround.nvim"
     use "Vonr/align.nvim"
+    use {
+        "AckslD/nvim-neoclip.lua",
+        requires = {
+            -- you'll need at least one of these
+            {'nvim-telescope/telescope.nvim'},
+    --         -- {'ibhagwan/fzf-lua'},
+    --         -- for persistent history
+    --         -- {'kkharji/sqlite.lua', module = 'sqlite'},
+        },
+    --     -- config = function()
+    --     --     require('neoclip').setup()
+    --     -- end,
+    }
 
     -- buffer stuff
     use 'kwkarlwang/bufjump.nvim'
