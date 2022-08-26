@@ -87,6 +87,8 @@ return packer.startup(function(use)
       run = ":TSUpdate",
     }
     use "p00f/nvim-ts-rainbow"
+    use { "yioneko/nvim-yati",                           -- patch indentation
+          requires = "nvim-treesitter/nvim-treesitter" }
 
     -- ::: sidebar / tree :::
     use 'kyazdani42/nvim-web-devicons'
