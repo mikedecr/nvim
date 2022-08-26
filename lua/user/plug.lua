@@ -52,6 +52,8 @@ return packer.startup(function(use)
          requires = {'kyazdani42/nvim-web-devicons'}}
 
     -- color schemes
+    use 'rockerBOO/boo-colorscheme-nvim'
+    use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "shaunsingh/nord.nvim"

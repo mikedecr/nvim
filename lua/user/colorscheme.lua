@@ -1,5 +1,6 @@
 -- local scheme = "two-firewatch"
 local scheme = "nord"
+-- local scheme = "oxocarbon"
 -- local scheme = "fairyfloss"
 -- local scheme = "peachpuff"
 
