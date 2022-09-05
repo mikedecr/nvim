@@ -5,7 +5,7 @@ if not status_ok then return end
 local dashboard = require("alpha.themes.dashboard")
 local section = dashboard.section
 
-section.header.val = {
+local _header_guy = {
     [[	     ☝                                  ]],
     [[	    ＼＼                                ]],
     [[	     ＼＼                               ]],
@@ -24,6 +24,17 @@ section.header.val = {
     [[	|  /                                    ]],
     [[	Lﾉ                                      ]],
 }
+
+local _header_big = {
+    [[ ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗ ]],
+    [[ ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║ ]],
+    [[ ██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║ ]],
+    [[ ██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║ ]],
+    [[ ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║ ]],
+    [[ ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝ ]],
+}
+
+section.header.val = _header_guy
 
 section.buttons.val = {
 	dashboard.button("f", "  file", ":Telescope find_files <CR>"),
