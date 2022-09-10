@@ -38,7 +38,7 @@ section.header.val = _header_guy
 
 section.buttons.val = {
 	dashboard.button("f", "  file", ":Telescope find_files <CR>"),
-	dashboard.button("e", "  new", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("n", "  new", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("r", "  recent", ":Telescope oldfiles <CR>"),
 	dashboard.button("p", "  project", ":Telescope projects <CR>"),
 	dashboard.button("t", "  search", ":Telescope live_grep <CR>"),
