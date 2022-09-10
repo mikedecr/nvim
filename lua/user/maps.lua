@@ -49,4 +49,11 @@ keymap("i", "<C-.><C-.>", "%>%", opts)  -- %>% pipe
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 
 
+-----------------------------------------------------
+-- ::: VISUAL :::
+
+-- Move text up and down
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "p", '"_dP', opts)
 
