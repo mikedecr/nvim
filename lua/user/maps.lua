@@ -9,7 +9,6 @@ local opts = {noremap = true, silent = true}    -- table of map options
 -- ::: NORMAL :::
 
 -- easier write / source
-keymap("n", "<space>ww", "<cmd>w<cr>", opts)
 -- keymap("n", "<space>so", "<cmd>source %<cr>", opts)
 
 -- easier cmds
