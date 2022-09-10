@@ -2,10 +2,16 @@
 
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then return end
+if not cmp_status_ok then 
+    vim.notify('cmp fails')
+    return
+end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then return end
+if not snip_status_ok then
+    vim.notify('luasnip fails')
+    return
+end
 
 -- expanding function for `luasnip` engine.
 local expand_snippets = function(args) luasnip.lsp_expand(args.body) end
@@ -94,7 +100,7 @@ local kind_icons = {
 cmp.setup {
   -- we need a snippet engine
   snippet = { expand = expand_snippets },
-  -- order controls search priority of snippets
+  -- ordering affects search priority of snippet sources
   sources = {
     { name = "luasnip" },
     { name = "nvim_lsp" },
