@@ -1,5 +1,6 @@
 -- local scheme = "two-firewatch"
-local scheme = "nord"
+-- local scheme = "nord"
+local scheme = "nordic"
 -- local scheme = "oxocarbon"
 -- local scheme = "fairyfloss"
 -- local scheme = "peachpuff"
@@ -11,6 +12,13 @@ local scheme = "nord"
 vim.g.nord_borders = true     -- vertical split border
 vim.g.nord_contrast = true    -- popups/bars different background
 vim.g.nord_italic = false     -- italic flourishes
+
+-- nordic
+vim.g.nord_underline_option = 'none'
+vim.g.nord_italic = false
+vim.g.nord_italic_comments = true
+vim.g.nord_minimal_mode = true
+vim.g.nord_alternate_backgrounds = true
 
 
 -- .set() the theme
