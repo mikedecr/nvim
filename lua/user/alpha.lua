@@ -34,7 +34,7 @@ local _header_big = {
     [[ ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝ ]],
 }
 
-section.header.val = _header_guy
+section.header.val = _header_big
 
 section.buttons.val = {
 	dashboard.button("f", "  file", ":Telescope find_files <CR>"),
