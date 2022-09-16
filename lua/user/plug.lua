@@ -57,6 +57,7 @@ return packer.startup(function(use)
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "shaunsingh/nord.nvim"
+    use 'andersevenrud/nordic.nvim'
     use "LunarVim/Colorschemes"
     use "folke/tokyonight.nvim"
 
