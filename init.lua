@@ -26,6 +26,7 @@ require "user.yati"          -- patch indentation for treesitter
 require "user.gitsigns"      -- git integration
 require "user.project"       -- project awareness (e.g. adding to fzf paths)
 
+require "user.autopairs"     -- self-explanatory
 require "user.surround"      -- sandwich/surround with characters
 require "user.comment"       -- comment controls
 require "user.bufjump"       -- jump to previous buffer
