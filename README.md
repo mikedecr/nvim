@@ -1,33 +1,32 @@
 # Neovim Configs
 
 
-## Repo details
+## Details
 
-This repo is managed out of `$HOME/.config/nvim`.
-It does not need to be a bare repo---we keep no files in `$HOME` (we bypass `.vimrc` entirely).
+This repo is managed out of `~/.config/nvim`.
+No need to be a bare repo: it is entirely separate from other dotfiles repositories, we keep no files under `~/`, and we bypass `~/.vimrc` altogether.
 
-## to-do
+## Agenda:
 
-- neovim package loading
+- [ ] neovim package loading
     - what needs `require()`
-
-- remove unnecessary / complected pieces
+    - resolve plug.lua instances
+- [ ] replace lspinstall
+- [ ] remove unnecessary / complected pieces
     - stick to well-understood modules
+- [ ] git signs etc.
 
 - give time to...
     - snippets
         - comments
         - work snips (users.mdecrescenzo)
         - language scoping
-    - ripgrep / fd
-    - cmp (fix `<CR>` trigger)
+    - cmp (fix `<CR>` trigger?)
     - lsp
     - telescope
     - treesitter
     - neotree (project)?
-
 - lower priority
-    - alpha
-    - symbol sets
+    - explore symbol sets
     - markdown completion
 
