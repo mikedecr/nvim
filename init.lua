@@ -6,6 +6,7 @@
 -- but they won't be activated unless we require them here or somewhere else.
 
 require "user.plug"          -- plugin manager
+require "impatient"
 require "user.notify"        -- pass notifications to other modules
 require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
