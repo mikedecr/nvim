@@ -1,3 +1,8 @@
+-- Refactor:
+-- lua/user/colorscheme directory
+-- init.lua has a local variable w/ a colorscheme name, then require(scheme)
+-- scheme_name.lua has configs for that scheme
+
 -- local scheme = "two-firewatch"
 -- local scheme = "nord"
 local scheme = "nordic"
