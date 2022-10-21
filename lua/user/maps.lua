@@ -31,7 +31,7 @@ keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
 
 -- select rmd/qmd chunk
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
-keymap("n", "vik", "/```<cr>NVn", opts)   -- select chunk + delimiters
+keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
 
 -----------------------------------------------------
 -- ::: INSERT :::
