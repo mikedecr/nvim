@@ -27,7 +27,10 @@ keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<space>fg", "<cmd>Telescope git_commits<cr>", opts)
 
 -- tree
-keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
+keymap("n", "<space>nff", ":NeoTreeFloatToggle<cr>", opts)
+keymap("n", "<space>nb", ":NeoTreeFocusToggle<cr>", opts)
+keymap("n", "<space>nfb", ":NeoTreeRevealToggle<cr>", opts)
+keymap("n", "<space>ns", ":NeoTreeRevealInSplitToggle<cr>", opts)
 
 -- select rmd/qmd chunk
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
