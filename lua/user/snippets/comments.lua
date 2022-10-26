@@ -32,9 +32,13 @@ local dashes = function(n)
     return string.rep('-', n)
 end
 
-local newline = function(contents)
-    text({"", contents})
-end
+-- local newline = function(contents)
+--     text({"", contents})
+-- end
+
+
+-- TODO
+-- k...kill.. m..mee
 
 ls.add_snippets(nil, {
     all = {
@@ -52,13 +56,10 @@ ls.add_snippets(nil, {
         --       text({" " .. dashes(10), "" })
         --     }
         -- ),
-        ls.parser.parse_snippet("com", "# ----- $1 ----------$0")
-        
+        ls.parser.parse_snippet("com", "# ----- $1 ----------$0"),
         -- snip({ trig = "comment", namr = "new comment", dscr = "new comment" },
         --      { text({get_cstring(1)}) }
         -- )
     },
 })
-
-
 
