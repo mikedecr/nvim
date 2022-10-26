@@ -22,6 +22,6 @@ keymap("n", "<leader><leader>s", "<cmd>source $HOME/.config/nvim/lua/user/snippe
 -- TODO loop filetype-specific files
 
 require("user.snippets.comments")
--- require("user.snippets.py")
+require('user.snippets.py') -- <-- scope to filetype!!!
 -- require("users.snippets.r")
 
