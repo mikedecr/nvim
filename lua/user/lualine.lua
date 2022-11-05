@@ -1,5 +1,9 @@
 local ll_ok, lualine = pcall(require, "lualine")
-if not ll_ok then return end
+
+if not ll_ok then
+    vim.notify('lualine broken')
+    return
+end
 
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
@@ -83,3 +87,4 @@ lualine.setup({
 	tabline = {},
 	extensions = {},
 })
+
