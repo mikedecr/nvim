@@ -24,7 +24,10 @@ vim.cmd [[
 
 -- Use a protected call so we don't error out on first use
 local packer_ok, packer = pcall(require, "packer")
-if not packer_ok then return end
+if not packer_ok then
+    vim.notify('packer fails')
+    return
+end
 
 -- Have packer use a popup window
 packer.init {
