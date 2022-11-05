@@ -25,8 +25,9 @@ require "user.telescope"     -- fuzzy finder engine
 require "user.treesitter"    -- syntax improvements
 require "user.yati"          -- patch indentation for treesitter
 require "user.gitsigns"      -- git integration
-require "user.project"       -- project awareness (e.g. adding to fzf paths)
+require "user.project"       -- project awareness (changing w.d. when moving, adding to fzf)
 
+require "user.pandoc"
 require "user.autopairs"     -- self-explanatory
 require "user.surround"      -- sandwich/surround with characters
 require "user.comment"       -- comment controls
