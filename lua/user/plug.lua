@@ -65,6 +65,7 @@ return packer.startup(function(use)
     use 'andersevenrud/nordic.nvim'
     use "LunarVim/Colorschemes"
     use "folke/tokyonight.nvim"
+    use "kvrohit/mellow.nvim"
 
     -- ::: snippets
     use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion

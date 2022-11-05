@@ -8,6 +8,7 @@
 local scheme = "nordic"
 -- local scheme = "oxocarbon"
 -- local scheme = "fairyfloss"
+-- local scheme = "mellow"
 -- local scheme = "peachpuff"
 
 -- scheme-specific settings.
