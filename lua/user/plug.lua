@@ -38,6 +38,7 @@ packer.init {
     },
 }
 
+
 -- Install your plugins here
 return packer.startup(function(use)
 
@@ -54,6 +55,8 @@ return packer.startup(function(use)
     -- startup
     use { "goolord/alpha-nvim",
           requires = 'kyazdani42/nvim-web-devicons' }
+    -- enhance certain syntaxes
+    use "lukas-reineke/headlines.nvim"
 
     -- color schemes
     use 'rockerBOO/boo-colorscheme-nvim'

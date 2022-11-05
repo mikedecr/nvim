@@ -27,6 +27,7 @@ require "user.yati"          -- patch indentation for treesitter
 require "user.gitsigns"      -- git integration
 require "user.project"       -- project awareness (changing w.d. when moving, adding to fzf)
 
+-- require "user.headlines"     -- prettier markdown chunks etc.
 require "user.pandoc"
 require "user.autopairs"     -- self-explanatory
 require "user.surround"      -- sandwich/surround with characters
