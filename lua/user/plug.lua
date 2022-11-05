@@ -13,7 +13,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 
--- -- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- -- Autocommand that reloads this file & PackerSyncs whenever it is written
 vim.cmd [[
     augroup packer_user_config
         autocmd!
