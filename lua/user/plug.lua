@@ -23,11 +23,13 @@ vim.cmd [[
 
 
 -- Use a protected call so we don't error out on first use
+
 local packer_ok, packer = pcall(require, "packer")
 if not packer_ok then
     vim.notify('packer fails')
     return
 end
+
 
 -- Have packer use a popup window
 packer.init {
@@ -47,17 +49,16 @@ return packer.startup(function(use)
 
     -- ::: appearance
     use "rcarriga/nvim-notify"
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    use { 'nvim-lualine/lualine.nvim',
+          requires = {'kyazdani42/nvim-web-devicons', opt = true } }
     -- startup
-    use {"goolord/alpha-nvim",
-         requires = {'kyazdani42/nvim-web-devicons'}}
+    use { "goolord/alpha-nvim",
+          requires = 'kyazdani42/nvim-web-devicons' }
 
     -- color schemes
     use 'rockerBOO/boo-colorscheme-nvim'
-    use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
+    use { 'shaunsingh/oxocarbon.nvim',
+          run = './install.sh' }
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "shaunsingh/nord.nvim"
@@ -87,43 +88,32 @@ return packer.startup(function(use)
     use "sharkdp/fd"                      -- improved file finding
 
     -- ::: tree sitter / syntax
-    use {
-      "nvim-treesitter/nvim-treesitter",
-      run = ":TSUpdate",
-    }
+    use { "nvim-treesitter/nvim-treesitter",
+          run = ":TSUpdate" }
     use "p00f/nvim-ts-rainbow"
     use { "yioneko/nvim-yati",                           -- patch indentation
           requires = "nvim-treesitter/nvim-treesitter" }
 
     -- ::: sidebar / tree :::
-    use 'kyazdani42/nvim-web-devicons'
-    use {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
-      requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" }
-    }
+    use 'kyazdani42/nvim-web-devicons' -- <-- is this just here bc it's a req for neo-tree?
+    use { "nvim-neo-tree/neo-tree.nvim",
+          branch = "v2.x",
+          requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" } }
 
     -- text tricks
     use "numToStr/Comment.nvim"
     use "ur4ltz/surround.nvim"
     use "windwp/nvim-autopairs"
     use "Vonr/align.nvim"
-    use {
-        "AckslD/nvim-neoclip.lua",
-        requires = {
-            -- you'll need at least one of these
-            {'nvim-telescope/telescope.nvim'},
-    --         -- {'ibhagwan/fzf-lua'},
-    --         -- for persistent history
-    --         -- {'kkharji/sqlite.lua', module = 'sqlite'},
-        },
-    --     -- config = function()
-    --     --     require('neoclip').setup()
-    --     -- end,
+    -- TODO: decide if you need this or a different map for "persistent delete/yank"
+    use { "AckslD/nvim-neoclip.lua",
+          requires = { 'nvim-telescope/telescope.nvim' }
+                       -- telescope or ibhagwan/fzf-lua
+                       -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
     }
 
     -- buffer stuff
-    use 'kwkarlwang/bufjump.nvim'
+    use 'kwkarlwang/bufjump.nvim' -- jump bufs fwd and bckwd
 
     -- file operations
     use 'kovetskiy/neovim-move'
@@ -141,8 +131,9 @@ return packer.startup(function(use)
     -- use "JuliaEditorSupport/julia-vim" -- julia
 
     -- writing
-    use "vim-pandoc/vim-pandoc-syntax"
-    use "quarto-dev/quarto-vim"
+    -- use "vim-pandoc/vim-pandoc" -- this is more about functionality and enhancements
+    use "vim-pandoc/vim-pandoc-syntax" -- syntax only
+    use "quarto-dev/quarto-vim" -- this is supposedly also syntax only? I'm not sure what the effect is.
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
