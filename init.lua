@@ -12,9 +12,9 @@ require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
 
 require "user.alpha"         -- startup screen
-require "user.lualine"       -- project awareness (e.g. adding to fzf paths)
 require "user.winbar"        -- top winbar
 require "user.colorscheme"   -- color themes
+require "user.lualine"       -- project awareness (e.g. adding to fzf paths)
 
 require "user.snippets"      -- configure and write snippets
 require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
