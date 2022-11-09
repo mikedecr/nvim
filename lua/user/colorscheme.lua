@@ -5,11 +5,12 @@
 
 -- local scheme = "two-firewatch"
 -- local scheme = "nord"
-local scheme = "nordic"
+-- local scheme = "nordic"
 -- local scheme = "oxocarbon"
 -- local scheme = "fairyfloss"
 -- local scheme = "mellow"
 -- local scheme = "peachpuff"
+local scheme = "nordfox"
 
 -- scheme-specific settings.
 -- activated if you load the scheme from `colorscheme [name]`
