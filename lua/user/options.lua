@@ -55,7 +55,8 @@ vo.sidescrolloff = 8
 -- interactivity
 vo.mouse = "a"
 -- vo.paste = true 			               -- setting paste in config creates problems??
-vo.clipboard = "unnamedplus"
+-- vo.clipboard = "unnamedplus"
+vim.cmd "set clipboard+=unnamedplus"
 
 -- maps and completions
 vo.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
