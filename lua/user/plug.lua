@@ -45,15 +45,21 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
-    use "lewis6991/impatient.nvim"
+    use { "lewis6991/impatient.nvim",
+           config = require 'impatient'}
 
     -- ::: appearance
-    use "rcarriga/nvim-notify"
+    use { "rcarriga/nvim-notify",
+          config = require "user.notify" }
     use { 'nvim-lualine/lualine.nvim',
-          requires = {'kyazdani42/nvim-web-devicons', opt = true } }
-    -- -- startup
+          requires = {'kyazdani42/nvim-web-devicons', opt = true },
+          config = require 'user.lualine'
+    }
+
+    -- startup
     use { "goolord/alpha-nvim",
-          requires = 'kyazdani42/nvim-web-devicons' }
+          requires = 'kyazdani42/nvim-web-devicons',
+          config = require 'user.alpha' }
     -- enhance certain syntaxes
     use "lukas-reineke/headlines.nvim"
 
@@ -67,7 +73,10 @@ return packer.startup(function(use)
     use "LunarVim/Colorschemes"
     use "folke/tokyonight.nvim"
     use "kvrohit/mellow.nvim"
-    use "EdenEast/nightfox.nvim"
+    use {
+        "EdenEast/nightfox.nvim",
+        config = require 'user.colors.nightfox'
+    }
 
     -- ::: snippets
     use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
