@@ -51,10 +51,7 @@ return packer.startup(function(use)
     use "rcarriga/nvim-notify"
     use { 'nvim-lualine/lualine.nvim',
           requires = {'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'nvim-zh/colorful-winsep.nvim',
-           config = require 'user.winsep'
-        }
-    -- startup
+    -- -- startup
     use { "goolord/alpha-nvim",
           requires = 'kyazdani42/nvim-web-devicons' }
     -- enhance certain syntaxes
