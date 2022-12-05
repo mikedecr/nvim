@@ -39,11 +39,6 @@ require "user.neoclip"       -- yank/macro history
 require "user.iron"          -- cross-language REPL
 
 -- missing:
--- [x] packer (plug)
--- [x] popup presumably also packer?
--- [x] plenary
--- ripgrep
--- fd
 -- ts-rainbow?
 -- nui
 -- neovim-move
