@@ -59,8 +59,7 @@ return packer.startup(function(use)
 
     -- color schemes
     use 'rockerBOO/boo-colorscheme-nvim'
-    use { 'shaunsingh/oxocarbon.nvim',
-          run = './install.sh' }
+    use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "shaunsingh/nord.nvim"
@@ -141,7 +140,8 @@ return packer.startup(function(use)
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
-    if PACKER_BOOTSTRAP then require("packer").sync() end
+    -- if PACKER_BOOTSTRAP then require("packer").sync() end
 
-end)
+    end
+)
 
