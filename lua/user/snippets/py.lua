@@ -15,8 +15,8 @@ ls.add_snippets(nil, {
     all = {
         make_snip("nf", "@NodeFactory\n$0"),
         make_snip("async", "async def $1($2):\n$0"),
+        make_snip("mm", "@defmulti"),
         make_snip("dm", "@defmethod($1, $2)\n$0"),
-        make_snip("mm", "@defmulti")
     }
 })
 
