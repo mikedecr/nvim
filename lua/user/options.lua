@@ -20,6 +20,7 @@ vo.hlsearch = true                         -- highlight all matches on previous 
 vo.incsearch = true
 
 -- buffers / splits
+vo.winbar = "%f %m"                     -- filepath and modified indicator
 vo.title = true
 vo.splitbelow = true                       -- force all horizontal splits to go below current window
 vo.splitright = true                      -- force all vertical splits to go to the right of current window
