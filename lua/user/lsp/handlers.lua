@@ -1,4 +1,10 @@
 -- TODO: could this file be divided into several?
+-- what this file does:
+-- lsp_highlight_document: highlight lsp/cmp menus(?)
+-- LSP-related keymaps
+-- signs / symbols for various things (annoying)
+-- on_attach: set keymaps and signs
+-- return M[[setup, capabilities]]
 
 -- ::: LOCAL FUNCTIONS
 
