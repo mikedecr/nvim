@@ -66,6 +66,7 @@ return packer.startup(function(use)
     use "lukas-reineke/headlines.nvim"
 
     -- color schemes
+    -- these are chosen in user.colors.init
     use 'rockerBOO/boo-colorscheme-nvim'
     use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
     use "rakr/vim-two-firewatch"
@@ -75,10 +76,7 @@ return packer.startup(function(use)
     use "LunarVim/Colorschemes"
     use "folke/tokyonight.nvim"
     use "kvrohit/mellow.nvim"
-    use {
-        "EdenEast/nightfox.nvim",
-        config = require 'user.colors.nightfox'
-    }
+    use "EdenEast/nightfox.nvim"
 
     -- ::: snippets
     use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
