@@ -21,11 +21,13 @@ vim.cmd [[
     augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
 
+-- attach Packer w/ a protected call.
+-- This prevents error on startup.
+-- Instead we print a message.
 local packer_ok, packer = pcall(require, "packer")
 if not packer_ok then
-    vim.notify('packer fails')
+    vim.notify("require('packer') fails. Check if packer.nvim is installed.")
     return
 end
 
