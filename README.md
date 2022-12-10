@@ -22,6 +22,9 @@
 
 - neovim package loading
 
+- [ ] Utils file
+    - `informative_pcall()`
+- [ ] neovim package loading
     - what needs `require()`
     - resolve plug.lua instances
 
@@ -36,6 +39,7 @@
     - other web icons
     - simpler telescope
     - simpler lsp
+
 
 
 - better document:
