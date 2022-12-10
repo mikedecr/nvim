@@ -14,7 +14,6 @@ require "user.snippets"      -- configure and write snippets
 require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
 require "user.lsp"           -- language servers (this is a dir)
 
-require "user.neotree"       -- sidebar
 require "user.telescope"     -- fuzzy finder engine
 require "user.treesitter"    -- syntax improvements
 require "user.yati"          -- patch indentation for treesitter

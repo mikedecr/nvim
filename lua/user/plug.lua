@@ -108,7 +108,9 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-web-devicons' -- <-- is this just here bc it's a req for neo-tree?
     use { "nvim-neo-tree/neo-tree.nvim",
           branch = "v2.x",
-          requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" } }
+          requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
+          config = require "user.neotree"
+    }
 
     -- text tricks
     use "numToStr/Comment.nvim"
