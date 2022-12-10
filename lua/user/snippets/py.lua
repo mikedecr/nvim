@@ -17,6 +17,7 @@ ls.add_snippets(nil, {
         make_snip("async", "async def $1($2):\n$0"),
         make_snip("mm", "@defmulti"),
         make_snip("dm", "@defmethod($1, $2)\n$0"),
+        make_snip('block', '```$1\n$0\n```')
     }
 })
 
