@@ -3,14 +3,23 @@
 -- Older versions of this file had a block for Packer to bootstrap its own installation.
 -- This was deleted becuase it feels bad.
 
--- -- -- Autocommand that reloads this file & PackerSyncs whenever it is written
--- vim.cmd [[
---     augroup packer_user_config
---         autocmd!
---         autocmd BufWritePost plug.lua source <afile> | PackerSync
---     augroup end
--- ]]
 
+-- ::: Autocommands :::
+
+-- Echo a message encouraging you to PackerSync
+vim.cmd [[
+    augroup packer_user_config
+        autocmd!
+        autocmd BufWritePost plug.lua echo "Consider running PackerSync =)"
+
+        " another option is to auto-run PackerSync but this often gets annoying:
+        " autocmd BufWritePost plug.lua source <afile> | PackerSync
+
+        " a middle-ground would be to do this only if the install table is modified,
+        " but that would be pretty challenging for me to implement
+
+    augroup end
+]]
 
 -- Use a protected call so we don't error out on first use
 
