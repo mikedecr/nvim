@@ -94,8 +94,10 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"           -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple lang server installer. NOTE: unsupported, get mason.nvim
 
-    -- ::: fuzzy finder
-    use "nvim-telescope/telescope.nvim"   -- core fzf infra
+    -- ::: fuzzy finder, buffer jumping, etc.
+    use "nvim-telescope/telescope.nvim"        -- core fzf infra
+    use { 'kwkarlwang/bufjump.nvim',           -- jump bufs fwd and bckwd
+          config = require 'user.bufjump' }
     use { 'ThePrimeagen/harpoon',
            config = require 'user.harpoon' }
 
@@ -126,9 +128,6 @@ return packer.startup(function(use)
                        -- telescope or ibhagwan/fzf-lua
                        -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
     }
-
-    -- buffer stuff
-    use 'kwkarlwang/bufjump.nvim' -- jump bufs fwd and bckwd
 
     -- file operations
     use 'kovetskiy/neovim-move'
