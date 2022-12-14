@@ -25,7 +25,6 @@ require "user.pandoc"
 require "user.autopairs"     -- self-explanatory
 require "user.surround"      -- sandwich/surround with characters
 require "user.comment"       -- comment controls
-require "user.bufjump"       -- jump to previous buffer
 -- TODO: this is ALMOST good.
 require "user.neoclip"       -- yank/macro history
 
