@@ -96,6 +96,9 @@ return packer.startup(function(use)
 
     -- ::: fuzzy finder
     use "nvim-telescope/telescope.nvim"   -- core fzf infra
+    use { 'ThePrimeagen/harpoon',
+           config = require 'user.harpoon' }
+
 
     -- ::: tree sitter / syntax
     use { "nvim-treesitter/nvim-treesitter",
