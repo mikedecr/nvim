@@ -12,10 +12,13 @@ end
 local keymap = vim.api.nvim_set_keymap          -- fn to write a map
 local opts = {noremap = true, silent = true}    -- table of map options
 
-local hui = "require('harpoon.ui')"
+-- variables for composing cmd strings into keymap args
+local lua_cmd = "<cmd>lua "
+local harpoon_ui_cmd = lua_cmd .. "require('harpoon.ui')"
+local ack_file = lua_cmd .. "vim.notify('file added to harpoon jump list')<CR>"
 
-keymap('n', '<space>ha', "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
-keymap('n', '<space>hl', "<cmd>lua " .. hui .. ".toggle_quick_menu()<CR>", opts)
-keymap('n', '<space>hn', "<cmd>lua " .. hui .. ".nav_next()<CR>", opts)
-keymap('n', '<space>hp', "<cmd>lua " .. hui .. ".nav_prev()<CR>", opts)
+keymap('n', '<space>ha', lua_cmd .. "require('harpoon.mark').add_file()<CR>" .. ack_file, opts)
+keymap('n', '<space>hl', harpoon_ui_cmd .. ".toggle_quick_menu()<CR>", opts)
+keymap('n', '<space>hn', harpoon_ui_cmd .. ".nav_next()<CR>", opts)
+keymap('n', '<space>hp', harpoon_ui_cmd .. ".nav_prev()<CR>", opts)
 
