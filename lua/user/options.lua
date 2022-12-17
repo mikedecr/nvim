@@ -16,7 +16,7 @@ vo.swapfile = false                        -- creates a swapfile
 -- search
 vo.ignorecase = true                       -- ignore case in search patterns
 vo.smartcase = true                        -- smart case
-vo.hlsearch = true                         -- highlight all matches on previous search pattern
+vo.hlsearch = false                         -- highlight all matches on previous search pattern
 vo.incsearch = true
 
 -- buffers / splits
@@ -50,7 +50,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set backspace=indent,eol,start"
 
 -- scrolling / scanning
-vo.scrolloff = 4
+vo.scrolloff = 6
 vo.sidescrolloff = 8
 
 -- interactivity
