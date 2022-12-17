@@ -11,8 +11,8 @@ require "user.maps"          -- keymaps
 require 'user.colors'        -- color schemes
 
 require "user.snippets"      -- configure and write snippets
-require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
-require "user.lsp"           -- language servers (this is a dir)
+-- require "user.cmp"           -- completion (source registry, keymaps, menu appearances)
+-- require "user.lsp"           -- language servers (this is a dir)
 
 require "user.telescope"     -- fuzzy finder engine
 require "user.treesitter"    -- syntax improvements
