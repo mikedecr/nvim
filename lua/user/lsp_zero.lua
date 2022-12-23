@@ -4,7 +4,6 @@ if not ok then
     return
 end
 
-vim.notify('using lsp-zero')
-
 lsp.preset('recommended')
 lsp.setup()
+
