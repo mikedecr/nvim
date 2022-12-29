@@ -135,9 +135,9 @@ return packer.startup(function(use)
     -- ::: tree sitter / syntax
     use { "nvim-treesitter/nvim-treesitter",
           run = ":TSUpdate" }
-    use "p00f/nvim-ts-rainbow"
+    -- use "p00f/nvim-ts-rainbow"
     use { "yioneko/nvim-yati",                           -- patch indentation
-          requires = "nvim-treesitter/nvim-treesitter" }
+          requires = { "nvim-treesitter/nvim-treesitter"  }}
 
     -- ::: sidebar / tree :::
     use 'kyazdani42/nvim-web-devicons' -- <-- is this just here bc it's a req for neo-tree?
