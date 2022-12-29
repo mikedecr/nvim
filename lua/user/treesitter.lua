@@ -1,5 +1,8 @@
-local ts_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not ts_ok then return end
+local success, configs = pcall(require, "nvim-treesitter.configs")
+if not success then 
+    vim.notify('failed: treesitter')
+    return
+end
 
 configs.setup {
     ensure_installed = {

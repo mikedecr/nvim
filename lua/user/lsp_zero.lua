@@ -1,6 +1,6 @@
 local ok, lsp = pcall(require, 'lsp-zero')
 if not ok then
-    vim.notify('lsp-zero having issues')
+    vim.notify('failed: lsp-zero')
     return
 end
 

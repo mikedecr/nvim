@@ -2,7 +2,7 @@
 
 local ok, _ = pcall(require, 'harpoon.mark')
 if not ok then
-    vim.notify('harpoon busted')
+    vim.notify('failed: harpoon')
     return
 end
 
