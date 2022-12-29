@@ -121,10 +121,8 @@ return packer.startup(function(use)
     -- use "williamboman/nvim-lsp-installer" -- simple lang server installer. NOTE: unsupported, get mason.nvim
 
     -- keymap helpers
-    use {
-        'folke/which-key.nvim',
-        config = require('user.whichkey')
-    }
+    use { 'folke/which-key.nvim',
+          config = require('user.whichkey') }
 
     -- ::: fuzzy finder, buffer jumping, etc.
     use "nvim-telescope/telescope.nvim"        -- core fzf infra
