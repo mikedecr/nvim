@@ -60,7 +60,7 @@ return packer.startup(function(use)
 
     -- startup
     use { "goolord/alpha-nvim",
-          requires = 'kyazdani42/nvim-web-devicons',
+          requires = {'kyazdani42/nvim-web-devicons'},
           config = require 'user.alpha' }
     -- enhance certain syntaxes
     use "lukas-reineke/headlines.nvim"
