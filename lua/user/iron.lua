@@ -10,8 +10,9 @@ end
 -- table of filetype: REPL binary
 local repls = {
     sh     = {command = {"zsh"}},
-    r      = {command = {"radian"}},
-    python = {command = {"ipython", "--no-autoindent"}},
+    r      = {command = {"zsh"}},
+    python = {command = {"zsh"}},
+    -- python = {command = {"ipython", "--no-autoindent"}},
     quarto = {command = {"zsh"}}
 }
 
