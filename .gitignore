@@ -2,3 +2,5 @@
 .undo_dir
 .undo
 plugin/
+
+lua/.luarc.json
