@@ -8,9 +8,10 @@
 require "user.plug"          -- plugin manager
 require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
-require 'user.colors'        -- color schemes
+-- require 'user.colors'        -- color schemes
 
 -- :: thematic setup ::
+require "user.ui"
 require "user.navigation"
 
 require "user.snippets"      -- configure and write snippets
@@ -19,7 +20,6 @@ require "user.cmp"           -- completion (source registry, keymaps, menu appea
 
 require "user.treesitter"    -- syntax improvements
 require "user.yati"          -- patch indentation for treesitter
-require "user.gitsigns"      -- git integration
 
 -- require "user.headlines"     -- prettier markdown chunks etc.
 require "user.pandoc"
