@@ -63,6 +63,11 @@ return packer.startup(function(use)
     -- enhance certain syntaxes
     use "lukas-reineke/headlines.nvim"
 
+    -- ::: navigation :::
+    use 'kwkarlwang/bufjump.nvim'
+    use 'ThePrimeagen/harpoon'
+
+
     -- color schemes
     -- these are chosen in user.colors.init
     use "rakr/vim-two-firewatch"
@@ -117,10 +122,6 @@ return packer.startup(function(use)
 
     -- ::: fuzzy finder, buffer jumping, etc.
     use "nvim-telescope/telescope.nvim"        -- core fzf infra
-    use { 'kwkarlwang/bufjump.nvim',           -- jump bufs fwd and bckwd
-          config = require 'user.bufjump' }
-    use { 'ThePrimeagen/harpoon',
-           config = require 'user.harpoon' }
 
 
     -- ::: tree sitter / syntax
