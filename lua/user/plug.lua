@@ -65,15 +65,8 @@ return packer.startup(function(use)
 
     -- color schemes
     -- these are chosen in user.colors.init
-    use 'rockerBOO/boo-colorscheme-nvim'
-    use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
-    use "shaunsingh/nord.nvim"
-    use 'andersevenrud/nordic.nvim'
-    use "LunarVim/Colorschemes"
-    use "folke/tokyonight.nvim"
-    use "kvrohit/mellow.nvim"
     use "EdenEast/nightfox.nvim"
 
     -- ::: LSP-zero, combination LSP x Mason (installer) x nvim-cmp (completion engine)
@@ -155,9 +148,6 @@ return packer.startup(function(use)
                        -- telescope or ibhagwan/fzf-lua
                        -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
     }
-
-    -- file operations
-    use 'kovetskiy/neovim-move'
 
     -- :: project
     use "ahmedkhalf/project.nvim"
