@@ -26,10 +26,6 @@ keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", o
 keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<space>fg", "<cmd>Telescope git_commits<cr>", opts)
 
--- tree
-keymap("n", "<space>nf", "<cmd>NeoTreeFloatToggle<cr>", opts)
-keymap("n", "<space>nb", "<cmd>NeoTreeFocusToggle<cr>", opts)
-keymap("n", "<space>ns", "<cmd>NeoTreeRevealInSplitToggle<cr>", opts)
 
 -- select rmd/qmd chunk
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
