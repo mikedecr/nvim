@@ -1,5 +1,13 @@
+-- ::::::::::::::::::::::
+-- :::: project.nvim ::::
+-- ::::::::::::::::::::::
+
+-- detects "projects" in a file system
+-- helpful for changing working directories when file-jumping
+
 local proj_ok, project = pcall(require, "project_nvim")
 if not proj_ok then return end
+
 
 project.setup({
 	---@usage set to false to disable project.nvim.
@@ -38,6 +46,9 @@ project.setup({
 	---@usage path to store the project history for use in telescope
   datapath = vim.fn.stdpath("data"),
 })
+
+
+-- :::: register as a telescope extension ::::
 
 local tele_status_ok, telescope = pcall(require, "telescope")
 if not tele_status_ok then return end
