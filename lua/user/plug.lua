@@ -11,16 +11,12 @@ vim.cmd [[
     augroup packer_user_config
         autocmd!
         autocmd BufWritePost plug.lua echo "Consider running PackerSync =)"
-
-        " another option is to auto-run PackerSync but this often gets annoying:
+        " -- another option is to auto-run PackerSync but this often gets annoying:
         " autocmd BufWritePost plug.lua source <afile> | PackerSync
-
-        " a middle-ground would be to do this only if the install table is modified,
-        " but that would be pretty challenging for me to implement
-
+        " -- a middle-ground would be to do this only if the install table is modified,
+        "    but that would be pretty challenging for me to implement
     augroup end
 ]]
-
 
 -- attach Packer w/ a protected call.
 -- This prevents error on startup.
@@ -31,16 +27,18 @@ if not packer_ok then
     return
 end
 
-
 -- Have packer use a popup window
 packer.init {
     display = {
-        open_fn = function() return require("packer.util").float { border = "rounded" } end,
+        open_fn = function() 
+            return require("packer.util").float { border = "rounded" }
+        end,
     },
 }
 
 
--- Install your plugins here
+-- ::: Plugins :::
+
 return packer.startup(function(use)
 
     -- ::: packer & basic lua
@@ -135,9 +133,8 @@ return packer.startup(function(use)
     -- ::: tree sitter / syntax
     use { "nvim-treesitter/nvim-treesitter",
           run = ":TSUpdate" }
-    -- use "p00f/nvim-ts-rainbow"
     use { "yioneko/nvim-yati",                           -- patch indentation
-          requires = { "nvim-treesitter/nvim-treesitter"  }}
+          requires = { "nvim-treesitter/nvim-treesitter" }}
 
     -- ::: sidebar / tree :::
     use 'kyazdani42/nvim-web-devicons' -- <-- is this just here bc it's a req for neo-tree?
