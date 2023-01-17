@@ -138,7 +138,8 @@ return packer.startup(function(use)
     }
 
     -- text tricks
-    use "numToStr/Comment.nvim"
+    use { "numToStr/Comment.nvim", 
+          congir = require("Comment").setup() }
     use "ur4ltz/surround.nvim"
     use "windwp/nvim-autopairs"
     use "Vonr/align.nvim"
