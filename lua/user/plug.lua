@@ -48,20 +48,20 @@ return packer.startup(function(use)
     use { "lewis6991/impatient.nvim",
            config = require 'impatient'}
 
-    -- ::: appearance
-    use { "rcarriga/nvim-notify",
-          config = require "user.notify" }
-    use { 'nvim-lualine/lualine.nvim',
-          requires = {'kyazdani42/nvim-web-devicons', opt = true },
-          config = require 'user.lualine'
-    }
-
+    -- ::: appearance / UI
     -- startup
     use { "goolord/alpha-nvim",
-          requires = {'kyazdani42/nvim-web-devicons'},
-          config = require 'user.alpha' }
-    -- enhance certain syntaxes
-    use "lukas-reineke/headlines.nvim"
+          requires = {'kyazdani42/nvim-web-devicons'}}
+    -- vim builtin mods
+    use { "rcarriga/nvim-notify" }
+    use { 'nvim-lualine/lualine.nvim',
+          requires = {'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    use { "nvim-zh/colorful-winsep.nvim" }
+    -- color schemes
+    use "rakr/vim-two-firewatch"
+    use "tssm/fairyfloss.vim"
+    use "EdenEast/nightfox.nvim"
 
     -- ::: navigation :::
     -- fuzzy finder, buffer jumping, etc.
@@ -71,11 +71,9 @@ return packer.startup(function(use)
     use 'ThePrimeagen/harpoon'
     use "ahmedkhalf/project.nvim"
 
-    -- color schemes
-    -- these are chosen in user.colors.init
-    use "rakr/vim-two-firewatch"
-    use "tssm/fairyfloss.vim"
-    use "EdenEast/nightfox.nvim"
+
+    -- enhance certain syntaxes
+    use "lukas-reineke/headlines.nvim"
 
     -- ::: LSP-zero, combination LSP x Mason (installer) x nvim-cmp (completion engine)
     use {
@@ -120,8 +118,7 @@ return packer.startup(function(use)
     -- use "williamboman/nvim-lsp-installer" -- simple lang server installer. NOTE: unsupported, get mason.nvim
 
     -- keymap helpers
-    use { 'folke/which-key.nvim',
-          config = require('user.whichkey') }
+    use { 'folke/which-key.nvim' }
 
 
 
@@ -136,7 +133,6 @@ return packer.startup(function(use)
     use { "nvim-neo-tree/neo-tree.nvim",
           branch = "v2.x",
           requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
-          -- config = require "user.neotree"
     }
 
     -- text tricks
