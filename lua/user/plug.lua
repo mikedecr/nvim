@@ -30,7 +30,7 @@ end
 -- Have packer use a popup window
 packer.init {
     display = {
-        open_fn = function() 
+        open_fn = function()
             return require("packer.util").float { border = "rounded" }
         end,
     },
@@ -64,9 +64,12 @@ return packer.startup(function(use)
     use "lukas-reineke/headlines.nvim"
 
     -- ::: navigation :::
+    -- fuzzy finder, buffer jumping, etc.
+    use "nvim-telescope/telescope.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
     use 'kwkarlwang/bufjump.nvim'
     use 'ThePrimeagen/harpoon'
-
+    use "ahmedkhalf/project.nvim"
 
     -- color schemes
     -- these are chosen in user.colors.init
@@ -120,8 +123,6 @@ return packer.startup(function(use)
     use { 'folke/which-key.nvim',
           config = require('user.whichkey') }
 
-    -- ::: fuzzy finder, buffer jumping, etc.
-    use "nvim-telescope/telescope.nvim"        -- core fzf infra
 
 
     -- ::: tree sitter / syntax
@@ -135,7 +136,7 @@ return packer.startup(function(use)
     use { "nvim-neo-tree/neo-tree.nvim",
           branch = "v2.x",
           requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
-          config = require "user.neotree"
+          -- config = require "user.neotree"
     }
 
     -- text tricks
@@ -151,8 +152,6 @@ return packer.startup(function(use)
                        -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
     }
 
-    -- :: project
-    use "ahmedkhalf/project.nvim"
 
     -- ::: git
     use "tpope/vim-fugitive"
