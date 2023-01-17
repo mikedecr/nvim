@@ -39,6 +39,7 @@ local maps = {
                             , c = cmp.mapping.close() },
     -- Accept selected item. Set select = false to confirm only explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm { select = false },
+    ["<C-l>"] = cmp.mapping.confirm { select = false },
     -- setting Tab to overloaded Super Tab
     -- see the LunarVim video for more details on this?
     -- also https://www.youtube.com/watch?v=_DnmphIwnjo&t=523s is opinionated about Tab
