@@ -22,7 +22,7 @@ keymap({"i", "s"}, "<c-l>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
 
 -- TODO loop filetype-specific files
 
-require("user.snippets.comments")
-require('user.snippets.py') -- <-- scope to filetype!!!
+require("user.ui.snippets.comments")
+require('user.ui.snippets.py') -- <-- scope to filetype!!!
 -- require("users.snippets.r")
 
