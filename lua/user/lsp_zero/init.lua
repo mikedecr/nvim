@@ -7,5 +7,5 @@ end
 lsp.preset('recommended')
 lsp.setup()
 
-require("user.lsp_zero.client_settings")
+-- require("user.lsp_zero.client_settings")
 
