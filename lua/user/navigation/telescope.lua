@@ -10,6 +10,14 @@ if not tele_ok then vim.notify('failed: telescope'); return; end
 local actions_ok, actions = pcall(require, 'telescope.actions')
 if not actions_ok then vim.notify('failed: telescope.actions'); return; end
 
+-- :::: maps to open pickers ::::
+keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
+keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", opts)
+keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<space>fg", "<cmd>Telescope git_commits<cr>", opts)
+
+
+-- :::: behavior of pickers ::::
 
 telescope.setup {
   defaults = {
@@ -106,7 +114,7 @@ telescope.setup {
 
 }
 
--- ::: setup media files :::
+-- :::: setup media files ::::
 
 telescope.load_extension('media_files')
 local media_files_setup = {
