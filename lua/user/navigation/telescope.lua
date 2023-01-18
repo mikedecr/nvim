@@ -11,6 +11,8 @@ local actions_ok, actions = pcall(require, 'telescope.actions')
 if not actions_ok then vim.notify('failed: telescope.actions'); return; end
 
 -- :::: maps to open pickers ::::
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
 keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", opts)
 keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
