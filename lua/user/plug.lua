@@ -51,12 +51,11 @@ return packer.startup(function(use)
     -- ::: appearance / UI
     -- startup
     use { "goolord/alpha-nvim",
-          requires = {'kyazdani42/nvim-web-devicons'}}
+          requires = {'kyazdani42/nvim-web-devicons'} }
     -- vim builtin mods
     use { "rcarriga/nvim-notify" }
     use { 'nvim-lualine/lualine.nvim',
-          requires = {'kyazdani42/nvim-web-devicons', opt = true }
-    }
+          requires = {'kyazdani42/nvim-web-devicons', opt = true } }
     use { "nvim-zh/colorful-winsep.nvim" }
     -- color schemes
     use "rakr/vim-two-firewatch"
@@ -71,9 +70,6 @@ return packer.startup(function(use)
     use 'ThePrimeagen/harpoon'
     use "ahmedkhalf/project.nvim"
 
-
-    -- enhance certain syntaxes
-    use "lukas-reineke/headlines.nvim"
 
     -- ::: LSP-zero, combination LSP x Mason (installer) x nvim-cmp (completion engine)
     use {
@@ -160,6 +156,7 @@ return packer.startup(function(use)
     -- writing
     -- use "vim-pandoc/vim-pandoc" -- this is more about functionality and enhancements
     use "vim-pandoc/vim-pandoc-syntax" -- syntax only
+    use "lukas-reineke/headlines.nvim"
     use "quarto-dev/quarto-vim" -- this is supposedly also syntax only? I'm not sure what the effect is.
 
     -- Automatically set up your configuration after cloning packer.nvim
