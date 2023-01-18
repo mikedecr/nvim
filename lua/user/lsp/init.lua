@@ -1,9 +1,11 @@
-local lsp_ok, _ = pcall(require, "lspconfig")
-if not lsp_ok then 
-    vim.notify("require 'lspconfig' fails")
+local ok, lsp = pcall(require, 'lsp-zero')
+if not ok then
+    vim.notify('failed: lsp-zero')
     return
 end
 
-require("user.lsp.installer")
-require("user.lsp.handlers").setup()
+lsp.preset('recommended')
+lsp.setup()
+
+-- require("user.lsp_zero.client_settings")
 

@@ -10,6 +10,7 @@ require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
 
 -- :: thematic setup ::
+require "user.lsp"
 require "user.visual"
 require "user.navigation"
 require "user.ui" -- for "text interface" only, what neovim does to you when you type
