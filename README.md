@@ -1,5 +1,7 @@
 # Neovim Configs
 
+![splash-page](https://pbs.twimg.com/media/FmuQu9PWIAEi4Iz?format=png&name=4096x4096)
+
 
 ## Agenda:
 
