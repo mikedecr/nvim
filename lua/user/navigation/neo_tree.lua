@@ -13,7 +13,8 @@ neo.setup({
 
 -- NeoTree maps
 
-local keymap =vim.keymap.set
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 keymap("n", "<space>nf", "<cmd>NeoTreeFloatToggle<cr>", opts)
 keymap("n", "<space>nb", "<cmd>NeoTreeFocusToggle<cr>", opts)
