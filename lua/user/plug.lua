@@ -55,6 +55,7 @@ return packer.startup(function(use)
     use { 'nvim-lualine/lualine.nvim',
           requires = {'kyazdani42/nvim-web-devicons', opt = true } }
     use { "nvim-zh/colorful-winsep.nvim" }
+    use {"shortcuts/no-neck-pain.nvim", tag = "*" }
     -- color schemes
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
@@ -122,15 +123,14 @@ return packer.startup(function(use)
           requires = { "nvim-treesitter/nvim-treesitter" }}
 
     -- ::: sidebar / tree :::
-    use 'kyazdani42/nvim-web-devicons' -- <-- is this just here bc it's a req for neo-tree?
+    use { 'kyazdani42/nvim-web-devicons' } -- <-- is this just here bc it's a req for neo-tree?
     use { "nvim-neo-tree/neo-tree.nvim",
           branch = "v2.x",
           requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
     }
 
     -- text tricks
-    use { "numToStr/Comment.nvim", 
-          congir = require("Comment").setup() }
+    use { "numToStr/Comment.nvim" }
     use "ur4ltz/surround.nvim"
     use "windwp/nvim-autopairs"
     use "Vonr/align.nvim"
