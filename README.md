@@ -3,49 +3,40 @@
 ![splash-page](https://pbs.twimg.com/media/FmuQu9PWIAEi4Iz?format=png&name=4096x4096)
 
 
-## Agenda:
+## Refactor todos:
+
+- snippets
+- cmp
+
+## other todos:
 
 - System clipboards:
+    - yanking to system clipboard doesn't work over ssh
     - <https://github.com/fcpg/vim-osc52>
     - <https://www.reddit.com/r/vim/comments/ac9eyh/talk_i_gave_on_going_mouseless_with_vim_tmux/>
-    - set up some kind of autocmd to sourcethe osc fwd if ssh'd?
+    - set up some kind of autocmd to source the osc fwd if ssh'd?
 
-- filetype plugins
-
-- language-agnostic comment keymap
-    - we might augment the comment string table for quarto?
-    - polymode comments (search for some kind of vim polymode)
+- ftplugin organization
 
 - filetype maps and snips
     - R
     - python
     - markdown
 
+- language-agnostic big-comment snippet
+    - there should be a variable storing the comment string for a filetype
+    - how to handle "polymode" comments
 
-- neovim package loading
-
-- [ ] Utils file
-    - `informative_pcall()`
-- [ ] neovim package loading
-    - what needs `require()`
-    - resolve plug.lua instances
-
-
-- replace lspinstall
-
-
-
-- remove unnecessary / complected pieces
-
-    - git signs...
-    - other web icons
+- remove unnecessary / tangled bits
+    - git signs ... ?
+    - other icons
     - simpler telescope
     - simpler lsp
 
 
-
-- better document:
-
-    - LSP
-    - TreeSitter
+- better documentation:
+    - lsp
+    - cmp
+    - treesitter
+    - ...
 
