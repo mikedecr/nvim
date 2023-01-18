@@ -1,49 +1,49 @@
------------------------------------------------------
--- ::: VARIABLES / ALIASES :::
+-- :::::::::::::::::::::::::::::
+-- :::: VARIABLES / ALIASES ::::
+-- :::::::::::::::::::::::::::::
 
 local keymap = vim.keymap.set          -- fn to write a map
 local opts = {noremap = true, silent = true}    -- table of map options
 
 
------------------------------------------------------
--- ::: NORMAL :::
-
--- easier write / source
--- keymap("n", "<space>so", "<cmd>source %<cr>", opts)
+-- :::::::::::::::::::::
+-- :::: NORMAL MODE ::::
+-- :::::::::::::::::::::
 
 -- easier cmds
 keymap("n", "<space>;", ":", opts)
 
--- Better window navigation
+-- Better buffer split navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-k>", "<C-w>k", opts) -- this conflicts w/ LSP somehow...
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- select rmd/qmd chunk
+-- TODO maybe relocate to a writing / markdown config?
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
 keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
 
------------------------------------------------------
--- ::: INSERT :::
+
+-- :::::::::::::::::::::
+-- :::: INSERT MODE ::::
+-- :::::::::::::::::::::
 
 keymap("i", "<C-,>", "<-", opts)        -- assignment
 keymap("i", "<C-.>", "|>", opts)        -- |> pipe
--- keymap("i", "<C-i>", "%in%", opts)        -- |> pipe
-
--- keymap("i", "<C-i><C-n>", "%in%", opts) -- %in%, TODO unsure about masking C-i
 
 
-
------------------------------------------------------
--- ::: TERMINAL :::
+-- :::::::::::::::::::::::
+-- :::: TERMINAL MODE ::::
+-- :::::::::::::::::::::::
 
 -- Esc exits terminal's Insert mode
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 
 
------------------------------------------------------
--- ::: VISUAL :::
+-- :::::::::::::::::::::
+-- :::: VISUAL MODE ::::
+-- :::::::::::::::::::::
 
 -- Move text up and down
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
