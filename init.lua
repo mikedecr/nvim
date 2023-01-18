@@ -1,21 +1,26 @@
--- ::: init.lua :::
+-- :::: init.lua ::::
 -- this is our replacement for ".vimrc" or "init.vim"
 
 -- It works by explicitly requiring modules.
 -- We may write as many assorted config files as we want in lua/*,
 -- but they won't be activated unless we require them here or somewhere else.
 
-require "user.plug"          -- plugin manager
+
+-- :::: config layout ::::
+
+-- in the top section we have "base" or "dependency-free" modifications
+-- including vim options and keymaps
+-- we also specify plugins to be used elsewhere
+
 require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
+require "user.plug"          -- plugin manager
 
--- :: thematic setup ::
-require "user.lsp"
-require "user.visual"
-require "user.navigation"
-require "user.ui" -- for "text interface" only, what neovim does to you when you type
-require "user.syntax"
+-- remaining configs are sorted by their substantive / functional domain
 
--- lsp
--- require "user.lsp"           -- language servers (this is a dir)
+require "user.lsp"          -- configuring built-in LSP
+require "user.visual"       -- appearance + aesthetics
+require "user.navigation"   -- from file to file
+require "user.ui"           -- text-base interfaces, what neovim does when you type
+require "user.syntax"       -- how neovim understands + decorates language syntax
 
