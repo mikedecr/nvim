@@ -9,4 +9,3 @@ local opts = {noremap = true, silent = true}    -- table of map options
 keymap('n', '<space>np', '<cmd>Telescope neoclip default<cr>', opts)
 keymap('i', '<C-h><C-p>', '<cmd>Telescope neoclip default<cr>', opts)
 
-
