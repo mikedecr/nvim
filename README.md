@@ -3,12 +3,11 @@
 ![splash-page](https://pbs.twimg.com/media/FmuQu9PWIAEi4Iz?format=png&name=4096x4096)
 
 
-## Refactor todos:
-
-- snippets
-- cmp
-
 ## other todos:
+- just a general audit of wth is going on:
+    - snippets
+    - cmp
+    - lsp-zero keymaps
 
 - System clipboards:
     - yanking to system clipboard doesn't work over ssh
@@ -30,9 +29,6 @@
 - remove unnecessary / tangled bits
     - git signs ... ?
     - other icons
-    - simpler telescope
-    - simpler lsp
-
 
 - better documentation:
     - lsp
