@@ -95,8 +95,7 @@ return packer.startup(function(use)
           -- Snippets
           {'L3MON4D3/LuaSnip'},
           {'rafamadriz/friendly-snippets'},
-        },
-        config = require('user.lsp_zero')
+        }
       }
 
     -- this isn't in lsp-zero...
