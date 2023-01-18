@@ -1,8 +1,12 @@
 
 local ui = 'user.ui.'
 
-require(ui .. 'whichkey')
-require(ui .. 'snippets')
+require(ui .. 'autopairs')
+require(ui .. 'cmp')
+require(ui .. 'comment')
 require(ui .. 'iron')
 require(ui .. 'neoclip')
+require(ui .. 'snippets')
+require(ui .. 'surround')
+require(ui .. 'whichkey')
 
