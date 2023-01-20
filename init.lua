@@ -2,8 +2,8 @@
 -- this is our replacement for ".vimrc" or "init.vim"
 
 -- It works by explicitly requiring modules.
--- We may write as many assorted config files as we want in lua/*,
--- but they won't be activated unless we require them here or somewhere else.
+-- We may write whatever config files as we want in lua/*,
+-- but they won't be activated unless we require them somehow.
 
 
 -- :::: config layout ::::

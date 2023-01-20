@@ -4,7 +4,7 @@
 
 -- save a shortlist of goto files
 
-local ok, _harp_mark = pcall(require, 'harpoon.mark')
+local ok, _ = pcall(require, 'harpoon.mark')
 if not ok then vim.notify('failed: harpoon.mark'); return; end
 
 -- variables for composing cmd strings into keymap args
