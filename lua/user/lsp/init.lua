@@ -1,11 +1,7 @@
-local ok, lsp = pcall(require, 'lsp-zero')
-if not ok then
-    vim.notify('failed: lsp-zero')
-    return
-end
+-- :::: Neovim Built-in LSP configuration ::::
 
-lsp.preset('recommended')
-lsp.setup()
+local lsp = 'user.lsp.'
 
--- require("user.lsp_zero.client_settings")
+require(lsp .. "lsp_zero")          -- easy LSP install/hookup
+require(lsp .. "client_settings")   -- server-specific
 
