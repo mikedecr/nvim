@@ -7,15 +7,12 @@ end
 local text = ls.text_node
 local snip = ls.snippet
 local insert = ls.insert_node
+local opts = {}
 
 
 local dashes = function(n)
     return string.rep('-', n)
 end
-
--- local newline = function(contents)
---     text({"", contents})
--- end
 
 
 -- TODO
@@ -30,17 +27,7 @@ ls.add_snippets(nil, {
               text({"",  "# " .. dashes(50), "" }),
             }
         ),
-        -- snip(
-        --     { trig = "com", namr = "Medium comment", dscr = "Medium comment" },
-        --     { text({ "# " .. dashes(5) .. " "} ),
-        --       insert(1, "comment"),
-        --       text({" " .. dashes(10), "" })
-        --     }
-        -- ),
-        ls.parser.parse_snippet("com", "# ----- $1 ----------$0"),
-        -- snip({ trig = "comment", namr = "new comment", dscr = "new comment" },
-        --      { text({get_cstring(1)}) }
-        -- )
+        ls.parser.parse_snippet("com", "# ----- $1 ----------$0", opts),
     },
 })
 
