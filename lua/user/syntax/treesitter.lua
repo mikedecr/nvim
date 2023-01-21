@@ -54,5 +54,14 @@ configs.setup {
         enable = true,
         disable = { "yaml", "lua", "python" } -- fallback is nvim-yati?
     },
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<CR>",
+          node_incremental = "<CR>",
+          node_decremental = "<BS>",
+          scope_incremental = "<S-CR>",
+        },
+    }
 }
 
