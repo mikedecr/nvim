@@ -144,6 +144,8 @@ return packer.startup(function(use)
                        -- telescope or ibhagwan/fzf-lua
                        -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
     }
+    -- better built-in terminal vim actions
+    use { 'chomosuke/term-edit.nvim' }
 
 
     -- ::: git
