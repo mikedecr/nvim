@@ -52,7 +52,7 @@ configs.setup {
     },
     indent = {
         enable = true,
-        disable = { "yaml", "lua", "python" } -- fallback is nvim-yati?
+        disable = { "yaml", "lua", "python", "r" } -- fallback is nvim-yati?
     },
     incremental_selection = {
         enable = true,
