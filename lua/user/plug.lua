@@ -73,6 +73,7 @@ return packer.startup(function(use)
     -- ::: LSP-zero, combination LSP x Mason (installer) x nvim-cmp (completion engine)
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = "v1.x",
         requires = {
           -- LSP Support
           {'neovim/nvim-lspconfig'},
