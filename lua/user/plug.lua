@@ -133,6 +133,7 @@ return packer.startup(function(use)
           branch = "v2.x",
           requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
     }
+    use "stevearc/oil.nvim"
 
     -- text tricks
     use { "numToStr/Comment.nvim" }
