@@ -2,13 +2,9 @@
 -- ::::  navigation-related packages and settings  ::::
 -- ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
--- easier import paths...
-local nav = 'user.navigation.'
-
-require(nav .. 'telescope') -- fuzzy finder
-require(nav .. 'bufjump')   -- previous/next buffer
-require(nav .. 'harpoon')   -- shortlist of important files
-require(nav .. 'neo_tree')  -- file tree navigation
-require(nav .. 'project')   -- project root detection / change dir
-
+require('user.navigation.telescope') -- fuzzy finder
+require('user.navigation.bufjump')   -- previous/next buffer
+require('user.navigation.harpoon')   -- shortlist of important files
+require('user.navigation.neo_tree')  -- file tree navigation
+require('user.navigation.project')   -- project root detection / change dir
 
