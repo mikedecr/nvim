@@ -157,7 +157,7 @@ return packer.startup(function(use)
     -- ::: stats
     use "hkupty/iron.nvim"            -- REPL
     use "eigenfoo/stan-vim"
-    -- use "JuliaEditorSupport/julia-vim" -- julia
+    use "JuliaEditorSupport/julia-vim" -- julia
 
     -- writing
     -- use "vim-pandoc/vim-pandoc" -- this is more about functionality and enhancements
