@@ -60,6 +60,7 @@ return packer.startup(function(use)
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "EdenEast/nightfox.nvim"
+    use "rose-pine/neovim"
 
     -- ::: navigation :::
     -- fuzzy finder, buffer jumping, etc.
