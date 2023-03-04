@@ -2,8 +2,11 @@
 -- :::: VARIABLES / ALIASES ::::
 -- :::::::::::::::::::::::::::::
 
-local keymap = vim.keymap.set          -- fn to write a map
-local opts = {noremap = true, silent = true}    -- table of map options
+-- fn to write a map
+local keymap = vim.keymap.set
+
+-- table of map options
+local opts = { noremap = true, silent = true }
 
 
 -- :::::::::::::::::::::
