@@ -47,14 +47,6 @@ keymap("i", "<C-,>", "<-", opts)        -- assignment
 keymap("i", "<C-.>", "|>", opts)        -- |> pipe
 
 
--- :::::::::::::::::::::::
--- :::: TERMINAL MODE ::::
--- :::::::::::::::::::::::
-
--- Esc exits terminal's Insert mode
-keymap("t", "<Esc>", "<C-\\><C-n>", opts)
-
-
 -- :::::::::::::::::::::
 -- :::: VISUAL MODE ::::
 -- :::::::::::::::::::::
@@ -63,4 +55,13 @@ keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
+
+
+-- :::::::::::::::::::::::
+-- :::: TERMINAL MODE ::::
+-- :::::::::::::::::::::::
+
+-- Esc exits terminal's Insert mode
+keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+
 
