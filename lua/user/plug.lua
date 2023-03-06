@@ -55,12 +55,13 @@ return packer.startup(function(use)
     use { 'nvim-lualine/lualine.nvim',
           requires = {'kyazdani42/nvim-web-devicons', opt = true } }
     use { "nvim-zh/colorful-winsep.nvim" }
-    use {"shortcuts/no-neck-pain.nvim", tag = "*" }
     -- color schemes
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "EdenEast/nightfox.nvim"
     use "rose-pine/neovim"
+    -- zen mode
+    use "folke/zen-mode.nvim"
 
     -- ::: navigation :::
     -- fuzzy finder, buffer jumping, etc.
@@ -120,8 +121,6 @@ return packer.startup(function(use)
     -- keymap helpers
     use { 'folke/which-key.nvim' }
 
-
-
     -- ::: tree sitter / syntax
     use { "nvim-treesitter/nvim-treesitter",
           run = ":TSUpdate" }
@@ -149,7 +148,6 @@ return packer.startup(function(use)
     }
     -- better built-in terminal vim actions
     use { 'chomosuke/term-edit.nvim' }
-
 
     -- ::: git
     use "tpope/vim-fugitive"
