@@ -13,9 +13,6 @@ local opts = { noremap = true, silent = true }
 -- :::: NORMAL MODE ::::
 -- :::::::::::::::::::::
 
--- easier cmds
-keymap("n", "<space>;", ":", opts)
-
 -- Better buffer split navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
