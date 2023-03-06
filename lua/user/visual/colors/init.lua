@@ -1,4 +1,3 @@
 require 'user.visual.colors.nightfox'
-
--- vim.cmd "colorscheme dayfox"
+-- vim.cmd "colorscheme rose-pine-main"
 
