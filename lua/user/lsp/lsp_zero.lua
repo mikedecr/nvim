@@ -4,7 +4,6 @@ if not lsp_ok then vim.notify('failed: lsp-zero'); return; end
 
 lsp.preset("recommended")
 
-
 lsp.set_preferences({
     suggest_lsp_servers = true,
     sign_icons = {
@@ -15,11 +14,16 @@ lsp.set_preferences({
     }
 })
 
-local keymap = vim.keymap.set
+-- language-specific settings
+require("user.lsp.language_settings")
+
+
+-- :::: LSP keymaps ::::
 
 -- helpful reference:
 -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
 
+local keymap = vim.keymap.set
 lsp.on_attach(
     function(client, bufnr)
         local opts = {buffer = bufnr, remap = false}
@@ -39,12 +43,9 @@ lsp.on_attach(
     end
 )
 
--- language-specific settings
-require("user.lsp.language_settings")
 
 lsp.setup()
 
-vim.diagnostic.config({
-    virtual_text = true
-})
+-- this has to be after lsp.setup() for some reason
+vim.diagnostic.config({ virtual_text = true })
 
