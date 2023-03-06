@@ -26,6 +26,14 @@ keymap("n", "J", "mzJ`z", opts)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Resize window using <ctrl> arrow keys
+-- This doesn't work so well on the Mac...
+
+keymap("n", "<C-Up>", "<cmd>resize +2<cr>", {desc = "Increase window height"})
+keymap("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+keymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+
 
 -- select rmd/qmd chunk
 -- TODO maybe relocate to a writing / markdown config?
