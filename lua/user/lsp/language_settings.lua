@@ -6,8 +6,14 @@ if not ok then
     return
 end
 
-lsp.configure(
-    -- prevents "unrecognized global: 'vim'"
-    'lua_ls', {settings = {Lua = {diagnostics = {globals = "vim"}}}}
-)
+-- hush "undefined global: 'vim'"
+lsp.configure('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
 
