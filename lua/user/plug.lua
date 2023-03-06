@@ -97,9 +97,7 @@ return packer.startup(function(use)
       }
     -- LSP enhancements
     use "milisims/nvim-luaref"
-    use "folke/neodev.nvim" -- support nvim built-in Lua in LSP
-
-
+    --
     -- this isn't in lsp-zero...
     use "hrsh7th/cmp-cmdline"
 
