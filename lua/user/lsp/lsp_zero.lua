@@ -28,8 +28,10 @@ lsp.on_attach(
         keymap("n", "gl", function() vim.diagnostic.open_float() end, opts)
         keymap("n", "]d", function() vim.diagnostic.goto_next() end, opts)
         keymap("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
+        keymap("n", "K", function() vim.lsp.buf.hover() end, opts)
+        -- keymap("n", "<C-H>", function() vim.lsp.buf.signature_help() end, opts)
 
-        -- how to do this in a repo?
+        -- how to do this at the repo level?
         keymap("n", "grr", function() vim.lsp.buf.references() end, opts)
         keymap("n", "grn", function() vim.lsp.buf.rename() end, opts)
         keymap("n", "gca", function() vim.lsp.buf.code_action() end, opts)
