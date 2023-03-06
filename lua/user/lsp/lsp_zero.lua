@@ -4,7 +4,6 @@ if not lsp_ok then vim.notify('failed: lsp-zero'); return; end
 
 lsp.preset("recommended")
 
-require("user.lsp.client_settings")
 
 lsp.set_preferences({
     suggest_lsp_servers = true,
@@ -37,6 +36,9 @@ lsp.on_attach(
 
     end
 )
+
+-- language-specific settings
+require("user.lsp.language_settings")
 
 lsp.setup()
 
