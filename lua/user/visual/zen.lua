@@ -4,10 +4,18 @@ if not ok then
     return
 end
 
-
+-- put this in a function for keymap to call
 local light_zen = function()
-    require('zen-mode').toggle()
-    vim.opt.colorcolumn = "0"
+    zen.toggle({
+        window = {
+            width = 120,
+            options = {
+                cursorline = false,
+                colorcolumn = "0",   -- rhs ruler
+                signcolumn = "no"    -- no git stuff
+            }
+        }
+    })
 end
 
 vim.keymap.set("n", "<space>zz", function() light_zen() end)
