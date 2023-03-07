@@ -22,6 +22,7 @@ require("luasnip/loaders/from_vscode").lazy_load()
 -- :::: keymaps ::::
 -- :::::::::::::::::
 
+
 -- used for Tab key
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -76,8 +77,8 @@ local maps = {
 --   פּ ﯟ   some other good icons
 -- find more here: https://www.nerdfonts.com/cheat-sheets
 
--- these are LSP objects?
--- and the icons are from vscode?
+-- these are LSP-recognized entities?
+-- (and the icons are from vscode(?)?)
 local kind_icons = {
     -- stuff that might matter to me
     File = "",
@@ -108,18 +109,41 @@ local kind_icons = {
     Color = "",
 }
 
+
 -- :::::::::::::::::::::
 -- :::: Source data ::::
 -- :::::::::::::::::::::
 
--- TODO: we want this to be a table of name, menu value, and opts to unpack?
--- local sources_menu = {
---     luasnip = "[Snippet]", 
---     nvim_lsp = "[LSP]",
---     nvim_lua = "[NVIM_LUA]",
---     path = "[Path]",
---     buffer = "[Buffer]",
--- }
+-- one table of data that we algorithmically convert 
+-- to source list and menu tags
+
+-- source: Table of {name, other params}. 
+--         This is how cmp knows where to look for completions.
+-- menu: String. How the source is annotated in the cmp dropdown menu.
+local sources_menu = {
+    -- snippets
+    {source = {name = 'luasnip'}, menu = '(Luasnip)'},
+    -- LSP
+    {source = {name = 'nvim_lsp'}, menu = '(Lsp)'},
+    -- items from the same buffer
+    {source = {name = 'buffer', keyword_length = 5}, menu = '(Buf)'},
+    -- filepaths?
+    {source = {name = 'path'}, menu = '(Path)'},
+    -- nvim's builtin Lua runtime API
+    {source = {name = 'nvim_lua'}, menu = '(Nvim_Lua)'},
+}
+
+-- list of cmp sources
+local source_list = {}
+for _, v in ipairs(sources_menu) do
+    table.insert(source_list, v.source)
+end
+
+-- map of source name -> cmp menu text
+local menu_map = {}
+for _, v in ipairs(sources_menu) do
+    menu_map[v.source.name] = v.menu
+end
 
 
 -- :::::::::::::::::::::::::::::
@@ -130,13 +154,7 @@ cmp.setup({
 
     -- source data and snippet functionality
     -- ordering affects search priority
-    sources = {
-        { name = "luasnip" },
-        { name = "nvim_lsp" },
-        { name = "nvim_lua" },
-        { name = "path" },
-        { name = "buffer", keyword_length = 5 },
-    },
+    sources = source_list,
     snippet = { expand = expand_snippets },
 
     -- UI
@@ -144,22 +162,17 @@ cmp.setup({
     confirm_opts = { behavior = cmp.ConfirmBehavior.Replace
                    , select = false },
 
-    -- aesthetics of completion menu
+    -- aesthetics of the completion menu
     formatting = {
         fields = { "kind", "abbr", "menu" }, -- left -> right order
-        -- TODO: we can pull the src-by-src stuff out of here, 
-        --       don't hard code the table etc.
         format = function(entry, vim_item)
-            -- kind: lookup icon from the table
+            -- maps / table lookups
+            vim_item.menu = menu_map[entry.source.name]
             vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-            -- This concatonates the icons with the name of the item kind
-            -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
-            -- source menu item: lookup from the following
-            vim_item.menu = ({ nvim_lsp = "[LSP]",
-                               nvim_lua = "[NVIM_LUA]",
-                               luasnip = "[Snippet]",
-                               path = "[Path]",
-                               buffer = "[Buffer]"})[entry.source.name]
+            -- concat kind icon w/ name
+            -- vim_item.kind = string.format('%s %s', 
+            --                               kind_icons[vim_item.kind],
+            --                               vim_item.kind)
             return vim_item
         end,
   },
