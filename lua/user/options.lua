@@ -41,7 +41,7 @@ vim.opt.smartindent = true                      -- make indenting smarter again
 vim.opt.autoindent = true
 
 -- wrap
-vim.opt.colorcolumn = "90"                      -- string for some reason
+vim.opt.colorcolumn = "100"                      -- string for some reason
 vim.opt.wrap = false                            -- display lines as one long line
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set backspace=indent,eol,start"
