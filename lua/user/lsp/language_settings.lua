@@ -8,12 +8,25 @@ end
 
 -- hush "undefined global: 'vim'"
 lsp.configure('lua_ls', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
+    settings = { Lua = {
+        diagnostics = {
+            globals = { 'vim' }
         }
-    }
+    }}
+})
+
+-- pylsp is actually a weird agglomeration of python diagnostics + style pkgs
+-- so you have to unwrap the lsp until you find the layer w/ the right pkg 
+-- helpful: <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
+lsp.configure('pylsp', {
+    settings = { pylsp = { plugins = {
+        pycodestyle = {
+            ignore = {
+                'E302', -- I'm allowed to use 1 blank line between function defs
+                'W391'  -- I'm allowed to put a blank line at the EOF
+            },
+            maxLineLength = 100 -- people so needlessly opinionated about this
+        }
+    }}}
 })
 
