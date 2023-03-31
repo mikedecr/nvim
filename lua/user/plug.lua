@@ -135,7 +135,8 @@ return packer.startup(function(use)
 
     -- text tricks
     use { "numToStr/Comment.nvim" }
-    use "ur4ltz/surround.nvim"
+    -- these could be a 'mini.nvim' pkgs?
+    use "kylechui/nvim-surround"
     use "windwp/nvim-autopairs"
     use "Vonr/align.nvim"
     -- TODO: decide if you need this or a different map for "persistent delete/yank"
