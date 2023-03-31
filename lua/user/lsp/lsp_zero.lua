@@ -1,6 +1,11 @@
 local lsp_ok, lsp = pcall(require, 'lsp-zero')
-if not lsp_ok then vim.notify('failed: lsp-zero'); return; end
+if not lsp_ok then
+    vim.notify('failed: lsp-zero')
+    return
+end
 
+
+-- //// main //// --
 
 lsp.preset("recommended")
 
@@ -14,11 +19,13 @@ lsp.set_preferences({
     }
 })
 
--- language-specific settings
+
+-- //// server settings //// --
+
 require("user.lsp.language_settings")
 
 
--- :::: LSP keymaps ::::
+-- //// LSP keymaps //// --
 
 -- helpful reference:
 -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
@@ -44,8 +51,10 @@ lsp.on_attach(
 )
 
 
+-- //// return ////
+
 lsp.setup()
 
--- this has to be after lsp.setup() for some reason
+-- must be after lsp.setup() for some reason
 vim.diagnostic.config({ virtual_text = true })
 

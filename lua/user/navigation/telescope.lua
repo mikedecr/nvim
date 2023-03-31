@@ -2,6 +2,7 @@
 -- :::: telescope ::::
 -- :::::::::::::::::::
 
+
 -- extensible fuzzy finder
 
 local tele_ok, telescope = pcall(require, "telescope")
@@ -10,7 +11,9 @@ if not tele_ok then vim.notify('failed: telescope'); return; end
 local actions_ok, actions = pcall(require, 'telescope.actions')
 if not actions_ok then vim.notify('failed: telescope.actions'); return; end
 
+
 -- :::: maps to open pickers ::::
+
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
@@ -26,14 +29,14 @@ telescope.setup {
 
     -- Visual display of the picker
     pickers = {
-        find_files =  { theme = "ivy" },
-        oldfiles =    { theme = "dropdown" },
-        projects =    { theme = "dropdown" },
-        live_grep =   { theme = "ivy" },
+        find_files  = { theme = "ivy" },
+        oldfiles    = { theme = "dropdown" },
+        projects    = { theme = "dropdown" },
+        live_grep   = { theme = "ivy" },
         git_commits = { theme = "ivy" }
     },
     prompt_prefix = "? > ",
-    selection_caret = "-> ",
+    selection_caret = ">> ",
     path_display = { "smart" },
 
     -- keymaps by mode
