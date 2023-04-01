@@ -2,6 +2,17 @@
 
 ![splash-page](https://pbs.twimg.com/media/FmuQu9PWIAEi4Iz?format=png&name=4096x4096)
 
+## Fresh install
+
+1. Ensure Packer is installed:
+
+    ```
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ```
+
+2. Telescope will want to use [ripgrep](https://github.com/BurntSushi/ripgrep#installation) and [fd](https://github.com/sharkdp/fd)
+
 
 ## other todos:
 - just a general audit of wth is going on:
