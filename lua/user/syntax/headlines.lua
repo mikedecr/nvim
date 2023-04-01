@@ -7,7 +7,7 @@ end
 
 headlines.setup {
     quarto = {
-        query = vim.treesitter.parse_query(
+        query = vim.treesitter.query.parse(
             "markdown",
             [[
                 (atx_heading [
