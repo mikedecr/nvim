@@ -11,6 +11,7 @@ local langs = {
     'fennel',
     'gitignore',
     'haskell',
+    'json',
     'julia',
     'latex',
     'lua',
