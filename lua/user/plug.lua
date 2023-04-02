@@ -160,9 +160,10 @@ return packer.startup(function(use)
 
     -- writing
     -- use "vim-pandoc/vim-pandoc" -- this is more about functionality and enhancements
-    use "vim-pandoc/vim-pandoc-syntax" -- syntax only
     use "lukas-reineke/headlines.nvim"
     use "quarto-dev/quarto-vim" -- this is supposedly also syntax only? I'm not sure what the effect is.
+    use "vim-pandoc/vim-pandoc" -- some language UI stuff?
+    use "vim-pandoc/vim-pandoc-syntax" -- syntax only
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
