@@ -1,8 +1,6 @@
 
-local syntax = 'user.syntax.'
-
-require(syntax .. 'headlines')
-require(syntax .. 'pandoc')
-require(syntax .. 'treesitter')
-require(syntax .. 'yati')
+require("user.syntax.headlines")
+require("user.syntax.pandoc")
+require("user.syntax.treesitter")
+require("user.syntax.yati")
 
