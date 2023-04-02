@@ -159,11 +159,42 @@ return packer.startup(function(use)
     use "JuliaEditorSupport/julia-vim" -- julia
 
     -- writing
-    -- use "vim-pandoc/vim-pandoc" -- this is more about functionality and enhancements
     use "lukas-reineke/headlines.nvim"
-    use "quarto-dev/quarto-vim" -- this is supposedly also syntax only? I'm not sure what the effect is.
     use "vim-pandoc/vim-pandoc" -- some language UI stuff?
     use "vim-pandoc/vim-pandoc-syntax" -- syntax only
+
+    -- (from quarto-nvim, but I'm not sure why or what this does, syntax only?)
+    -- use { 'quarto-dev/quarto-vim',
+    --     ft = 'quarto',
+    --     dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
+    --     -- note: needs additional vim highlighting enabled
+    --     -- for markdown in treesitter.lua
+    -- }
+
+    -- use {
+    --     'quarto-dev/quarto-nvim',
+    --     requires = {
+    --       'jmbuhr/otter.nvim',
+    --       'hrsh7th/nvim-cmp',
+    --       'neovim/nvim-lspconfig',
+    --       'nvim-treesitter/nvim-treesitter'
+    --     },
+    --     config = function()
+    --       require 'quarto'.setup {
+    --         lspFeatures = {
+    --           enabled = true,
+    --           languages = { 'r', 'python', 'julia' },
+    --           diagnostics = {
+    --             enabled = true,
+    --             triggers = { "BufWrite" }
+    --           },
+    --           completion = {
+    --             enabled = true
+    --           }
+    --         }
+    --       }
+    --     end
+    -- }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
