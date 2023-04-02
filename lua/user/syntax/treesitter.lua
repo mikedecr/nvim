@@ -25,19 +25,25 @@ local langs = {
 }
 
 configs.setup {
-    -- one of 'all' or a { list } of languages
-    ensure_installed = langs,
-    sync_install = false,     -- install languages synchronously (only applied to `ensure_installed`)
-    ignore_install = { "" },  -- List of parsers to ignore installing
+
+    ignore_install = { "" },   -- List of parsers to ignore installing
+    ensure_installed = langs,  -- one of 'all' or a { list } of languages
+    sync_install = false,      -- install "ensured" languages synchronously
+
     highlight = {
         enable = true,          -- false will disable the whole extension
         -- disable = { "" },       -- list of language that will be disabled
-        additional_vim_regex_highlighting = {'markdown'},  -- <- supports quarto
+        -- additional_vim_regex_highlighting = {'markdown'}, -- quarto-nvim says this is supposed 
+                                                             -- to help something, but it makes 
+                                                             -- quotes look really bad
+        additional_vim_regex_highlighting = false
     },
+
     indent = {
         enable = true,
         disable = { "yaml", "lua", "python", "r" } -- fallback is nvim-yati?
     },
+
     incremental_selection = {
         enable = true,
         keymaps = {
@@ -47,5 +53,6 @@ configs.setup {
           scope_incremental = "<S-CR>",
         },
     }
+
 }
 
