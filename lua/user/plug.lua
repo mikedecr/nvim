@@ -100,6 +100,7 @@ return packer.startup(function(use)
     --
     -- this isn't in lsp-zero...
     use "hrsh7th/cmp-cmdline"
+    use 'kdheepak/cmp-latex-symbols'
 
     -- -- ::: snippets
     -- use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion

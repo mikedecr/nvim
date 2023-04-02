@@ -131,6 +131,7 @@ local sources_menu = {
     {source = {name = 'path'}, menu = 'Path'},
     -- nvim's builtin Lua runtime API
     {source = {name = 'nvim_lua'}, menu = 'Nvim Lua'},
+    {source = {name = 'latex_symbols', option = { strategy = 0 }}, menu = 'TeX'},  -- latex -> UNICODE!!
 }
 
 -- list of cmp sources
