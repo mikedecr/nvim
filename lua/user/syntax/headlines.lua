@@ -5,8 +5,10 @@ if not ext_ok then
     return
 end
 
-headlines.setup {
-    quarto = {
+-- this controls how markdown files are visually decorated.
+-- The most obvious thing you'll notice is fenced code backgrounds
+-- default <https://github.com/lukas-reineke/headlines.nvim>
+local md_config = {
         query = vim.treesitter.query.parse(
             "markdown",
             [[
@@ -35,11 +37,10 @@ headlines.setup {
         quote_highlight = "Quote",
         quote_string = "┃",
         fat_headlines = false,
-        fat_headline_upper_string = "▃",
-        -- fat_headline_lower_string = "🬂",
-        fat_headline_lower_string = ""
-    },
-}
+    }
 
--- headlines.setup()
+headlines.setup {
+    quarto = md_config,
+    markdown = md_config
+}
 
