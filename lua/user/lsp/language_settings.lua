@@ -37,3 +37,8 @@ lsp.configure('pylsp', {
     }}}
 })
 
+
+-- :::: Markdown ::::
+lsp.configure('prosemd_lsp', {
+    filetypes = {'markdown', 'quarto'}
+})
