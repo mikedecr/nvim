@@ -1,9 +1,10 @@
 -- there are many fox themes
-local scheme = 'nordfox'
-
-local ok, msg = pcall(vim.cmd, 'colorscheme ' .. scheme)
+local ok, nightfox = pcall(require, 'nightfox')
 if not ok then
-    vim.notify(scheme .. ' fails because ' .. msg)
+    vim.notify("Failed: Nightfox themes")
     return
 end
+
+local scheme = "nordfox"
+vim.cmd("colorscheme " .. scheme)
 
