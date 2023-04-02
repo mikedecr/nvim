@@ -122,15 +122,15 @@ local kind_icons = {
 -- menu: String. How the source is annotated in the cmp dropdown menu.
 local sources_menu = {
     -- snippets
-    {source = {name = 'luasnip'}, menu = '(Luasnip)'},
+    {source = {name = 'luasnip'}, menu = 'Snip'},
     -- LSP
-    {source = {name = 'nvim_lsp'}, menu = '(Lsp)'},
+    {source = {name = 'nvim_lsp'}, menu = 'LSP'},
     -- items from the same buffer
-    {source = {name = 'buffer', keyword_length = 5}, menu = '(Buf)'},
+    {source = {name = 'buffer', keyword_length = 5}, menu = 'Buf'},
     -- filepaths?
-    {source = {name = 'path'}, menu = '(Path)'},
+    {source = {name = 'path'}, menu = 'Path'},
     -- nvim's builtin Lua runtime API
-    {source = {name = 'nvim_lua'}, menu = '(Nvim_Lua)'},
+    {source = {name = 'nvim_lua'}, menu = 'Nvim Lua'},
 }
 
 -- list of cmp sources
