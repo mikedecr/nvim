@@ -163,13 +163,13 @@ return packer.startup(function(use)
     use "vim-pandoc/vim-pandoc" -- some language UI stuff?
     use "vim-pandoc/vim-pandoc-syntax" -- syntax only
 
-    -- (from quarto-nvim, but I'm not sure why or what this does, syntax only?)
-    -- use { 'quarto-dev/quarto-vim',
-    --     ft = 'quarto',
-    --     dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
-    --     -- note: needs additional vim highlighting enabled
-    --     -- for markdown in treesitter.lua
-    -- }
+    -- additional syntax highlights only, but nvim officially has a "quarto" filetype
+    use { 'quarto-dev/quarto-vim',
+        ft = 'quarto',
+        dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
+        -- note: needs additional vim highlighting enabled
+        -- for markdown in treesitter.lua
+    }
 
     -- use {
     --     'quarto-dev/quarto-nvim',
