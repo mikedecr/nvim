@@ -135,7 +135,7 @@ return packer.startup(function(use)
     use "stevearc/oil.nvim"
 
     -- text tricks
-    use { "numToStr/Comment.nvim" }
+    use "numToStr/Comment.nvim"
     -- these could be a 'mini.nvim' pkgs?
     use "kylechui/nvim-surround"
     use "windwp/nvim-autopairs"
