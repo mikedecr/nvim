@@ -12,8 +12,8 @@ local repls = {
     sh     = {command = {"zsh"}},
     r      = {command = {"zsh"}},
     python = {command = {"zsh"}},
-    -- python = {command = {"ipython", "--no-autoindent"}},
-    quarto = {command = {"zsh"}}
+    quarto = {command = {"zsh"}},
+    scheme = {command = 'racket'}
 }
 
 -- keymaps for sending cmds and controlling REPL behavior
