@@ -97,7 +97,7 @@ return packer.startup(function(use)
       }
     -- LSP enhancements
     use "milisims/nvim-luaref"
-    --
+
     -- this isn't in lsp-zero...
     use "hrsh7th/cmp-cmdline"
     use 'kdheepak/cmp-latex-symbols'
@@ -154,7 +154,7 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
 
     -- ::: stats
-    use "hkupty/iron.nvim"            -- REPL
+    use "Vigemus/iron.nvim"            -- REPL
     use "eigenfoo/stan-vim"
     use "JuliaEditorSupport/julia-vim" -- julia
 
