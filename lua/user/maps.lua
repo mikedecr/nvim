@@ -51,8 +51,8 @@ vim.keymap.set("n", "<C-Q><C-p>", "<cmd>lprev<CR>zz")
 -- :::: INSERT MODE ::::
 -- :::::::::::::::::::::
 
-keymap("i", "<C-,>", "<-", opts)        -- assignment
-keymap("i", "<C-.>", "|>", opts)        -- |> pipe
+keymap("i", "<C-,>", "<-", opts)   -- assignment
+keymap("i", "<C-.>", "|>", opts)   -- |> pipe
 
 
 -- :::::::::::::::::::::
