@@ -9,11 +9,12 @@ end
 
 -- table of filetype: REPL binary
 local repls = {
-    sh     = {command = {"zsh"}},
-    r      = {command = {"zsh"}},
-    python = {command = {"zsh"}},
-    quarto = {command = {"zsh"}},
-    scheme = {command = 'racket'}
+    sh     = {command = "zsh"},
+    r      = {command = "zsh"},
+    python = {command = "zsh"},
+    quarto = {command = "zsh"},
+    scheme = {command = 'racket'},
+    rachet = {command = 'racket'}
 }
 
 -- keymaps for sending cmds and controlling REPL behavior
