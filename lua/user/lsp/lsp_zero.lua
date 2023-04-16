@@ -56,5 +56,5 @@ lsp.on_attach(
 lsp.setup()
 
 -- must be after lsp.setup() for some reason
-vim.diagnostic.config({ virtual_text = true })
+-- vim.diagnostic.config({ virtual_text = true })
 
