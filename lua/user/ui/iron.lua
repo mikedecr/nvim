@@ -1,18 +1,17 @@
 -- https://raw.githubusercontent.com/hkupty/iron.nvim/master/doc/iron.txt
-
 local iron_ok, iron = pcall(require, "iron.core")
 if not iron_ok then
     vim.notify("iron failed")
     return
 end
 
-
--- table of filetype: REPL binary
+-- table of {filetype: REPL cmd}
+local shell = 'zsh'  -- default all to zsh because I don't want to be locked in
 local repls = {
-    sh     = {command = "zsh"},
-    r      = {command = "zsh"},
-    python = {command = "zsh"},
-    quarto = {command = "zsh"},
+    sh     = {command = shell},
+    r      = {command = shell},
+    python = {command = shell},
+    quarto = {command = shell},
     scheme = {command = 'racket'},
     rachet = {command = 'racket'}
 }
