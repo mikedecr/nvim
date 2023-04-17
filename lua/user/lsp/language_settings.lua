@@ -29,12 +29,13 @@ lsp.configure('pylsp', {
             ignore = {
                 'E302',  -- I'm allowed to use 1 blank line between function defs
                 'E305',  -- I'm allowed to use 1 blank line between function defs
-                'W391',   -- I'm allowed to put a blank line at the EOF
-                'E127',   -- indent on line continuation (muting for Python S-expr)
-                'E251',   -- spaces around param/args
-                'E501'    -- I have my own ruler
+                'W391',  -- I'm allowed to put a blank line at the EOF
+                'E402',  -- sometimes we have to import things late
+                'E128',  -- indent on line continuation (muting for Python S-expr)
+                'E251',  -- spaces around param/args
+                'E501'   -- I have my own ruler thank you
             },
-            -- maxLineLength = 100 -- people so needlessly opinionated about this
+            -- maxLineLength = 100 -- people are so needlessly opinionated about this
         },
         flake8 = {
             ignore = {
