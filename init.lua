@@ -20,7 +20,7 @@ require "user.plug"          -- plugin manager
 
 require "user.lsp"          -- configuring built-in LSP
 require "user.visual"       -- appearance + aesthetics
-require "user.navigation"   -- from file to file
+require "user.nav"   -- from file to file
 require "user.ui"           -- text-base interfaces, what neovim does when you type
 require "user.syntax"       -- how neovim understands + decorates language syntax
 
