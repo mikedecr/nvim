@@ -97,6 +97,7 @@ return packer.startup(function(use)
       }
     -- LSP enhancements
     use "milisims/nvim-luaref"
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
     -- this isn't in lsp-zero...
     use "hrsh7th/cmp-cmdline"
