@@ -1,38 +1,32 @@
-local lsp_ok, lsp = pcall(require, 'lsp-zero')
-if not lsp_ok then
+local ok, zero = pcall(require, 'lsp-zero')
+if not ok then
     vim.notify('failed: lsp-zero')
     return
 end
 
 
--- //// main //// --
+-- //// lang config + presets //// --
 
-lsp.preset("recommended")
-
-lsp.set_preferences({
+zero.preset("recommended")
+zero.set_preferences({
     suggest_lsp_servers = true,
-    sign_icons = {
-        error = "X",
-        warning = "W",
-        hint = "?",
-        info = "i"
-    }
+    sign_icons = { error = "X",
+                   warning = "W",
+                   hint = "?",
+                   info = "i" }
 })
 
-
--- //// server settings //// --
-
+-- language overrides
 require("user.lsp.language_settings")
 
 
--- //// LSP keymaps //// --
-
+-- //// keymaps //// --
 -- helpful reference:
 -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
 
 local keymap = vim.keymap.set
-lsp.on_attach(
-    function(_, bufnr)
+zero.on_attach(
+    function(_, bufnr)  -- client, bufnr
         local opts = {buffer = bufnr, remap = false}
 
         keymap("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -53,8 +47,7 @@ lsp.on_attach(
 
 -- //// return ////
 
-lsp.setup()
-
--- must be after lsp.setup() for some reason
+zero.setup()
+-- must be after zero.setup() for some reason
 -- vim.diagnostic.config({ virtual_text = true })
 
