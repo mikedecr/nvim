@@ -14,8 +14,23 @@ keymap({"i", "s"}, "<c-h>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 
 -- :::: Other things ::::
 
-local ui_snip = "user.ui.snippets."
+require("user.ui.snippets.comments")
 
-require(ui_snip .. "comments")
-require(ui_snip .. "py") -- <-- scope to filetype!!!
+
+local make_snip = luasnip.parser.parse_snippet
+
+-- TODO: async def x(y) should be a variable :)
+luasnip.add_snippets(nil, {
+    python = {
+        make_snip("nf", "@NodeFactory\nasync def $1(ctx$2):\n$0", opts),
+        make_snip("async", "async def $1($2):\n$0", opts),
+        make_snip("mm", "@defmulti", opts),
+        make_snip("dm", "@defmethod($1, $2)\n$0", opts),
+        make_snip('rew', 'return await evaluate($0)', opts)
+    },
+    pandoc = {
+        make_snip('block', '```$1\n$0\n```', opts)
+    }
+})
+
 
