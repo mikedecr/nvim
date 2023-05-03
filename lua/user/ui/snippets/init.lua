@@ -26,7 +26,7 @@ luasnip.add_snippets(nil, {
         make_snip("async", "async def $1($2):\n$0", opts),
         make_snip("mm", "@defmulti", opts),
         make_snip("dm", "@defmethod($1, $2)\n$0", opts),
-        make_snip('rew', 'return await evaluate($0)', opts)
+        make_snip('rew', 'return await evaluate($0)', opts),
     },
     pandoc = {
         make_snip('block', '```$1\n$0\n```', opts)
