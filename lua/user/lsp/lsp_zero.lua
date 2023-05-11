@@ -7,13 +7,18 @@ end
 
 -- //// lang config + presets //// --
 
-zero.preset("recommended")
-zero.set_preferences({
+local lsp = zero.preset("recommended")
+
+-- TODO: unsure if this is working!!!
+lsp.set_preferences({
     suggest_lsp_servers = true,
-    sign_icons = { error = "X",
-                   warning = "W",
-                   hint = "?",
-                   info = "i" }
+})
+
+lsp.set_sign_icons({
+    error = "!",
+    warn = "?",
+    hint = "i",
+    info = "i"
 })
 
 -- language overrides
@@ -25,7 +30,7 @@ require("user.lsp.language_settings")
 -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
 
 local keymap = vim.keymap.set
-zero.on_attach(
+lsp.on_attach(
     function(_, bufnr)  -- client, bufnr
         local opts = {buffer = bufnr, remap = false}
 
@@ -47,7 +52,8 @@ zero.on_attach(
 
 -- //// return ////
 
-zero.setup()
+lsp.setup()
+
 -- must be after zero.setup() for some reason
--- vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_text = false })
 
