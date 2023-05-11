@@ -31,13 +31,13 @@ lspconfig.pylsp.setup{
     settings = { pylsp = { plugins = {
         pycodestyle = {
             ignore = {
-                'E303',  -- I'm allowed to use 1 blank line between function defs
-                'E305',  -- I'm allowed to use 1 blank line between function defs
+                'E302',  -- I'm allowed to use 1 blank line between function defs
+                'E303',  -- I'm allowed to put 2 blank lines where I want them
                 'W391',  -- I'm allowed to put a blank line at the EOF
-                'E402',  -- sometimes we have to import things late
+                -- 'E402',  -- sometimes we have to import things late
                 'E127',  -- indent on line continuation (muting for Python S-expr)
                 'E251',  -- spaces around param/args
-                'E501'   -- I have my own ruler thank you
+                -- 'E501'   -- I have my own ruler thank you
             },
             maxLineLength = 100 -- people are so needlessly opinionated about this
         }
