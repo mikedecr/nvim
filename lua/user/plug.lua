@@ -60,6 +60,8 @@ return packer.startup(function(use)
     use "tssm/fairyfloss.vim"
     use "EdenEast/nightfox.nvim"
     use "rose-pine/neovim"
+    use "echasnovski/mini.base16"
+    use "junegunn/seoul256.vim"
     -- zen mode
     use "folke/zen-mode.nvim"
 
