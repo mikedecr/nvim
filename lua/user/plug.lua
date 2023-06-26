@@ -59,7 +59,6 @@ return packer.startup(function(use)
     use "rakr/vim-two-firewatch"
     use "tssm/fairyfloss.vim"
     use "EdenEast/nightfox.nvim"
-    use "rose-pine/neovim"
     use "echasnovski/mini.base16"
     use "junegunn/seoul256.vim"
     -- zen mode
