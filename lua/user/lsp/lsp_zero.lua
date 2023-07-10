@@ -29,10 +29,11 @@ require("user.lsp.language_settings")
 -- helpful reference:
 -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
 
-local keymap = vim.keymap.set
 lsp.on_attach(
     function(_, bufnr)  -- client, bufnr
+
         local opts = {buffer = bufnr, remap = false}
+        local keymap = vim.keymap.set
 
         keymap("n", "gd", function() vim.lsp.buf.definition() end, opts)
         keymap("n", "gl", function() vim.diagnostic.open_float() end, opts)
