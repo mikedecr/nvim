@@ -98,6 +98,8 @@ return packer.startup(function(use)
       }
     -- LSP enhancements
     use "milisims/nvim-luaref"
+    use { "folke/trouble.nvim",
+          requires = { "nvim-tree/nvim-web-devicons" } }
 
     -- cmps not in lsp-zero...
     use "hrsh7th/cmp-cmdline"
