@@ -11,6 +11,7 @@ local repls = {
     sh     = {command = shell},
     r      = {command = shell},
     python = {command = shell},
+    julia = {command = shell},
     quarto = {command = shell},
     scheme = {command = 'racket'},
     rachet = {command = 'racket'}

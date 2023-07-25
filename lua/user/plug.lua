@@ -41,12 +41,12 @@ packer.init {
 
 return packer.startup(function(use)
 
-    -- ::: packer & basic lua
+    -- ::: packer & basic lua :::
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
 
-    -- ::: appearance / UI
+    -- ::: appearance / UI :::
     -- startup
     use { "goolord/alpha-nvim",
           requires = {'kyazdani42/nvim-web-devicons'} }
@@ -73,7 +73,7 @@ return packer.startup(function(use)
     use "ahmedkhalf/project.nvim"
 
 
-    -- ::: LSP-zero, combination LSP x Mason (installer) x nvim-cmp (completion engine)
+    -- ::: LSP, Installer, cmp :::
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = "v2.x",
@@ -98,13 +98,12 @@ return packer.startup(function(use)
       }
     -- LSP enhancements
     use "milisims/nvim-luaref"
-    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
-    -- this isn't in lsp-zero...
+    -- cmps not in lsp-zero...
     use "hrsh7th/cmp-cmdline"
     use 'kdheepak/cmp-latex-symbols'
 
-    -- -- ::: snippets
+    -- -- ::: snippets :::
     -- use "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
     --
     -- -- ::: completion
@@ -117,10 +116,6 @@ return packer.startup(function(use)
     --
     -- -- ::: LSP
     -- use "neovim/nvim-lspconfig"           -- enable LSP
-    -- use "williamboman/nvim-lsp-installer" -- simple lang server installer. NOTE: unsupported, get mason.nvim
-
-    -- keymap helpers
-    use { 'folke/which-key.nvim' }
 
     -- ::: tree sitter / syntax
     use { "nvim-treesitter/nvim-treesitter",
@@ -137,6 +132,9 @@ return packer.startup(function(use)
     use "stevearc/oil.nvim"
 
     -- text tricks
+    use { 'folke/which-key.nvim' }
+    use { "folke/todo-comments.nvim",
+          requires = { "nvim-lua/plenary.nvim" } }
     use "numToStr/Comment.nvim"
     -- many of these could be 'mini.nvim' pkgs?
     use 'echasnovski/mini.surround'
@@ -173,30 +171,7 @@ return packer.startup(function(use)
         -- for markdown in treesitter.lua
     }
 
-    -- use {
-    --     'quarto-dev/quarto-nvim',
-    --     requires = {
-    --       'jmbuhr/otter.nvim',
-    --       'hrsh7th/nvim-cmp',
-    --       'neovim/nvim-lspconfig',
-    --       'nvim-treesitter/nvim-treesitter'
-    --     },
-    --     config = function()
-    --       require 'quarto'.setup {
-    --         lspFeatures = {
-    --           enabled = true,
-    --           languages = { 'r', 'python', 'julia' },
-    --           diagnostics = {
-    --             enabled = true,
-    --             triggers = { "BufWrite" }
-    --           },
-    --           completion = {
-    --             enabled = true
-    --           }
-    --         }
-    --       }
-    --     end
-    -- }
+    -- use 'quarto-dev/quarto-nvim' (... other cfg options...)
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
