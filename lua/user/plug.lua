@@ -71,6 +71,8 @@ return packer.startup(function(use)
     use 'kwkarlwang/bufjump.nvim'
     use 'ThePrimeagen/harpoon'
     use "ahmedkhalf/project.nvim"
+    use { 'aymericbeaumet/vim-symlink', requires = { 'moll/vim-bbye' } }
+
 
 
     -- ::: LSP, Installer, cmp :::
