@@ -26,7 +26,9 @@ lspconfig.lua_ls.setup(
 
 -- pylsp is actually a weird agglomeration of python diagnostics + style pkgs
 -- so you have to unwrap the lsp until you find the layer w/ the right pkg 
--- helpful: <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
+-- helpful: 
+--   <https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp>
+--   <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
 lspconfig.pylsp.setup{
     settings = { pylsp = { plugins = {
         pycodestyle = {
