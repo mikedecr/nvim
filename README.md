@@ -11,6 +11,8 @@
      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
     ```
 
+    Once installed, you must run `:PackerSync` to install plugins.
+
 2. Telescope will want to use [ripgrep](https://github.com/BurntSushi/ripgrep#installation) and [fd](https://github.com/sharkdp/fd)
 
 3. Some language servers want Node.js: `brew install node`
