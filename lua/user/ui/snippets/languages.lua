@@ -14,7 +14,9 @@ luasnip.add_snippets(nil, {
     python = {
         -- DRW
         make_snip("cm", "import clue.maps as cm\n$0", opts),
+        make_snip("chl", "import clue.high_level as chl\n$0", opts),
         make_snip("cv", "import clue.views as cv\n$0", opts),
+        make_snip("vd", "import clue.visidata as vd\n$0", opts),
         make_snip("mex", "from clue.m_expr import evaluate$0", opts),
         make_snip("nf", "@NodeFactory\nasync def $1(ctx$2):\n$0", opts),
         make_snip("async", "async def $1($2):\n$0", opts),
