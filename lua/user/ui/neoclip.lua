@@ -6,6 +6,6 @@ neoclip.setup()
 local keymap = vim.api.nvim_set_keymap          -- fn to write a map
 local opts = {noremap = true, silent = true}    -- table of map options
 
-keymap('n', '<space>np', '<cmd>Telescope neoclip default<cr>', opts)
-keymap('i', '<C-h><C-p>', '<cmd>Telescope neoclip default<cr>', opts)
+keymap('n', '<space>p', '<cmd>Telescope neoclip default<cr>', opts)
+keymap('i', '<C-p>', '<cmd>Telescope neoclip default<cr>', opts)
 
