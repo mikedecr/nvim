@@ -26,7 +26,6 @@ lazy.setup({
     -- startup
     { "goolord/alpha-nvim", dependencies = {'nvim-tree/nvim-web-devicons'} },
     -- vim builtin mods
-    { "rcarriga/nvim-notify" },
     { 'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons', opt = true } },
     { "nvim-zh/colorful-winsep.nvim" },
     -- color schemes
