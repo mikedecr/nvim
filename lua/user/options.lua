@@ -7,9 +7,11 @@ vim.opt.pumheight = 10       -- pop up menu height
 
 -- file behavior
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
-vim.opt.backup = false                          -- creates a backup file
-vim.opt.writebackup = false                     -- if file is being edited by another program (or was written while editing with another program), it is not allowed to be edited
-vim.opt.swapfile = false                        -- creates a swapfile
+
+-- :h backup
+-- vim.opt.backup = false
+-- vim.opt.writebackup = false
+-- vim.opt.swapfile = false
 
 -- search
 vim.opt.ignorecase = true                       -- ignore case in search patterns
@@ -47,12 +49,11 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set backspace=indent,eol,start"
 
 -- scrolling / scanning
-vim.opt.scrolloff = 6
-vim.opt.sidescrolloff = 8
+-- vim.opt.scrolloff = 6
+-- vim.opt.sidescrolloff = 8
 
 -- interactivity
 vim.opt.mouse = "a"
--- vim.opt.paste = true 			  -- setting paste in config creates problems??
 vim.cmd "set clipboard+=unnamedplus"
 
 -- maps and completions
