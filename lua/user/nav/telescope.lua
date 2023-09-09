@@ -102,7 +102,8 @@ telescope.setup {
         oldfiles    = { theme = "ivy" },
         projects    = { theme = "ivy" },
         live_grep   = { theme = "ivy" },
-        git_commits = { theme = "ivy" }
+        git_commits = { theme = "ivy" },
+        colorscheme = {enable_preview = true}
     },
 
 }
