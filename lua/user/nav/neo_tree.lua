@@ -1,3 +1,9 @@
+-- :::::::::::::::::::
+-- :::: neo-tree :::::
+-- :::::::::::::::::::
+
+-- tree-based file explorer
+
 local ok, neo = pcall(require, "neo-tree")
 if not ok then vim.notify("failed: neo-tree"); return; end
 

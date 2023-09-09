@@ -2,7 +2,6 @@
 -- :::: telescope ::::
 -- :::::::::::::::::::
 
-
 -- extensible fuzzy finder
 
 local tele_ok, telescope = pcall(require, "telescope")
@@ -16,6 +15,7 @@ if not actions_ok then vim.notify('failed: telescope.actions'); return; end
 
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
+
 keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", opts)
 keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
