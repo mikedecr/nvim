@@ -17,7 +17,7 @@ lsp.set_preferences({
 lsp.set_sign_icons({
     error = "!",
     warn = "?",
-    hint = "i",
+    hint = "@",
     info = "i"
 })
 
