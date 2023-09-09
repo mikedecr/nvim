@@ -1,8 +1,5 @@
 local ok, zen = pcall(require, 'zen-mode')
-if not ok then
-    vim.notify('failed: zen-mode')
-    return
-end
+if not ok then vim.notify('failed: zen-mode') return end
 
 -- put this in a function for keymap to call
 local light_zen = function()
