@@ -1,3 +1,10 @@
+# Migration to Lazy:
+
+[Packer is unmaintained](https://github.com/wbthomason/packer.nvim).
+This configuration is migrating to Lazy for package management.
+See the [lazy](https://github.com/mikedecr/nvim/tree/lazy) branch of this repo, soon to become Default branch.
+
+
 # Neovim Configs
 
 ![splash-page](https://pbs.twimg.com/media/FmuQu9PWIAEi4Iz?format=png&name=4096x4096)
