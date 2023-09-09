@@ -14,7 +14,7 @@
 
 require "user.options"       -- basic vimrc stuff
 require "user.maps"          -- keymaps
-require "user.plug"          -- plugin manager
+require "user.lazy"
 
 -- remaining configs are sorted by their substantive / functional domain
 
