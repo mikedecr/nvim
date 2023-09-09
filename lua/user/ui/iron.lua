@@ -13,8 +13,10 @@ local repls = {
     python = {command = shell},
     julia = {command = shell},
     quarto = {command = shell},
+    rmd = {command = shell},
     scheme = {command = 'racket'},
-    rachet = {command = 'racket'}
+    racket = {command = 'racket'},
+    hy = {command = shell}
 }
 
 -- keymaps for sending cmds and controlling REPL behavior
