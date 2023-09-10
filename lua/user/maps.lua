@@ -23,6 +23,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts) -- this conflicts w/ LSP somehow...
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+keymap("n", "<C-p>", "<cmd>bp<cr>", opts)
+keymap("n", "<C-n>", "<cmd>bn<cr>", opts)
+
 -- J without moving cursor to EOL
 keymap("n", "J", "mzJ`z", opts)
 
