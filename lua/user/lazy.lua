@@ -95,10 +95,8 @@ lazy.setup({
     -- "neovim/nvim-lspconfig"           -- enable LSP
 
     -- ::: tree sitter / syntax
-    { "nvim-treesitter/nvim-treesitter",
-          build = ":TSUpdate" },
-    { "yioneko/nvim-yati",                           -- patch indentation
-          dependencies = { "nvim-treesitter/nvim-treesitter" }},
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    { "yioneko/nvim-yati", dependencies = { "nvim-treesitter/nvim-treesitter" }}, -- patch indents
 
     -- ::: sidebar / tree :::
     { 'nvim-tree/nvim-web-devicons' }, -- <-- is this just here bc it's a req for neo-tree?
