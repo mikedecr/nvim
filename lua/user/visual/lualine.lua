@@ -1,45 +1,5 @@
 local ll_ok, lualine = pcall(require, "lualine")
-
-if not ll_ok then
-    vim.notify('failed: lualine')
-    return
-end
-
-local hide_in_width = function()
-	return vim.fn.winwidth(0) > 80
-end
-
-local diagnostics = {
-	"diagnostics",
-	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = " ", warn = " " },
-	colored = false,
-	update_in_insert = false,
-	always_visible = false,
-}
-
-local diff = {
-	"diff",
-	colored = false,
-	symbols = { added = "(+)", modified = "(Δ)", removed = "(-)" }, -- changes diff symbols
-    cond = hide_in_width
-}
-
--- local mode = {
--- 	"mode",
--- 	fmt = function(str)
--- 		return "" .. str .. " "
--- 	end,
--- }
-
-
-local filetype = {
-	"filetype",
-    fmt = function(str) return '(' .. str .. ')' end,
-	icons_enabled = false,
-	icon = nil,
-}
+if not ll_ok then vim.notify('failed: lualine') return end
 
 local branch = {
 	"branch",
@@ -47,15 +7,41 @@ local branch = {
 	icon = "",
 }
 
-local location = {
-	"location",
-	padding = 0,
+-- closure trick, cond attribute expectes a function
+-- so we pass a param and return a fn that encloses the param
+local show_above_width = function(w)
+	return function()
+        return vim.fn.winwidth(0) > w
+    end
+end
+
+local diff = {
+	"diff",
+	colored = true,
+	symbols = { added = "+", modified = "∆", removed = "-" }, -- changes diff symbols
+    cond = show_above_width(60)
 }
 
+local diagnostics = {
+	"diagnostics",
+	sources = { "nvim_diagnostic" },
+	sections = { "error", "warn", "info" },
+	symbols = { error = "x", warn = "!" },
+	colored = true,
+	update_in_insert = false,
+	always_visible = false
+}
+
+local filetype = {
+	"filetype",
+    fmt = function(str) return '[' .. str .. ']' end,
+	icons_enabled = false,
+	icon = nil,
+}
 
 local spaces = function()
     local width = vim.api.nvim_buf_get_option(0, "shiftwidth")
-	return "tab = " .. width
+	return "\\t=" .. width
 end
 
 lualine.setup({
@@ -85,6 +71,13 @@ lualine.setup({
 		lualine_z = {},
 	},
 	tabline = {},
+    -- winbar = { 
+    --     lualine_a = {"filename"},
+    --     lualine_b = {diff},
+    -- },
+    -- inactive_winbar = {
+    --     lualine_a = {"filename"}
+    -- },
 	extensions = {},
 })
 
