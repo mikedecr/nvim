@@ -20,7 +20,7 @@ local branch = {
 local show_above_width = function(w)
 	return function()
         -- cur_width is local to the calling context
-        local current_window_width = vim.fn.widwidth(0)
+        local current_window_width = vim.fn.winwidth(0)
         return current_window_width > w
     end
 end
