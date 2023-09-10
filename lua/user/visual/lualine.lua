@@ -1,17 +1,27 @@
 local ll_ok, lualine = pcall(require, "lualine")
 if not ll_ok then vim.notify('failed: lualine') return end
 
+
+------------------------------------------------------------------
+--    lib: manage status line items as variables / functions    --
+------------------------------------------------------------------
+
+-- Lualine expects tables for each "slot" in the status line.
+-- This section pops out the table content into locals to separate out the noise.
+
 local branch = {
 	"branch",
 	icons_enabled = true,
 	icon = "",
 }
 
--- closure trick, cond attribute expectes a function
--- so we pass a param and return a fn that encloses the param
+-- closure trick: `cond` table entry expectes a function.
+-- but we want to pass an arg, so we enclose / curry it
 local show_above_width = function(w)
 	return function()
-        return vim.fn.winwidth(0) > w
+        -- cur_width is local to the calling context
+        local current_window_width = vim.fn.widwidth(0)
+        return current_window_width > w
     end
 end
 
@@ -39,10 +49,19 @@ local filetype = {
 	icon = nil,
 }
 
-local spaces = function()
+local tab_spaces = function()
     local width = vim.api.nvim_buf_get_option(0, "shiftwidth")
 	return "\\t=" .. width
 end
+
+
+-----------------------------------
+--    implement configuration    --
+-----------------------------------
+
+-- suppress MODE from the builtin cmd line.
+-- Custom statusline will show it.
+vim.opt.showmode = false
 
 lualine.setup({
 	options = {
@@ -59,7 +78,7 @@ lualine.setup({
 		lualine_c = { branch, diff },
 		lualine_d = {},
 		lualine_x = { diagnostics },
-        lualine_y = { filetype, spaces },
+        lualine_y = { filetype, tab_spaces },
 		lualine_z = { 'location' },
 	},
 	inactive_sections = {

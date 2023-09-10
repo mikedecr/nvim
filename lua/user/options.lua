@@ -2,7 +2,6 @@
 -- https://www.youtube.com/watch?v=hY5-Q6NxQgY&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=2
 
 -- menus, modes
-vim.opt.showmode = false     -- hide mode from cmd line (statusline has it)
 vim.opt.pumheight = 10       -- pop up menu height
 
 -- file behavior
