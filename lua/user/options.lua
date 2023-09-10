@@ -2,12 +2,12 @@
 -- https://www.youtube.com/watch?v=hY5-Q6NxQgY&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=2
 
 -- menus, modes
-vim.opt.pumheight = 10       -- pop up menu height
+vim.opt.pumheight = 10       -- pop up menu height (e.g. completion hover dropdown)
 
 -- file behavior
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
 
--- :h backup
+-- NOTE: see :h backup if this becomes frustrating...
 -- vim.opt.backup = false
 -- vim.opt.writebackup = false
 -- vim.opt.swapfile = false
@@ -42,22 +42,22 @@ vim.opt.smartindent = true                      -- make indenting smarter again
 vim.opt.autoindent = true
 
 -- wrap
-vim.opt.colorcolumn = "100"                      -- string for some reason
-vim.opt.wrap = false                            -- display lines as one long line
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.opt.colorcolumn = "100"                     -- string for some reason
+vim.opt.wrap = false                            -- if false: display lines as one long line
+vim.cmd "set whichwrap+=<,>,[,],h,l"            -- actions can traverse lines
 vim.cmd "set backspace=indent,eol,start"
 
--- scrolling / scanning
+-- max diff between cursor and window bounds
 -- vim.opt.scrolloff = 6
 -- vim.opt.sidescrolloff = 8
 
 -- interactivity
-vim.opt.mouse = "a"
-vim.cmd "set clipboard+=unnamedplus"
+vim.opt.mouse = "a"                    -- clocking is allowed
+vim.cmd "set clipboard+=unnamedplus"   -- can yank to system clipboard (fix ssh...)
 
 -- maps and completions
-vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
-vim.opt.updatetime = 300                        -- faster completion (4000ms default)
+vim.opt.timeoutlen = 1000   -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.updatetime = 300    -- faster completion (4000ms default)
 
 -- undo
 vim.opt.undodir = ".undo"

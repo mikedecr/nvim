@@ -22,35 +22,46 @@ lazy.setup({
     "nvim-lua/popup.nvim",    -- An implementation of the Popup API from vim in Neovim
     "nvim-lua/plenary.nvim",  -- Useful lua functions used by lots of plugins
 
-    -- ::: appearance / UI :::
+    ----------------------
+    --    appearance    --
+    ----------------------
+
     -- startup
-    { "goolord/alpha-nvim", dependencies = {'nvim-tree/nvim-web-devicons'} },
-    -- vim builtin mods
-    { 'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons', opt = true } },
-    { "nvim-zh/colorful-winsep.nvim" },
+    { "goolord/alpha-nvim",
+        dependencies = {'nvim-tree/nvim-web-devicons'} },
+
+    -- status line / window bounds
+    { 'nvim-lualine/lualine.nvim',
+        dependencies = {'nvim-tree/nvim-web-devicons', opt = true } },
+    -- { "nvim-zh/colorful-winsep.nvim" },
+
     -- color schemes
     "rakr/vim-two-firewatch",
     "tssm/fairyfloss.vim",
     "EdenEast/nightfox.nvim",
     "echasnovski/mini.base16",
     "junegunn/seoul256.vim",
+
     -- zen mode
     "folke/zen-mode.nvim",
 
-    -- ::: navigation :::
+    ----------------------
+    --    navigation    --
+    ----------------------
+
     -- fuzzy finder, buffer jumping, etc.
     "nvim-telescope/telescope.nvim",
     "nvim-telescope/telescope-media-files.nvim",
     'kwkarlwang/bufjump.nvim',
-    'ThePrimeagen/harpoon',
+    -- 'ThePrimeagen/harpoon',
     "ahmedkhalf/project.nvim",
     { 'aymericbeaumet/vim-symlink', dependencies = { 'moll/vim-bbye' } },
 
 
-
-    -- ::: LSP, Installer, cmp :::
-    {
-        'VonHeikemen/lsp-zero.nvim',
+    --------------------------------
+    --    LSP, completion, ...    --
+    --------------------------------
+    { 'VonHeikemen/lsp-zero.nvim',
         branch = "v2.x",
         dependencies = {
           -- LSP Support
@@ -70,7 +81,7 @@ lazy.setup({
           {'L3MON4D3/LuaSnip'},
           {'rafamadriz/friendly-snippets'},
         }
-      },
+    },
     -- LSP enhancements
     "milisims/nvim-luaref",
     { "folke/trouble.nvim",
@@ -82,7 +93,6 @@ lazy.setup({
 
     -- -- ::: snippets :::
     -- "L3MON4D3/LuaSnip"          -- snippet engine req'd for completion
-    --
     -- -- ::: completion
     -- "hrsh7th/nvim-cmp"          -- this is the completion brain
     -- "hrsh7th/cmp-buffer"        -- sources to complete:
@@ -90,26 +100,50 @@ lazy.setup({
     -- "saadparwaiz1/cmp_luasnip"  -- need a snippet engine to deliver completions
     -- "hrsh7th/cmp-nvim-lsp"
     -- "hrsh7th/cmp-nvim-lua"
-    --
     -- -- ::: LSP
     -- "neovim/nvim-lspconfig"           -- enable LSP
 
-    -- ::: tree sitter / syntax
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    { "yioneko/nvim-yati", dependencies = { "nvim-treesitter/nvim-treesitter" }}, -- patch indents
+    ------------------
+    --    syntax    --
+    ------------------
+    { "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate" },
+    { "yioneko/nvim-yati",
+        dependencies = { "nvim-treesitter/nvim-treesitter" }}, -- patch indents
+    -- stats
+    "eigenfoo/stan-vim",
+    "JuliaEditorSupport/julia-vim",
+    -- writing
+    "lukas-reineke/headlines.nvim",
+    "vim-pandoc/vim-pandoc", -- some language UI stuff?
+    "vim-pandoc/vim-pandoc-syntax", -- syntax only
+    -- syntax only, but nvim officially has a "quarto" filetype?
+    { 'quarto-dev/quarto-vim',
+        ft = 'quarto',
+        dependencies = { 'vim-pandoc/vim-pandoc-syntax' }
+        -- note: needs additional vim highlighting enabled
+        -- for markdown in treesitter.lua
+    },
 
-    -- ::: sidebar / tree :::
-    { 'nvim-tree/nvim-web-devicons' }, -- <-- is this just here bc it's a req for neo-tree?
+    ---------------------
+    --    file tree    --
+    ---------------------
     { "nvim-neo-tree/neo-tree.nvim",
           branch = "v2.x",
-          dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
+          dependencies = { 
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            "nvim-tree/nvim-web-devicons" -- suggested only
+        },
     },
     "stevearc/oil.nvim",
 
-    -- text tricks
-    { 'folke/which-key.nvim' },
-    { "folke/todo-comments.nvim",
-          dependencies = { "nvim-lua/plenary.nvim" } },
+
+    -----------------------
+    --    text tricks    --
+    -----------------------
+    'folke/which-key.nvim',
+    { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
     "numToStr/Comment.nvim",
     -- many of these could be 'mini.nvim' pkgs?
     'echasnovski/mini.surround',
@@ -117,34 +151,23 @@ lazy.setup({
     "Vonr/align.nvim",
     -- TODO: decide if you need this or a different map for "persistent delete/yank"
     { "AckslD/nvim-neoclip.lua",
-          dependencies = { 'nvim-telescope/telescope.nvim' }
-                       -- telescope or ibhagwan/fzf-lua
-                       -- for persistent history: {'kkharji/sqlite.lua', module = 'sqlite'},
+          dependencies = { 'nvim-telescope/telescope.nvim' } -- or ibhagwan/fzf-lua
+                           -- for persistent history, save to DB:
+                           -- {'kkharji/sqlite.lua', module = 'sqlite'},
     },
     -- better built-in terminal vim actions
-    { 'chomosuke/term-edit.nvim' },
+    'chomosuke/term-edit.nvim',
 
-    -- ::: git
+    ---------------
+    --    Git    --
+    ---------------
     "tpope/vim-fugitive",
     "lewis6991/gitsigns.nvim",
 
-    -- ::: stats
-    "Vigemus/iron.nvim",            -- REPL
-    "eigenfoo/stan-vim",
-    "JuliaEditorSupport/julia-vim",
-
-    -- writing
-    "lukas-reineke/headlines.nvim",
-    "vim-pandoc/vim-pandoc", -- some language UI stuff?
-    "vim-pandoc/vim-pandoc-syntax", -- syntax only
-
-    -- additional syntax highlights only, but nvim officially has a "quarto" filetype
-    { 'quarto-dev/quarto-vim',
-        ft = 'quarto',
-        dependencies = { 'vim-pandoc/vim-pandoc-syntax' }
-        -- note: needs additional vim highlighting enabled
-        -- for markdown in treesitter.lua
-    }
+    ----------------
+    --    REPL    --
+    ----------------
+    "Vigemus/iron.nvim"
 })
 
 

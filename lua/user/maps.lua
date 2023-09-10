@@ -38,23 +38,24 @@ keymap("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" 
 keymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
-
--- select rmd/qmd chunk
--- TODO maybe relocate to a writing / markdown config?
-keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
-keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
-
 -- quickfix list navigation
+-- TODO delete me?
 vim.keymap.set("n", "<C-Q><C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-Q><C-k>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<C-Q><C-n>", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<C-Q><C-p>", "<cmd>lprev<CR>zz")
+
+-- select rmd/qmd chunk
+-- TODO scope to filetype config
+keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
+keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
 
 
 -- :::::::::::::::::::::
 -- :::: INSERT MODE ::::
 -- :::::::::::::::::::::
 
+-- TODO scope to R filetype
 keymap("i", "<C-,>", "<-", opts)   -- assignment
 keymap("i", "<C-.>", "|>", opts)   -- |> pipe
 
@@ -75,5 +76,4 @@ keymap("v", "p", '"_dP', opts)
 
 -- Esc exits terminal's Insert mode
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
-
 
