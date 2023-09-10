@@ -20,7 +20,7 @@ vim.opt.hlsearch = false                         -- highlight all matches on pre
 vim.opt.incsearch = true
 
 -- buffers / splits
-vim.opt.winbar = "%f %m"                     -- filepath and modified indicator
+-- vim.opt.winbar = "%f %m"                     -- filepath and modified indicator
 vim.opt.title = true
 vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
 vim.opt.splitright = true                      -- force all vertical splits to go to the right of current window
