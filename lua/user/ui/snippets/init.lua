@@ -3,6 +3,7 @@ if not snip_ok then vim.notify("failed: luasnip"); return; end
 
 -- :::: Other things ::::
 
+require("user.ui.snippets.box_comment")
 require("user.ui.snippets.keymaps")
 require("user.ui.snippets.languages")
 require("user.ui.snippets.comments")
