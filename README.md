@@ -1,8 +1,11 @@
 # Migration to Lazy:
 
 [Packer is unmaintained](https://github.com/wbthomason/packer.nvim).
-This configuration is migrating to Lazy for package management.
-See the [lazy](https://github.com/mikedecr/nvim/tree/lazy) branch of this repo, soon to become Default branch.
+This configuration has migrated to Lazy.nvim for package management.
+
+- If proceeding with lazy, you should clean out your local packer install directory.
+  Failure to do so may cause conflicts (esp. with Treesitter, see [here](https://www.reddit.com/r/neovim/comments/128exsu/treesitter_always_compiling_parsers_on_startup/))
+- Alternatively: checkout a [legacy Packer branch](https://github.com/mikedecr/nvim/tree/legacy-packer) (unmaintained).
 
 
 # Neovim Configs
@@ -11,7 +14,7 @@ See the [lazy](https://github.com/mikedecr/nvim/tree/lazy) branch of this repo, 
 
 ## Fresh install
 
-1. Lazy (package manager) ought to bootstrap itself. Be warned.
+1. Lazy (package manager) will try to bootstrap itself. Be warned.
 2. Telescope will want to use [ripgrep](https://github.com/BurntSushi/ripgrep#installation) and [fd](https://github.com/sharkdp/fd)
 3. Some language servers want Node.js: `brew install node`
 
