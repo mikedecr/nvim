@@ -55,10 +55,8 @@ keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
 -- :::: INSERT MODE ::::
 -- :::::::::::::::::::::
 
--- TODO scope to R filetype
-keymap("i", "<C-,>", "<-", opts)   -- assignment
-keymap("i", "<C-.>", "|>", opts)   -- |> pipe
-
+-- There is where I'd put an insert mode remap...
+-- <https://imgflip.com/s/meme/This-Is-Where-Id-Put-My-Trophy-If-I-Had-One.jpg>
 
 -- :::::::::::::::::::::
 -- :::: VISUAL MODE ::::
