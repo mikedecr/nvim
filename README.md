@@ -21,26 +21,28 @@ This configuration has migrated to Lazy.nvim for package management.
 
 ## other todos:
 
-Consider eliminating / better documenting packages:
+Lazy plugins module organization:
 
-- [ ] harpoon
-- [ ] project
+- <https://github.com/folke/lazy.nvim#-structuring-your-plugins>
+- this organization lets us cache byte-compiled Lua code?
+
+
+Eliminate or better-document packages.
+
+- [/] harpoon
 - [ ] lzp_zero -> separate
 - [ ] headlines / pandoc
 - [ ] yati
 - [ ] neoclip
 - [ ] autopairs vs surround
-- [ ] winsep alternative
+- [/] winsep alternative
 - [ ] zen
 
 
 Learn about...
 
-- after/
-- ftplugin/
-- filetype-specific maps
 - language agnostic comment string
-    - how to handle "polymode" comments
+- how to handle "polymode" comments? (some TreeSitter extension)
 - System clipboard / yank over ssh:
     - yanking to system clipboard doesn't work over ssh
     - <https://github.com/fcpg/vim-osc52>
