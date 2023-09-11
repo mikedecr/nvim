@@ -99,10 +99,13 @@ telescope.setup {
 
     -- Visual display of the picker
     pickers = {
-        find_files  = { theme = "ivy" },
-        oldfiles    = { theme = "ivy" },
+        find_files  = { follow = true,     -- follow symlinks
+                        theme = "ivy" },
+        oldfiles    = { follow = true,
+                        theme = "ivy" },
         projects    = { theme = "ivy" },
-        live_grep   = { theme = "ivy" },
+        live_grep   = { follow = true,
+                        theme = "ivy" },
         git_commits = { theme = "ivy" },
         colorscheme = {enable_preview = true}
     },
