@@ -17,8 +17,8 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 keymap("n", "<space>tl", "<cmd>Telescope<cr>", opts)
-keymap("n", "<space>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
-keymap("n", "<space>fo", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", opts)
+keymap("n", "<space>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<space>fo", "<cmd>Telescope oldfiles<cr>", opts)
 keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<space>fg", "<cmd>Telescope git_commits<cr>", opts)
 
