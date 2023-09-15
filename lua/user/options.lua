@@ -8,9 +8,9 @@ vim.opt.pumheight = 10       -- pop up menu height (e.g. completion hover dropdo
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
 
 -- NOTE: see :h backup if this becomes frustrating...
--- vim.opt.backup = false
--- vim.opt.writebackup = false
--- vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 -- search
 vim.opt.ignorecase = true                       -- ignore case in search patterns
