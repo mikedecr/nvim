@@ -13,7 +13,17 @@ neo.setup({
                             nowait = true },
     },
     filesystem = {
-        window = { width = 30 }
+        window = { 
+            width = 30,
+            mappings = {
+                ["m"] = {
+                    "move",
+                    config = {
+                        show_path = "absolute"
+                    }
+                }
+            }
+        },
     }
 })
 
