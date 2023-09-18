@@ -29,13 +29,11 @@ Lazy plugins module organization:
 
 Eliminate or better-document packages.
 
-- [/] harpoon
+- [ ] file tree: use either Oil or *Tree, not both?
 - [ ] lzp_zero -> separate
 - [ ] headlines / pandoc
 - [ ] yati
 - [ ] neoclip
-- [ ] autopairs vs surround
-- [/] winsep alternative
 - [ ] zen
 
 
