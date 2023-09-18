@@ -16,6 +16,8 @@ lsp.set_sign_icons({
     info = "i"
 })
 
+-- lsp.set_lsp_keymaps = {preserve_mappings = true}
+
 -- language overrides
 require("user.lsp.language_settings")
 
