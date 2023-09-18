@@ -124,7 +124,7 @@ lazy.setup({
         -- note: needs additional vim highlighting enabled
         -- for markdown in treesitter.lua
     },
-
+    'hylang/vim-hy',
     ---------------------
     --    file tree    --
     ---------------------
