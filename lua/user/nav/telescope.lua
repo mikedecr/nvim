@@ -21,6 +21,7 @@ keymap("n", "<space>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<space>fo", "<cmd>Telescope oldfiles<cr>", opts)
 keymap("n", "<space>fl", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<space>fg", "<cmd>Telescope git_commits<cr>", opts)
+keymap("n", "<space>fb", "<cmd>Telescope buffers<cr>", opts)
 
 
 -- :::: behavior of pickers ::::
