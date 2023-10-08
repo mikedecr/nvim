@@ -14,6 +14,8 @@ local repls = {
     julia = {command = shell},
     quarto = {command = shell},
     rmd = {command = shell},
+    md = {command = shell},
+    pandoc = {command = shell},
     scheme = {command = 'racket'},
     racket = {command = 'racket'},
     hy = {command = shell}
