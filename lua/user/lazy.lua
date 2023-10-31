@@ -125,6 +125,7 @@ lazy.setup({
         -- for markdown in treesitter.lua
     },
     "hylang/vim-hy",
+    "gpanders/nvim-parinfer",
 
     ---------------------
     --    file tree    --
