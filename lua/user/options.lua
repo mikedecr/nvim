@@ -54,16 +54,20 @@ vim.cmd "set backspace=indent,eol,start"
 -- interactivity
 vim.opt.mouse = "a"                    -- clocking is allowed
 vim.cmd "set clipboard+=unnamedplus"   -- can yank to system clipboard (fix ssh...)
-vim.g.clipboard = {
-  name = 'OSC 52',
-  copy = {
-    ['+'] = require('vim.ui.clipboard.osc52').copy,
-    ['*'] = require('vim.ui.clipboard.osc52').copy,
-  },
-  paste = {
-    ['+'] = require('vim.ui.clipboard.osc52').paste,
-    ['*'] = require('vim.ui.clipboard.osc52').paste,
-  },
+vim.g.clipboard = {                    -- yank to local clipboard from remote nvim over ssh
+    name = 'OSC 52',
+    copy = {
+        ['+'] = require('vim.ui.clipboard.osc52').copy,
+        ['*'] = require('vim.ui.clipboard.osc52').copy,
+    },
+    -- although we enable pasting from clipboard in neovim, we prevent in kitty.conf
+    -- this is because (1) paste needed to be enabled to get the yank behavior I wanted but
+    -- (2) it's more secure to prevent reading from system clipboard
+    -- We could maybe investigate the security given the VPN
+    paste = {
+        ['+'] = require('vim.ui.clipboard.osc52').paste,
+        ['*'] = require('vim.ui.clipboard.osc52').paste,
+    },
 }
 
 -- maps and completions
