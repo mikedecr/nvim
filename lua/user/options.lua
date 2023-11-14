@@ -54,6 +54,17 @@ vim.cmd "set backspace=indent,eol,start"
 -- interactivity
 vim.opt.mouse = "a"                    -- clocking is allowed
 vim.cmd "set clipboard+=unnamedplus"   -- can yank to system clipboard (fix ssh...)
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy,
+    ['*'] = require('vim.ui.clipboard.osc52').copy,
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste,
+    ['*'] = require('vim.ui.clipboard.osc52').paste,
+  },
+}
 
 -- maps and completions
 vim.opt.timeoutlen = 1000   -- time to wait for a mapped sequence to complete (in milliseconds)
