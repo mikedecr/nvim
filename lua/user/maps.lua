@@ -8,12 +8,19 @@ local keymap = vim.keymap.set
 -- table of map options
 local opts = { noremap = true, silent = true }
 
-
 -- :::::::::::::::::::::
 -- :::: NORMAL MODE ::::
 -- :::::::::::::::::::::
 
--- easy save
+-- yank to clipboard
+-- there is a delicate setup here.
+-- This map lets me write to system (which can be fwd'd over ssh)
+-- but kitty term will ask before reading from system clipboard
+-- not a problem...I can manually paste text w/ OS keymap
+keymap("n", "<Space>y", '"+y', opts)
+keymap("v", "<Space>y", '"+y', opts)
+
+-- easy file write
 keymap("n", "<Space>w", "<cmd>w<cr>", opts)
 keymap("n", "<Space>q", "<cmd>q<cr>", opts)
 
