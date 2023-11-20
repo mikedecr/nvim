@@ -14,6 +14,7 @@
   "fairyfloss.vim": { "branch": "master", "commit": "234875a9dafac9a86f0448ddcdb9eb8c604a8144" },
   "friendly-snippets": { "branch": "main", "commit": "43727c2ff84240e55d4069ec3e6158d74cb534b6" },
   "gitsigns.nvim": { "branch": "main", "commit": "af0f583cd35286dd6f0e3ed52622728703237e50" },
+  "harpoon": { "branch": "master", "commit": "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" },
   "headlines.nvim": { "branch": "master", "commit": "e3d7bfdf40e41a020d966d35f8b48d75b90367d2" },
   "iron.nvim": { "branch": "master", "commit": "7f876ee3e1f4ea1e5284b1b697cdad5b256e8046" },
   "julia-vim": { "branch": "master", "commit": "69dd4b076b9b4f863647b424f856bbe6d5ba0cd4" },

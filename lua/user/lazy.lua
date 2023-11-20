@@ -54,7 +54,7 @@ lazy.setup({
     "nvim-telescope/telescope.nvim",
     "nvim-telescope/telescope-media-files.nvim",
     'kwkarlwang/bufjump.nvim',
-    -- 'ThePrimeagen/harpoon',
+    'ThePrimeagen/harpoon',
     "ahmedkhalf/project.nvim",
     { 'aymericbeaumet/vim-symlink', dependencies = { 'moll/vim-bbye' } },
 
