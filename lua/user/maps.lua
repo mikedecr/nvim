@@ -24,6 +24,9 @@ keymap("v", "<Space>y", '"+y', opts)
 keymap("n", "<Space>w", "<cmd>w<cr>", opts)
 keymap("n", "<Space>q", "<cmd>q<cr>", opts)
 
+-- delete line contents, stay in normal
+keymap("n", "dc", "d$", opts)
+
 -- Better buffer split navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
