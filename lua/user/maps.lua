@@ -28,10 +28,11 @@ keymap("n", "<Space>q", "<cmd>q<cr>", opts)
 keymap("n", "dc", "d$", opts)
 
 -- Better buffer split navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts) -- this conflicts w/ LSP somehow...
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- s+ or t+ ?
+keymap("n", "sh", "<C-w>h", opts)
+keymap("n", "sj", "<C-w>j", opts)
+keymap("n", "sk", "<C-w>k", opts) -- C-k would conflict w/ LSP somehow...
+keymap("n", "sl", "<C-w>l", opts)
 
 -- J without moving cursor to EOL
 keymap("n", "J", "mzJ`z", opts)
