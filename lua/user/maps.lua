@@ -34,7 +34,7 @@ keymap("n", "sj", "<C-w>j", opts)
 keymap("n", "sk", "<C-w>k", opts) -- C-k would conflict w/ LSP somehow...
 keymap("n", "sl", "<C-w>l", opts)
 
--- tab things
+-- tab creation / navigation
 keymap("n", "tt", "<cmd>tabnew<enter><cmd>terminal<enter>", opts)
 keymap("n", "tn", "<cmd>tabnew<enter>", opts)
 keymap("n", "th", "<cmd>tabprevious<enter>", opts)
