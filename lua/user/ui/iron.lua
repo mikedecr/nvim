@@ -62,5 +62,6 @@ local opts = {noremap = true, silent = true}    -- table of map options
 
 keymap('n', '<space>irh', '<cmd>IronReplHere<cr>', opts)
 keymap('n', '<space>irl', '<cmd>spl<cr><cmd>IronReplHere<cr>', opts)
+keymap('n', '<space>irv', '<cmd>vspl<cr><C-w>h<cmd>IronReplHere<cr>', opts)
 keymap('n', '<space>irs', '<cmd>IronRestart<cr>', opts)
 
