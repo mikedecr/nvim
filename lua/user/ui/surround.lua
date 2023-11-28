@@ -4,5 +4,9 @@ if not ok then
     return
 end
 
-surround.setup()
+surround.setup({
+    mappings = {
+        highlight = 'ss' -- prevent conflict w/ goto-split-left
+    }
+})
 
