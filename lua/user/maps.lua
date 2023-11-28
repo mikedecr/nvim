@@ -34,6 +34,13 @@ keymap("n", "sj", "<C-w>j", opts)
 keymap("n", "sk", "<C-w>k", opts) -- C-k would conflict w/ LSP somehow...
 keymap("n", "sl", "<C-w>l", opts)
 
+-- tab things
+keymap("n", "tt", "<cmd>tabnew<enter><cmd>terminal<enter>", opts)
+keymap("n", "tn", "<cmd>tabnew<enter>", opts)
+keymap("n", "th", "<cmd>tabprevious<enter>", opts)
+keymap("n", "tl", "<cmd>tabnext<enter>", opts)
+keymap("n", "tq", "<cmd>tabclose<enter>", opts)
+
 -- J without moving cursor to EOL
 keymap("n", "J", "mzJ`z", opts)
 
