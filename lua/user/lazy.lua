@@ -210,7 +210,18 @@ lazy.setup(
         ----------------
         --    REPL    --
         ----------------
-        "Vigemus/iron.nvim"
+        "Vigemus/iron.nvim",
+
+        ----------------
+        --    misc    --
+        ----------------
+        {
+            "ellisonleao/carbon-now.nvim",
+            lazy = true,
+            cmd = "CarbonNow",
+            ---@param opts cn.ConfigSchema
+            -- opts = { [[ your custom config here ]] }
+        }
     },
     {
         git = { filter = git_version_at_least(2, 19) }
