@@ -68,6 +68,8 @@ vim.g.clipboard = {                    -- yank to local clipboard from remote nv
 -- maps and completions
 vim.opt.timeoutlen = 1000   -- miliseconds to wait for a mapped sequence to complete
 vim.opt.updatetime = 300    -- faster completion (4000ms default)
+vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
+
 
 -- undo
 vim.opt.undodir = ".undo"
