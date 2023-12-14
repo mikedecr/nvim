@@ -15,7 +15,7 @@ carbon.setup({
         -- font_size = "18px",
         -- line_height = "133%",
         -- line_numbers = true,
-        theme = "nord",
+        theme = "panda",
         titlebar = "(via carbon-now.nvim)",
         watermark = false,
         width = "680",
