@@ -83,9 +83,7 @@ lazy.setup(
         "echasnovski/mini.base16",
         "junegunn/seoul256.vim",
         { "craftzdog/solarized-osaka.nvim",
-          lazy = false,
-          priority = 1000,
-          opts = {} },
+          lazy = false },
 
         -- zen mode
         "folke/zen-mode.nvim",
