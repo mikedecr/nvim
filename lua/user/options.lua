@@ -1,6 +1,11 @@
 -- Neovim from Scratch:
 -- https://www.youtube.com/watch?v=hY5-Q6NxQgY&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=2
 
+-- I don't use editorconfig
+-- putting this up top so I can be reminded in case this ever changes
+-- might (maybe) prevent issues w/ vim-symlink: <https://github.com/aymericbeaumet/vim-symlink/issues/14>
+vim.g.editorconfig = false
+
 -- menus, modes
 vim.opt.pumheight = 10       -- pop up menu height (e.g. completion hover dropdown)
 
@@ -78,4 +83,5 @@ vim.opt.undofile = true
 -- colors, fonts
 vim.cmd "highlight Comment cterm=italic gui=italic"
 vim.opt.termguicolors = true
+
 
