@@ -21,7 +21,9 @@ neo.setup({
                     config = {
                         show_path = "absolute"
                     }
-                }
+                },
+                ["/"] = {},  -- this should work like normal vim
+                ["s"] = {}   -- this used to do some split nonsense
             }
         },
     }
