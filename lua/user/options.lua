@@ -73,6 +73,15 @@ vim.g.clipboard = {                    -- yank to local clipboard from remote nv
 -- maps and completions
 vim.opt.timeoutlen = 1000   -- miliseconds to wait for a mapped sequence to complete
 vim.opt.updatetime = 300    -- faster completion (4000ms default)
+--[[ 
+    Disable certain auto-comment behaviors:
+    r       Automatically insert the current comment leader after hitting
+            -- <Enter> in Insert mode.
+    c       Auto-wrap comments using textwidth, inserting the current comment
+            leader automatically.
+    o       Automatically insert the current comment leader after hitting 'o' or 
+            'O' in Normal mode.
+]]
 vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
 
 
