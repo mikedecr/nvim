@@ -25,7 +25,7 @@ keymap("n", "<Space>w", "<cmd>w<cr>", opts)
 keymap("n", "<Space>q", "<cmd>q<cr>", opts)
 
 -- delete line contents, stay in normal
-keymap("n", "dc", "d$", opts)
+keymap("n", "dc", "cc<Esc>", opts)
 
 -- Better buffer split navigation
 -- s+ or t+ ?
