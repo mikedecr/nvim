@@ -153,20 +153,24 @@ lazy.setup(
             build = ":TSUpdate" },
         { "yioneko/nvim-yati",
             dependencies = { "nvim-treesitter/nvim-treesitter" }}, -- patch indents
+
         -- stats
         "eigenfoo/stan-vim",
         "JuliaEditorSupport/julia-vim",
+
         -- writing
-        "lukas-reineke/headlines.nvim",
-        "vim-pandoc/vim-pandoc", -- some language UI stuff?
-        "vim-pandoc/vim-pandoc-syntax", -- syntax only
+        -- "lukas-reineke/headlines.nvim",
+        -- "vim-pandoc/vim-pandoc", -- some language UI stuff?
+        -- "vim-pandoc/vim-pandoc-syntax", -- syntax only
         -- syntax only, but nvim officially has a "quarto" filetype?
-        { 'quarto-dev/quarto-vim',
-            ft = 'quarto',
-            dependencies = { 'vim-pandoc/vim-pandoc-syntax' }
-            -- note: needs additional vim highlighting enabled
-            -- for markdown in treesitter.lua
-        },
+        -- { 'quarto-dev/quarto-vim',
+        --     ft = 'quarto',
+        --     dependencies = { 'vim-pandoc/vim-pandoc-syntax' }
+        --     -- note: needs additional vim highlighting enabled
+        --     -- for markdown in treesitter.lua
+        -- },
+
+        -- lisps
         "hylang/vim-hy",
         "gpanders/nvim-parinfer",
 
