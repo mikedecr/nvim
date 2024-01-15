@@ -9,4 +9,5 @@ require("user.ui.oil")
 require("user.ui.surround")
 require("user.ui.term_edit")
 require("user.ui.whichkey")
+require("user.ui.quarto")
 
