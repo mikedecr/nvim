@@ -125,6 +125,8 @@ local sources_menu = {
     {source = {name = 'luasnip'}, menu = 'Snip'},
     -- LSP
     {source = {name = 'nvim_lsp'}, menu = 'LSP'},
+    -- otter
+    {source = {name = 'otter'}, menu = 'OtterLSP'},
     -- items from the same buffer
     {source = {name = 'buffer', keyword_length = 5}, menu = 'Buf'},
     -- filepaths?
