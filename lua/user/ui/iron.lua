@@ -12,13 +12,16 @@ local repls = {
     r      = {command = shell},
     python = {command = shell},
     julia = {command = shell},
-    quarto = {command = shell},
-    rmd = {command = shell},
-    md = {command = shell},
-    pandoc = {command = shell},
     scheme = {command = 'racket'},
     racket = {command = 'racket'},
     hy = {command = shell}
+    -- we don't want markdown types to detect their own repl.
+    -- we only want them to read code chunk languages.
+    -- so we mute these filetypes here
+    -- quarto = {command = shell},
+    -- rmd = {command = shell},
+    -- md = {command = shell},
+    -- pandoc = {command = shell},
 }
 
 -- keymaps for sending cmds and controlling REPL behavior
