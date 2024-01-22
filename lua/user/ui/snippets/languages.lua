@@ -10,6 +10,11 @@ end
 local make_snip = luasnip.parser.parse_snippet
 local opts = { noremap = true, silent = true }
 
+local markdown_snips = {
+    make_snip('block', '```$1\n$0\n```', opts),
+    make_snip('box', '- [ ] $0')
+}
+
 luasnip.add_snippets(nil, {
     python = {
         -- DRW
@@ -30,10 +35,8 @@ luasnip.add_snippets(nil, {
         make_snip('md', 'users.mdecrescenzo.$0'),
         make_snip('mdm', 'users.mdecrescenzo.maps$0')
     },
-    pandoc = {
-        make_snip('block', '```$1\n$0\n```', opts),
-        make_snip('box', '- [ ] $0')
-    }
+    pandoc = markdown_snips,
+    quarto = markdown_snips
 })
 
 
