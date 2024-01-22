@@ -80,6 +80,7 @@ lazy.setup(
         "rakr/vim-two-firewatch",
         "tssm/fairyfloss.vim",
         "EdenEast/nightfox.nvim",
+        { "kaplanz/deku.nvim", dependencies = "rktjmp/lush.nvim"},
         "echasnovski/mini.base16",
         "junegunn/seoul256.vim",
         { "craftzdog/solarized-osaka.nvim",
