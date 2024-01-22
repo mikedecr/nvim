@@ -41,6 +41,7 @@ local md_config = {
 
 headlines.setup {
     quarto = md_config,
-    markdown = md_config
+    markdown = md_config,
+    pandoc = md_config
 }
 
