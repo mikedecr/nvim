@@ -18,10 +18,11 @@ vim.opt.writebackup = false
 vim.opt.swapfile = false
 
 -- search
-vim.opt.ignorecase = true                       -- ignore case in search patterns
-vim.opt.smartcase = true                        -- smart case
-vim.opt.hlsearch = false                         -- highlight all matches on previous search pattern
-vim.opt.incsearch = true
+vim.opt.ignorecase = true           -- ignore case in search patterns
+vim.opt.smartcase = true            -- smart case
+vim.opt.wildignorecase = true       -- ignore case when wildcard-completing files and paths
+vim.opt.hlsearch = false            -- highlight all matches on previous search pattern
+vim.opt.incsearch = true            -- search while writing pattern string
 
 -- buffers / splits
 vim.opt.winbar = "%f %m"                     -- filepath and modified indicator
