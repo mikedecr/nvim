@@ -161,8 +161,8 @@ lazy.setup(
 
         -- writing
         "lukas-reineke/headlines.nvim",
-        -- "vim-pandoc/vim-pandoc", -- some language UI stuff?
-        -- "vim-pandoc/vim-pandoc-syntax", -- syntax only
+        "vim-pandoc/vim-pandoc", -- some language UI stuff?
+        "vim-pandoc/vim-pandoc-syntax", -- syntax only
         -- syntax only, but nvim officially has a "quarto" filetype?
         -- { 'quarto-dev/quarto-vim',
         --     ft = 'quarto',
@@ -210,7 +210,9 @@ lazy.setup(
         --    REPL    --
         ----------------
         "Vigemus/iron.nvim",
-        { "quarto-dev/quarto-nvim",
+        -- { "quarto-dev/quarto-nvim",
+        { "mikedecr/quarto-nvim",
+            branch = "feature/iron-repl",
             dependencies = {'jmbuhr/otter.nvim',
                             'hrsh7th/nvim-cmp',
                             'neovim/nvim-lspconfig',
