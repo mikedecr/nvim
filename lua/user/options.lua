@@ -58,7 +58,7 @@ vim.cmd "set backspace=indent,eol,start"
 -- vim.opt.sidescrolloff = 8
 
 -- interactivity
-vim.opt.mouse = "a"                    -- clocking is allowed
+vim.opt.mouse = "a"                    -- clicking is allowed
 vim.g.clipboard = {                    -- yank to local clipboard from remote nvim over ssh
     name = 'OSC 52',
     copy = {
