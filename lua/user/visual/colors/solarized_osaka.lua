@@ -38,5 +38,3 @@ solar.setup({
   -- on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd("colorscheme solarized-osaka")
-
