@@ -12,15 +12,17 @@ local opts = { noremap = true, silent = true }
 
 local markdown_snips = {
     make_snip('block', '```$1\n$0\n```', opts),
-    make_snip('box', '- [ ] $0')
+    make_snip('py', '```{python}\n$0\n```', opts),
+    make_snip('yp', '```\n\n```{python}\n$0', opts),
+    make_snip('box', '- [ ] $0'),
 }
 
 luasnip.add_snippets(nil, {
     python = {
         -- DRW
         make_snip("async", "async def $1($2):\n$0", opts),
-        make_snip("mm", "@defmulti", opts),
-        make_snip("dm", "@defmethod($1, $2)\n$0", opts),
+        make_snip("mm", "@defmulti\n$1def $2($3):\n$0", opts),
+        make_snip("dm", "@defmethod($1, $2)\n$3def _$1($4):\n$0", opts),
         make_snip("nf", "@NodeFactory\nasync def $1(ctx$2):\n$0", opts),
         make_snip("mnf", "@MergedNodeFactory\n$0", opts),
         make_snip("giv", "gather_into_view", opts),
