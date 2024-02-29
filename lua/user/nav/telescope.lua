@@ -108,7 +108,7 @@ telescope.setup {
         live_grep   = { follow = true,
                         theme = "ivy" },
         git_commits = { theme = "ivy" },
-        colorscheme = {enable_preview = true}
+        colorscheme = { enable_preview = true }
     },
 
 }
