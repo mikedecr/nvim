@@ -147,6 +147,11 @@ lazy.setup(
         -- -- ::: LSP
         -- "neovim/nvim-lspconfig"           -- enable LSP
 
+        -------------------------------------------
+        --    here be artificial intelligence    --
+        -------------------------------------------
+        { "Exafunction/codeium.vim", version = "1.6.39" },
+
         ------------------
         --    syntax    --
         ------------------
@@ -178,14 +183,6 @@ lazy.setup(
         ---------------------
         --    file tree    --
         ---------------------
-        { "nvim-neo-tree/neo-tree.nvim",
-              branch = "v2.x",
-              dependencies = { 
-                "nvim-lua/plenary.nvim",
-                "MunifTanjim/nui.nvim",
-                "nvim-tree/nvim-web-devicons" -- suggested only
-            },
-        },
         "stevearc/oil.nvim",
 
 
