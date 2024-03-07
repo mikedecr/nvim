@@ -147,11 +147,6 @@ lazy.setup(
         -- -- ::: LSP
         -- "neovim/nvim-lspconfig"           -- enable LSP
 
-        -------------------------------------------
-        --    here be artificial intelligence    --
-        -------------------------------------------
-        { "Exafunction/codeium.vim", version = "1.6.39" },
-
         ------------------
         --    syntax    --
         ------------------
