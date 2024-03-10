@@ -59,17 +59,17 @@ vim.cmd "set backspace=indent,eol,start"
 
 -- interactivity
 vim.opt.mouse = "a"                    -- clicking is allowed
-vim.g.clipboard = {                    -- yank to local clipboard from remote nvim over ssh
-    name = 'OSC 52',
-    copy = {
-        ['+'] = require('vim.ui.clipboard.osc52').copy,
-        ['*'] = require('vim.ui.clipboard.osc52').copy,
-    },
-    paste = {
-        ['+'] = require('vim.ui.clipboard.osc52').paste,
-        ['*'] = require('vim.ui.clipboard.osc52').paste,
-    },
-}
+-- vim.g.clipboard = {                    -- yank to local clipboard from remote nvim over ssh
+--     name = 'OSC 52',
+--     copy = {
+--         ['+'] = require('vim.ui.clipboard.osc52').copy,
+--         ['*'] = require('vim.ui.clipboard.osc52').copy,
+--     },
+--     paste = {
+--         ['+'] = require('vim.ui.clipboard.osc52').paste,
+--         ['*'] = require('vim.ui.clipboard.osc52').paste,
+--     },
+-- }
 
 -- maps and completions
 vim.opt.timeoutlen = 1000   -- miliseconds to wait for a mapped sequence to complete
