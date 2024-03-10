@@ -160,7 +160,7 @@ lazy.setup(
         "JuliaEditorSupport/julia-vim",
 
         -- writing
-        -- "lukas-reineke/headlines.nvim",
+        "lukas-reineke/headlines.nvim",
         -- "vim-pandoc/vim-pandoc", -- some language UI stuff?
         -- "vim-pandoc/vim-pandoc-syntax", -- syntax only
         -- syntax only, but nvim officially has a "quarto" filetype?
