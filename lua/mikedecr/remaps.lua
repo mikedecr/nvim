@@ -6,11 +6,17 @@ local opts = { noremap = true, silent = true }
 
 -- :::: NORMAL ::::
 
--- yank to clipboard
+-- convenient write
+keymap("n", "<Space>w", "<cmd>w<enter>", { desc = "Write file" })
+keymap("n", "<Space>q", "<cmd>q<enter>", { desc = "Quit file" })
+
 -- there is a delicate setup here.
 -- This map lets me write to system (which can be fwd'd over ssh)
 -- but kitty term may ask before reading from system clipboard
 -- not a problem...I can manually paste text w/ OS keymap
+
+-- yank to clipboard
+-- terminal may separately give you trouble trying to read clipboard
 keymap("n", "<Space>y", '"+y', opts)
 keymap("v", "<Space>y", '"+y', opts)
 
