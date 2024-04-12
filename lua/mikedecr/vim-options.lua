@@ -39,8 +39,10 @@ vo.relativenumber = true
 vo.signcolumn = "yes" -- always leave room for signcol
 
 -- buffers + splits
-vo.winbar = "%f %m"  -- @ buffer top
-vo.title = true      -- @ terminal tab title
+vo.winbar = "%f %m"         -- @ buffer top
+vo.title = true             -- @ terminal tab title
+vim.opt.splitbelow = true   -- horiz splits below
+vim.opt.splitright = true   -- vertical splits right
 
 -- misc/visual
 vo.cursorline = true
