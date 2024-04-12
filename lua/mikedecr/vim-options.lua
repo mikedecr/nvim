@@ -36,7 +36,7 @@ vo.hlsearch = false            -- highlight all pattern matches
 -- gutter
 vo.number = true
 vo.relativenumber = true
-vo.signcolumn = "no" -- always leave room for signcol
+vo.signcolumn = "yes" -- always leave room for signcol
 
 -- buffers + splits
 vo.winbar = "%f %m"  -- @ buffer top
