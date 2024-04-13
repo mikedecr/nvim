@@ -1,4 +1,5 @@
-require "mikedecr.vim-options"
-require "mikedecr.remaps"
+
+require "mikedecr.options"
+require "mikedecr.maps"
 require "mikedecr.lazy"
 
