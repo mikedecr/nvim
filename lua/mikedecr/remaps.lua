@@ -21,16 +21,17 @@ keymap("n", "<Space>y", '"+y', opts)
 keymap("v", "<Space>y", '"+y', opts)
 
 -- Better buffer split navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- these used to be sh, sj, etc. but this (regrettably) matches jupyter better
+keymap("n", "sh", "<C-w>h", opts)
+keymap("n", "sj", "<C-w>j", opts)
+keymap("n", "sk", "<C-w>k", opts)
+keymap("n", "sl", "<C-w>l", opts)
 
 -- resize splits
--- keymap("n", "<C-Up>", "<cmd>resize +2<cr>", {desc = "Increase window height"})
--- keymap("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
--- keymap("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
--- keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+keymap("n", "<C-k>", "<cmd>resize +2<cr>", {desc = "Increase window height"})
+keymap("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+keymap("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+keymap("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- source file
 keymap("n", "<Space>sof", "<Cmd>source %<Enter>", { desc = "Source current file" })
@@ -38,12 +39,13 @@ keymap("n", "<Space>sof", "<Cmd>source %<Enter>", { desc = "Source current file"
 -- clear line in normal mode
 keymap("n", "dc", "0D", { desc = "Delete text from line" })
 
--- Better buffer split navigation
--- s+ or t+ ?
-keymap("n", "sh", "<C-w>h", opts)
-keymap("n", "sj", "<C-w>j", opts)
-keymap("n", "sk", "<C-w>k", opts) -- C-k would conflict w/ LSP somehow...
-keymap("n", "sl", "<C-w>l", opts)
+
+-- :::: VISUAL ::::
+
+-- Move text up and down
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "p", '"_dP', opts)
 
 
 -- :::: TERMINAL ::::
