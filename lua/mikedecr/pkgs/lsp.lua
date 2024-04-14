@@ -25,8 +25,8 @@ return {
         "williamboman/mason-lspconfig.nvim",
     },
     config = function()
-        local ms = require("mason").setup()
-        local mc = require("mason-lspconfig").setup({
+        require("mason").setup()
+        require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
                 "pylsp"
@@ -39,8 +39,6 @@ return {
                 end
             }
         })
---        lsp = require("lspconfig").setup({})
-        -- lsp.on_attach = attach
     end
 }
 
