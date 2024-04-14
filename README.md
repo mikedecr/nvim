@@ -1,3 +1,14 @@
 
-- [ ] keymap desc's
+## Todo
+
+Major:
+
+- snippets
+- repl
+- quarto
+
+Minor:
+
+- keymap desc's
+- vim globals lsp
 

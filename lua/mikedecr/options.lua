@@ -1,3 +1,4 @@
+-- TODO fix lsp for vim globals
 local vo = vim.opt
 
 
