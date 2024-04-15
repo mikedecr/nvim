@@ -47,7 +47,8 @@ vim.opt.splitright = true   -- vertical splits right
 
 -- misc/visual
 vo.cursorline = true
-vo.termguicolors = true   -- authentic colors, thicker cursorline
+vim.cmd "highlight Comment cterm=italic gui=italic"
+vo.termguicolors = true
 vo.colorcolumn = "100"    -- right-side ruler
 
 
