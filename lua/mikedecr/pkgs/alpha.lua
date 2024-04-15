@@ -14,7 +14,7 @@ local bold_mikedecr = {
 return {
     "goolord/alpha-nvim",
     dependencies = {
-        'nvim-tree/nvim-web-devicons', 
+        'nvim-tree/nvim-web-devicons',
         'nvim-telescope/telescope.nvim'
     },
     config = function()
@@ -28,7 +28,7 @@ return {
             dash.button("t", "  search", ":Telescope live_grep <CR>"),
             dash.button("p", "  project", ":Telescope projects <CR>"),
             dash.button("c", "  configure", ":e ~/.config/nvim/init.lua <CR>"),
-            dash.button("l", "  lazy", ":Lazy<CR>"),
+            dash.button("l", "  lazy", ":Lazy<CR>"),
             dash.button("q", "  quit", ":qa<CR>"),
         }
 
