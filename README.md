@@ -3,12 +3,12 @@
 
 Major:
 
-- snippets
-- repl
+- comment snippets
+- language snippets in general
 - quarto
+
 
 Minor:
 
 - keymap desc's
-- vim globals lsp
 
