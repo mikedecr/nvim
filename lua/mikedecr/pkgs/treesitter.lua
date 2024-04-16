@@ -23,7 +23,7 @@ return {
             },
             indent = {
                 enable = true,
-                disable = { "yaml", "lua", "python", "r" } -- fallback is nvim-yati?
+                disable = { "yaml", "lua", "r" } -- fallback is nvim-yati?
             },
             highlight = {
                 -- false disables entire extension
