@@ -40,6 +40,14 @@ keymap("n", "<Space>sof", "<Cmd>source %<Enter>", { desc = "Source current file"
 keymap("n", "dc", "0D", { desc = "Delete text from line" })
 
 
+-- tabs
+keymap("n", "th", "<cmd>tabprev<cr>", { desc = ":tabprev" })
+keymap("n", "tl", "<cmd>tabnext<cr>", { desc = ":tabnext" })
+keymap("n", "tr", "<cmd>tabnew<cr><cmd>terminal<cr>", { desc = "New tab with terminal buffer" })
+keymap("n", "tn", "<cmd>tabnew<cr>", { desc = "New tab" })
+
+
+
 -- :::: VISUAL ::::
 
 -- Move text up and down
