@@ -56,8 +56,8 @@ return {
         --------------------------------------------------
         -- other maps
 
-        local keymap = vim.api.nvim_set_keymap          -- fn to write a map
-        local opts = {noremap = true, silent = true}    -- table of map options
+        local keymap = vim.api.nvim_set_keymap
+        local opts = {noremap = true, silent = true}
 
         keymap('n', '<space>irh', '<cmd>IronReplHere<cr>', opts)
         keymap('n', '<space>irl', '<cmd>spl<cr><cmd>IronReplHere<cr>', opts)
