@@ -2,7 +2,7 @@ local conf = function()
     -- don't let oil have C-p map
     require("oil").setup({
         keymaps = {
-            ["C-p"] = false,
+            ["<C-p>"] = false,
             ["<Space>v"] = "actions.preview"
         }
     })
