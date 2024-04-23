@@ -54,6 +54,8 @@ vo.colorcolumn = "100"    -- right-side ruler
 
 ---- BEHAVIOR ----
 
+vim.g.editorconfig = false
+
 -- mouse ok in "a" modes
 vo.mouse = "a"
 
