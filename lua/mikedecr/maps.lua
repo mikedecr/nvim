@@ -20,11 +20,6 @@ keymap("n", "<Space>q", "<cmd>q<enter>", { desc = "Quit file" })
 keymap("n", "<Space>y", '"+y', opts)
 keymap("v", "<Space>y", '"+y', opts)
 
-
--- buffer prev/next
-keymap("n", "<C-p>", "<cmd>bp<cr>", opts)
-keymap("n", "<C-n>", "<cmd>bn<cr>", opts)
-
 -- Better buffer split navigation
 -- these used to be sh, sj, etc. but this (regrettably) matches jupyter better
 keymap("n", "sh", "<C-w>h", opts)
