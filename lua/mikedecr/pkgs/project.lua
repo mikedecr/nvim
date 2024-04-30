@@ -49,7 +49,7 @@ return {
 
         telescope.load_extension('projects')
         local opts = {noremap = true, silent = true}
-        vim.keymap.set("n", "<space>tp", "<cmd>Telescope projects<cr>", opts)
+        vim.keymap.set("n", "<space>fp", "<cmd>Telescope projects<cr>", opts)
     end
 
 }
