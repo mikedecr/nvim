@@ -29,7 +29,7 @@ return {
             dash.button("p", "  project", ":Telescope projects <CR>"),
             dash.button("c", "  configure", ":e ~/.config/nvim/init.lua <CR>"),
             dash.button("l", "  lazy", ":Lazy<CR>"),
-            dash.button("q", "  quit", ":qa<CR>"),
+            dash.button("q", "  quit", ":q<CR>"),
         }
 
         alpha.setup(dash.opts)
