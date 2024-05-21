@@ -13,9 +13,10 @@ vo.expandtab = true
 vo.autoindent = true
 vo.smartindent = true
 
--- nav/backspace line traversal
+-- wrapping/nav/backspace line traversal
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set backspace=indent,eol,start"
+vo.wrap = false
 
 -- don't insert comments on r=return, c=continue/wrap, o=`o`
 vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
