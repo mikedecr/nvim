@@ -22,6 +22,10 @@ keymap("n", "<Space>qf", "<cmd>q!<enter>", { desc = "Quit file" })
 keymap("n", "<Space>y", '"+y', opts)
 keymap("v", "<Space>y", '"+y', opts)
 
+-- create splits
+keymap("n", "<space>sh", "<cmd>split<CR>", opts)
+keymap("n", "<space>sv", "<cmd>vsplit<CR>", opts)
+
 -- Better buffer split navigation
 -- these used to be sh, sj, etc. but this (regrettably) matches jupyter better
 keymap("n", "sh", "<C-w>h", opts)
