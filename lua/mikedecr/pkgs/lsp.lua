@@ -76,7 +76,7 @@ return {
                         'E251',  -- spaces around param/args
                         -- 'E402',  -- sometimes we have to import things late
                     },
-                    maxLineLength = 100 -- people are so needlessly opinionated about this
+                    maxLineLength = 120 -- people are so needlessly opinionated about this
                 }
             }}}
         }
