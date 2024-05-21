@@ -7,8 +7,10 @@ local opts = { noremap = true, silent = true }
 -- :::: NORMAL ::::
 
 -- convenient write
-keymap("n", "<Space>w", "<cmd>w<enter>", { desc = "Write file" })
-keymap("n", "<Space>q", "<cmd>q<enter>", { desc = "Quit file" })
+keymap("n", "<Space>ww", "<cmd>w<enter>", { desc = "Write file" })
+keymap("n", "<Space>qq", "<cmd>q<enter>", { desc = "Quit file" })
+keymap("n", "<Space>wq", "<cmd>wq<enter>", { desc = "Quit file" })
+keymap("n", "<Space>qf", "<cmd>q!<enter>", { desc = "Quit file" })
 
 -- there is a delicate setup here.
 -- This map lets me write to system (which can be fwd'd over ssh)
