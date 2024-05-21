@@ -22,7 +22,7 @@ return {
     'VonHeikemen/lsp-zero.nvim',
     branch = "v2.x",
     dependencies = {
-        "neovim/nvim-lspconfig",
+        {"neovim/nvim-lspconfig", commit = "5e54173"},
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         -- Autocompletion
@@ -68,6 +68,17 @@ return {
         --   <https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp>
         --   <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
         lspconfig.pylsp.setup{
+            -- root_dir = function(fname)
+            --     local util = require("lspconfig.util")
+            --     local root_files = {
+            --         "pyproject.toml",
+            --         "requirements.txt",
+            --         ".git",
+            --     }
+            --     return util.root_pattern(unpack(root_files))(fname)
+            --         or util.find_git_ancestor(fname)
+            --         or vim.fn.expand("%:p:h")
+            -- end,
             settings = { pylsp = { plugins = {
                 pycodestyle = {
                     ignore = {
