@@ -12,6 +12,7 @@ return {
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<space>ff", builtin.find_files, {desc = "Tele: files"})
+        vim.keymap.set("n", "<space>fo", builtin.oldfiles, {desc = "Tele: files"})
         vim.keymap.set("n", "<space>gf", builtin.git_files, {desc = "Tele: git files"})
         vim.keymap.set("n", "<space>gc", builtin.git_commits, {desc = "Tele: git commits"})
         vim.keymap.set("n", "<space>fb", builtin.buffers, {desc = "Tele: buffers"})
