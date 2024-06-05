@@ -21,6 +21,11 @@ return {
             make_snip('jl', '```{julia}\n$0\n```', opts),
             make_snip('yp', '```\n\n```{python}\n$0', opts),
             make_snip('box', '- [ ] $0'),
+            make_snip('opt', '#| $0'),
+            make_snip('label', '#| label: $0'),
+            make_snip('echo', '#| echo: $0'),
+            make_snip('include', '#| include: $0'),
+            make_snip('eval', '#| eval: $0'),
         }
 
         luasnip.add_snippets(
