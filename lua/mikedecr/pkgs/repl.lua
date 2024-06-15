@@ -2,12 +2,10 @@ return {
     "pappasam/nvim-repl",
     init = function()
         -- set shells
-        local SHELL = "bash"
+        -- for some reason python is set in pkg by default
+        local SHELL = "$SHELL"
+        vim.g['repl_filetype_commands'] = { python = SHELL }
         vim.g['repl_default'] = SHELL
-        -- for some reason python is pre-initialized in the pkg file
-        vim.g['repl_filetype_commands'] = {
-            python = SHELL
-        }
 
         -- repl behaviors
         vim.g["repl_split"] = "right"
