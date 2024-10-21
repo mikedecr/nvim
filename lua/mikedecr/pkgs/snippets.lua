@@ -17,6 +17,7 @@ return {
         local markdown_snips = {
             make_snip('block', '```$1\n$0\n```', opts),
             make_snip('py', '```{python}\n$0\n```', opts),
+            make_snip('md', '```{=markdown}\n$0\n```', opts),
             make_snip('r', '```{r}\n$0\n```', opts),
             make_snip('jl', '```{julia}\n$0\n```', opts),
             make_snip('yp', '```\n\n```{python}\n$0', opts),
