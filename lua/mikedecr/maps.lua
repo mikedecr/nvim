@@ -53,6 +53,13 @@ keymap("n", "tr", "<cmd>tabnew<cr><cmd>terminal<cr>", { desc = "New tab with ter
 keymap("n", "tn", "<cmd>tabnew<cr>", { desc = "New tab" })
 
 
+-- chunk selection
+-- TODO scope to filetype config
+keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
+keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
+-- keymap("n", "vic", "V/```<CR>ok?```<CR>j", {desc = "select inside chunk"})
+-- keymap("n", "vic", "V/```<CR>?```<CR>", {desc = "select inside chunk"})
+
 
 -- :::: VISUAL ::::
 
