@@ -82,8 +82,8 @@ return {
             settings = { pylsp = { plugins = {
                 pycodestyle = {
                     ignore = {
-                        'E303',  -- I'm allowed to put 2 blank lines where I want them
-                        'E127',  -- indent on line continuation (muting for Python S-expr)
+                        -- 'E303',  -- I'm allowed to put 2 blank lines where I want them
+                        -- 'E127',  -- indent on line continuation (muting for Python S-expr)
                         'E251',  -- spaces around param/args
                         -- 'E402',  -- sometimes we have to import things late
                     },
