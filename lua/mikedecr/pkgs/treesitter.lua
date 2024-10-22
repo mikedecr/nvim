@@ -13,12 +13,14 @@ return {
                 'julia',
                 'latex',
                 'lua',
+                'luadoc',
                 'markdown',
                 'markdown_inline',
                 'python',
                 'r',
                 'toml',
                 'vim',
+                'vimdoc',
                 'yaml'
             },
             indent = {
