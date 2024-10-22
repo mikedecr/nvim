@@ -25,19 +25,16 @@ return {
         --         This is how cmp knows where to look for completions.
         -- menu: String. How the source is annotated in the cmp dropdown menu.
         local sources_menu = {
-            -- snippets
             {source = {name = 'luasnip'}, menu = 'Snip'},
-            -- LSP
-            {source = {name = 'nvim_lsp'}, menu = 'LSP'},
-            -- otter
-            {source = {name = 'otter'}, menu = 'OtterLSP'},
+            {source = {name = 'nvim_lsp'}, menu = 'lsp'},
+            {source = {name = 'otter'}, menu = 'Otter'},
             -- items from the same buffer
             {source = {name = 'buffer', keyword_length = 5}, menu = 'Buf'},
             -- filepaths?
             {source = {name = 'path'}, menu = 'Path'},
             -- nvim's builtin Lua runtime API
             {source = {name = 'nvim_lua'}, menu = 'Nvim Lua'},
-            -- latex -> UNICODE!!
+            -- latex keys to expand unicode string values
             {source = {name = 'latex_symbols', option = { strategy = 0 }}, menu = 'TeX'}
         }
 
