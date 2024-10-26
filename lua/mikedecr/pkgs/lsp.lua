@@ -68,24 +68,10 @@ return {
         --   <https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp>
         --   <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
         lspconfig.pylsp.setup{
-            -- root_dir = function(fname)
-            --     local util = require("lspconfig.util")
-            --     local root_files = {
-            --         "pyproject.toml",
-            --         "requirements.txt",
-            --         ".git",
-            --     }
-            --     return util.root_pattern(unpack(root_files))(fname)
-            --         or util.find_git_ancestor(fname)
-            --         or vim.fn.expand("%:p:h")
-            -- end,
             settings = { pylsp = { plugins = {
                 pycodestyle = {
                     ignore = {
-                        -- 'E303',  -- I'm allowed to put 2 blank lines where I want them
-                        -- 'E127',  -- indent on line continuation (muting for Python S-expr)
                         'E251',  -- spaces around param/args
-                        -- 'E402',  -- sometimes we have to import things late
                     },
                     maxLineLength = 120 -- people are so needlessly opinionated about this
                 }
