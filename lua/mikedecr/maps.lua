@@ -7,6 +7,9 @@ local opts = { noremap = true, silent = true }
 -- :::: NORMAL ::::
 
 -- convenient write
+-- edit config
+vim.keymap.set("n", "<space>cc", ":e ~/.config/nvim<CR>")
+
 keymap("n", "<Space>ww", "<cmd>w<enter>", { desc = "Write file" })
 keymap("n", "<Space>qq", "<cmd>q<enter>", { desc = "Quit file" })
 keymap("n", "<Space>wq", "<cmd>wq<enter>", { desc = "Quit file" })
