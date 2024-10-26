@@ -12,5 +12,5 @@ end
 
 return { 
     "stevearc/oil.nvim",
-    config = conf 
+    config = conf
 }
