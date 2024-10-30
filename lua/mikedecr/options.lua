@@ -70,3 +70,15 @@ vo.swapfile = false
 -- we don't use swapfile so we might as well speed this up (4000ms default!)
 vo.updatetime = 300
 
+-- -- yank to local clipboard from remote nvim over ssh
+-- vim.g.clipboard = {                    
+--     name = 'OSC 52',
+--     copy = {
+--         ['+'] = require('vim.ui.clipboard.osc52').copy,
+--         ['*'] = require('vim.ui.clipboard.osc52').copy,
+--     },
+--     paste = {
+--         ['+'] = require('vim.ui.clipboard.osc52').paste,
+--         ['*'] = require('vim.ui.clipboard.osc52').paste,
+--     },
+-- }
