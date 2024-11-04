@@ -26,7 +26,8 @@ return {
         vim.keymap.set("n", "<space>rr", "vip" .. send_visual .. ")", silent)
         -- send line, no step fwd
         local send_line = "<Cmd>execute 'set operatorfunc=repl#noop'<CR><Cmd>call repl#sendline()<CR>g@l<Cmd>execute 'set operatorfunc=repl#sendline'<CR>"
-        vim.keymap.set("n", "<space>sl", send_line, silent)
+        vim.keymap.set("n", "<space>sj", send_line, silent)
+        vim.keymap.set("n", "<space>sl", send_line .. "k", silent)
 
     end
 }
