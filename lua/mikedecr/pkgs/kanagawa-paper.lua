@@ -15,6 +15,5 @@ return {
                 return m
             end
         })
-        vim.cmd "colorscheme kanagawa-paper"
     end
 }
