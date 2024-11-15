@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 -- :::: NORMAL ::::
 
 -- edit config
-vim.keymap.set("n", "<space>cc", ":e ~/.config/nvim<CR>")
+vim.keymap.set("n", "<space>cc", ":e ~/.config/nvim/init.lua<CR>")
 
 -- write & quit
 keymap("n", "<Space>ww", "<cmd>w<enter>", { desc = "Write file" })
