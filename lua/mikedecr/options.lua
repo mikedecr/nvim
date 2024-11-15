@@ -71,7 +71,7 @@ vo.swapfile = false
 vo.updatetime = 300
 
 -- -- yank to local clipboard from remote nvim over ssh
--- vim.g.clipboard = {                    
+-- vim.g.clipboard = {
 --     name = 'OSC 52',
 --     copy = {
 --         ['+'] = require('vim.ui.clipboard.osc52').copy,
