@@ -55,6 +55,8 @@ keymap("n", "tn", "<cmd>tabnew<cr>", { desc = "New tab" })
 -- navigation
 keymap("n", "th", "<cmd>tabprev<cr>", { desc = ":tabprev" })
 keymap("n", "tl", "<cmd>tabnext<cr>", { desc = ":tabnext" })
+keymap("n", "tml", "<cmd>tabmove +1<cr>", { desc = ":tabmove +1" })
+keymap("n", "tmh", "<cmd>tabmove -1<cr>", { desc = ":tabmove +1" })
 
 -- chunk selection
 -- TODO scope to filetype config
