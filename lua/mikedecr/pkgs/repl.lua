@@ -15,6 +15,7 @@ return {
         local silent = {silent = true}
         -- open / close
         vim.keymap.set("n", "<space>ro", "<CMD>ReplOpen<CR><C-w>h", silent)
+        vim.keymap.set("n", "<space>ra", "<CMD>ReplAttach<CR><C-w>h", silent)
         vim.keymap.set("n", "<space>rc", "<CMD>ReplClose<CR>", silent)
         vim.keymap.set("n", "<space>rt", "<CMD>ReplToggle<CR>", silent)
         -- send visual / paragraph
