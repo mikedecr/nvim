@@ -2,13 +2,17 @@ local nvim_repl_config = {
     "pappasam/nvim-repl",
     config = function()
         local SHELL = "$SHELL"
-        local repl = require("repl").setup({
+
+        -- stateful
+        require("repl").setup({
             filetype_commands = {
                 python = {
                     cmd = SHELL
                 }
-            }
+            },
+            open_window_default = "topleft vnew"
         })
+
         -- ::: keymaps :::
         local silent = {silent = true}
         -- open / close
