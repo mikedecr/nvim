@@ -92,8 +92,8 @@ return {
                 local keymap = vim.keymap.set
                 keymap("n", "gd", function() vim.lsp.buf.definition() end, opts)
                 keymap("n", "gl", function() vim.diagnostic.open_float() end, opts)
-                keymap("n", "]d", function() vim.diagnostic.goto_next() end, opts)
-                keymap("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
+                keymap("n", "]d", function() vim.diagnostic.jump({count = 1}) end, opts)
+                keymap("n", "[d", function() vim.diagnostic.jump({count = -1}) end, opts)
                 keymap("n", "K", function() vim.lsp.buf.hover() end, opts)
                 -- keymap("n", "<C-H>", function() vim.lsp.buf.signature_help() end, opts)
                 -- how to do this at the repo level?
