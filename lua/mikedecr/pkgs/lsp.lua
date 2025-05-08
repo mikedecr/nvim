@@ -1,20 +1,42 @@
-local attach = function(_, bufnr)  -- client, bufnr
+-- fn to copy array contents to new array
+local function copy_table(tbl)
+    local clone = {}
+    for k, v in pairs(tbl) do
+        clone[k] = v
+    end
+    return clone
+end
 
-    -- scopes the keymaps to the currently attached buffer(?)
-    local opts = {buffer = bufnr, remap = false}
-    local keymap = vim.keymap.set
 
-    keymap("n", "gd", function() vim.lsp.buf.definition() end, opts)
-    keymap("n", "gl", function() vim.diagnostic.open_float() end, opts)
-    keymap("n", "]d", function() vim.diagnostic.goto_next() end, opts)
-    keymap("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
-    keymap("n", "K", function() vim.lsp.buf.hover() end, opts)
-    -- keymap("n", "<C-H>", function() vim.lsp.buf.signature_help() end, opts)
-    -- how to do this at the repo level?
-    keymap("n", "grr", function() vim.lsp.buf.references() end, opts)
-    keymap("n", "grn", function() vim.lsp.buf.rename() end, opts)
-    keymap("n", "gca", function() vim.lsp.buf.code_action() end, opts)
+local python_ignores = {
+    "E251", "E306"
+}
 
+-- quarto is a superset of python ignores
+local quarto_additions = {"E303"}
+local quarto_ignores = copy_table(python_ignores)
+for i, qa in pairs(quarto_additions) do
+    quarto_ignores[i] = qa
+end
+
+
+local function configure_pylsp_inplace(lsp_config_module)
+    -- pylsp is actually a weird agglomeration of python diagnostics + style pkgs
+    -- so you have to unwrap the lsp until you find the layer w/ the right pkg 
+    -- helpful: 
+    --   <https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp>
+    --   <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
+    lsp_config_module.pylsp.setup{
+        settings = { pylsp = { plugins = {
+            pycodestyle = {
+                -- ignore = {
+                --     'E251',  -- spaces around param/args
+                -- },
+                ignore = python_ignores,
+                maxLineLength = 120 -- people are so needlessly opinionated about this
+            }
+        }}}
+    }
 end
 
 
@@ -51,7 +73,6 @@ return {
             hint = "@",
             info = "i"
         })
-        -- presets.set_lsp_keymaps = {preserve_mappings = true}
         -- language overrides
         -- :::: language-specific LSP mods ::::
         local lspconfig = require("lspconfig")
@@ -62,21 +83,8 @@ return {
             zero.nvim_lua_ls()
         )
         -- :::: PYTHON ::::
-        -- pylsp is actually a weird agglomeration of python diagnostics + style pkgs
-        -- so you have to unwrap the lsp until you find the layer w/ the right pkg 
-        -- helpful: 
-        --   <https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp>
-        --   <https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md>
-        lspconfig.pylsp.setup{
-            settings = { pylsp = { plugins = {
-                pycodestyle = {
-                    ignore = {
-                        'E251',  -- spaces around param/args
-                    },
-                    maxLineLength = 120 -- people are so needlessly opinionated about this
-                }
-            }}}
-        }
+        configure_pylsp_inplace(lspconfig)
+        -- lspconfig.pyright.setup({})
         -- :::: Markdown ::::
         lspconfig.prosemd_lsp.setup({
             filetypes = {'markdown', 'quarto'}
@@ -85,6 +93,7 @@ return {
         -- helpful reference:
         -- https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/after/plugin/lsp.lua#L48
         -- check also kickstart.nvim for more LSP commands to map
+        -- presets.set_lsp_keymaps = {preserve_mappings = true}
         presets.on_attach(
             function(_, bufnr)  -- client, bufnr
                 -- scopes the keymaps to the currently attached buffer(?)
