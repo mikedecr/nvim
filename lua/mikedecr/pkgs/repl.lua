@@ -18,7 +18,7 @@ local nvim_repl_config = {
         -- open / close
         vim.keymap.set("n", "<space>ro", "<CMD>Repl<CR><C-w>h", silent)
         vim.keymap.set("n", "<space>ra", "<CMD>ReplAttach<CR><C-w>h", silent)
-        vim.keymap.set("n", "<space>rc", "<CMD>ReplClose<CR>", silent)
+        vim.keymap.set("n", "<space>rx", "<CMD>ReplClose<CR>", silent)
         vim.keymap.set("n", "<space>rt", "<CMD>ReplToggle<CR>", silent)
         -- send visual / paragraph
         local send_visual = "<Cmd>execute 'set operatorfunc=repl#noop'<CR>:<C-u>call repl#sendvisual(visualmode())<CR>g@l<Cmd>execute 'set operatorfunc=repl#sendline'<CR>"
