@@ -12,7 +12,7 @@ return {
               changedelete = { text = "~", },
           },
           numhl = true,
-          linehl = true,     -- man... idk. this is annoying which is maybe good, keeps the changes contained?
+          linehl = false,     -- man... idk. this is annoying which is maybe good, keeps the changes contained?
         }
     end
 }
