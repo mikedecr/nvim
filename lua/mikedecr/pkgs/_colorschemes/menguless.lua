@@ -1,0 +1,3 @@
+return {
+    "zekzekus/menguless"
+}
