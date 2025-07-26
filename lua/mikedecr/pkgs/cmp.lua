@@ -27,6 +27,7 @@ return {
         local sources_menu = {
             {source = {name = 'luasnip'}, menu = 'Snip'},
             {source = {name = 'nvim_lsp'}, menu = 'lsp'},
+            {source = {name = "supermaven"}, menu = "llm"},
             {source = {name = 'otter'}, menu = 'Otter'},
             -- items from the same buffer
             {source = {name = 'buffer', keyword_length = 5}, menu = 'Buf'},
