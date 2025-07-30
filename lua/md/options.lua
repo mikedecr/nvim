@@ -51,7 +51,6 @@ vo.cursorline = false
 -- vim.cmd "highlight Comment cterm=italic gui=italic"
 vo.termguicolors = true
 vo.colorcolumn = "100"    -- right-side ruler
-vim.cmd "hi statusline guibg=NONE"  -- no status line bg on active buf
 
 ---- BEHAVIOR ----
 
