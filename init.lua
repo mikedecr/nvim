@@ -1,9 +1,12 @@
 -- require "mikedecr"
 
-require "options"
-require "maps"
-
-require "plugins.oil"
+require "md.options"
+require "md.maps"
+require "md.telescope"
+require "md.alpha"
+require "md.oil"
+require "md.projects"
+require "md.lsp"
 
 -- color scheme
 vim.pack.add({
