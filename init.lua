@@ -7,6 +7,10 @@ require "md.alpha"
 require "md.oil"
 require "md.projects"
 require "md.lsp"
+require "md.git-signs"
+require "md.cmp"
+require "md.supermaven"
+
 
 -- color scheme
 vim.pack.add({
