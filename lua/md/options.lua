@@ -1,73 +1,70 @@
--- TODO fix lsp for vim globals
-local vo = vim.opt
-
-
----- TEXT ----
+-- :: TEXT ::
 
 -- tabstop
-vo.shiftwidth = 4
-vo.tabstop = 4
-vo.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
 
 -- newline indent
-vo.autoindent = true
-vo.smartindent = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- wrapping/nav/backspace line traversal
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set backspace=indent,eol,start"
-vo.wrap = false
+vim.opt.wrap = false
 
--- don't insert comments on r=return, c=continue/wrap, o=`o`
+-- disable comment continuation on (r)eturn, (c)ontinue/wrap, (o)
 vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
 
 -- undo
-vo.undodir = ".undo"
-vo.undofile = true
+vim.opt.undodir = ".undo"
+vim.opt.undofile = true
 
--- search
-vo.ignorecase = true           -- ignore by default
-vo.smartcase = true            -- except when using a capital
-vo.wildignorecase = true       -- and when wildcard-completing files/paths
-vo.incsearch = true            -- jump mid-search
-vo.hlsearch = false            -- highlight all pattern matches
+-- buf text search
+vim.opt.ignorecase = true           -- ignore by default
+vim.opt.smartcase = true            -- except when using a capital
+vim.opt.wildignorecase = true       -- and when wildcard-completing files/paths
+vim.opt.incsearch = true            -- jump mid-search
+vim.opt.hlsearch = false            -- highlight all pattern matches
 
 
----- VISUAL ----
+-- :: VISUAL ::
 
 -- gutter
-vo.number = true
-vo.relativenumber = true
-vo.signcolumn = "yes" -- always leave room for signcol
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes" -- always leave room for signcol
 
 -- buffers + splits
-vo.winbar = "%f %m"         -- @ buffer top
-vo.title = true             -- @ terminal tab title
+vim.opt.winbar = "%f %m"         -- @ buffer top
+vim.opt.title = true             -- @ terminal tab title
 vim.opt.splitbelow = true   -- horiz splits below
 vim.opt.splitright = true   -- vertical splits right
 
 -- misc/visual
-vo.cursorline = false
+vim.opt.cursorline = false
 -- vim.cmd "highlight Comment cterm=italic gui=italic"
-vo.termguicolors = true
-vo.colorcolumn = "100"    -- right-side ruler
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = "100"    -- right-side ruler
 
----- BEHAVIOR ----
+
+-- :: BEHAVIOR ::
 
 vim.g.editorconfig = false
 
 -- mouse ok in "a" modes
-vo.mouse = "a"
+vim.opt.mouse = "a"
 
 -- file backups (just don't...)
-vo.backup = false
-vo.writebackup = false
-vo.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 -- originally controls time to write swapfile,
 -- but many other plugins use this for e.g. completion timeout
 -- we don't use swapfile so we might as well speed this up (4000ms default!)
-vo.updatetime = 300
+vim.opt.updatetime = 300
 
 -- yank to local clipboard from remote nvim over ssh
 vim.g.clipboard = "osc52"
