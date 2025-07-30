@@ -62,6 +62,10 @@ keymap("n", "tmh", "<cmd>tabmove -1<cr>", { desc = ":tabmove +1" })
 keymap("n", "vic", "/```<cr>NjVnk", opts) -- select chunk contents
 keymap("n", "vac", "/```<cr>NVn", opts)   -- select chunk + delimiters
 
+-- goto previous/next buffer (these are pretty easy though...)
+keymap("n", "<C-p>", "<CMD>bp<CR>", opts)  
+keymap("n", "<C-n>", "<CMD>bn<CR>", opts)
+
 
 -- :::: VISUAL ::::
 
