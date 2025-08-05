@@ -2,29 +2,18 @@ vim.pack.add({
     "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
-local ts = require("nvim-treesitter.configs")
-ts.setup({
+require("nvim-treesitter.configs").setup({
     auto_install = true,
     sync_install = false, -- only applies to ensure_installed
     ensure_installed = {
-        'bash',
-        'gitignore',
-        'haskell',
-        'json',
-        'julia',
-        'latex',  -- needs tree-sitter-cli
-        'lua',
-        'luadoc',
-        'markdown',
-        'markdown_inline',
-        'python',
-        'r',
-        'toml',
-        'vim',
-        'vimdoc',
-        'yaml'
+        "bash", "gitignore", "haskell", "json", "julia",
+        "latex",  -- needs tree-sitter-cli
+        "lua", "luadoc", "markdown", "markdown_inline",
+        "python", "r", "toml", "vim", "vimdoc", "yaml"
     },
-    indent = { enable = true },
+    indent = {
+        enable = true
+    },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false
