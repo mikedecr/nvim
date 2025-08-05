@@ -1,5 +1,3 @@
--- require "mikedecr"
-
 require "md.options"
 require "md.maps"
 require "md.telescope"
