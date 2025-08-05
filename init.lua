@@ -10,6 +10,7 @@ require "md.lsp"
 require "md.git-signs"
 require "md.cmp"
 require "md.supermaven"
+require "md.treesitter"
 
 
 -- color scheme

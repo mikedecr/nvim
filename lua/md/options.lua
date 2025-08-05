@@ -47,6 +47,7 @@ vim.opt.cursorline = false
 -- vim.cmd "highlight Comment cterm=italic gui=italic"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "100"    -- right-side ruler
+vim.opt.winborder = "bold"
 
 
 -- :: BEHAVIOR ::
