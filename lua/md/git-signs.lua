@@ -13,7 +13,6 @@ gs.setup({
         topdelete    = { text = "‾", },
         changedelete = { text = "~", },
     },
-    numhl = false,
-    -- man... idk. this is annoying which is maybe good, keeps the changes contained?
+    numhl = true,
     linehl = false,
 })

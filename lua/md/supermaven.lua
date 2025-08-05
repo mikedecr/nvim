@@ -4,9 +4,12 @@ vim.pack.add({
 
 require("supermaven-nvim").setup({
     ignore_filetypes = { "oil" },
+    -- cmp dropdown sources config'd in cmp.lua module
     disable_inline_completion = false,
-    disable_keymaps = true,
+    disable_keymaps = false,
     keymaps = {
-        accept_suggestion = "<C-f>"
+        accept_suggestion = "<C-f>",
+        accept_word = "<C-n>",
+        clear_suggestion = "<C-b>",
     }
 })
