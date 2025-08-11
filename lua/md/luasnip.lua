@@ -10,7 +10,8 @@ keymap({"i", "s"}, "<c-h>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 
 
 -- cute little library to use in after/ftplugin
-
+-- this may be painful if we need to refactor.
+-- the assumption is that "set language snippets" can be our indirection point
 local luasnip = require("luasnip")
 local M = {
     set_language_snippets = function(language, snippets)
