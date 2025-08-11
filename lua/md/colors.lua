@@ -1,6 +1,13 @@
 vim.pack.add({
     "https://github.com/sho-87/kanagawa-paper.nvim",
     "https://github.com/EdenEast/nightfox.nvim",
-    "https://github.com/sainnhe/everforest",
+    "https://github.com/neanias/everforest-nvim",
 })
-vim.cmd "colorscheme everforest"
+
+local everforest = require("everforest")
+everforest.setup({
+    background = "medium",
+    dim_inactive_windows = true
+})
+
+everforest.load()
