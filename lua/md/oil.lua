@@ -3,7 +3,7 @@ vim.pack.add({"https://github.com/stevearc/oil.nvim"})
 require("oil").setup({
     keymaps = {
         ["<C-p>"] = false,
-        ["<Space>v"] = "actions.preview"
+        ["<Space>ov"] = "actions.preview"
     },
     columns = {"icon", "size", "mtime"}
 })
