@@ -1,3 +1,12 @@
+vim.pack.add({
+    "https://github.com/goolord/alpha-nvim",
+    "https://github.com/nvim-tree/nvim-web-devicons",
+    "https://github.com/nvim-telescope/telescope.nvim"
+})
+
+local dash = require("alpha.themes.dashboard")
+local alpha = require("alpha")
+
 local bold_mikedecr = {
 [[    ]],
 [[███╗   ███╗██╗██╗  ██╗███████╗██████╗ ███████╗ ██████╗██████╗ ]],
@@ -10,17 +19,7 @@ local bold_mikedecr = {
 [[]],
 }
 
-
-vim.pack.add({
-    "https://github.com/goolord/alpha-nvim",
-    "https://github.com/nvim-tree/nvim-web-devicons",
-    "https://github.com/nvim-telescope/telescope.nvim"
-})
-
--- bold_mikedecr
-local dash = require("alpha.themes.dashboard")
-dash.section.header.val = bold_mikedecr
-dash.section.buttons.val = {
+local quick_buttons = {
     dash.button("f", "  file", ":Telescope find_files <CR>"),
     dash.button("r", "  recent", ":Telescope oldfiles <CR>"),
     dash.button("t", "  search", ":Telescope live_grep <CR>"),
@@ -29,5 +28,8 @@ dash.section.buttons.val = {
     dash.button("q", "  quit", ":q<CR>"),
 }
 
-local alpha = require("alpha")
-alpha.setup(dash.opts)
+-- different themes have different config schema...
+local theme = require("alpha.themes.theta")
+theme.header.val = bold_mikedecr
+theme.buttons.val = quick_buttons
+alpha.setup(theme.config)
