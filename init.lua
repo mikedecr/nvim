@@ -1,12 +1,22 @@
-require "md.options"
-require "md.maps"
-require "md.colors"
-require "md.telescope"
-require "md.alpha"
-require "md.oil"
-require "md.projects"
-require "md.lsp"
-require "md.git-signs"
-require "md.cmp"
-require "md.supermaven"
-require "md.treesitter"
+local modules  = {
+    "md.options",
+    "md.maps",
+    "md.colors",
+    "md.telescope",
+    "md.alpha",
+    "md.oil",
+    "md.projects",
+    "md.lsp",
+    "md.git-signs",
+    "md.cmp",
+    "md.supermaven",
+    "md.treesitter"
+}
+
+for _, module in ipairs(modules) do
+    local ok, data_or_err = pcall(require, module)
+    if not ok then
+        print("Error loading module: " .. module)
+        print(data_or_err)
+    end
+end
