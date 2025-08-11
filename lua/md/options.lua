@@ -54,7 +54,7 @@ vim.opt.winborder = "bold"
 
 vim.g.editorconfig = false
 
--- mouse ok in "a" modes
+-- mouse ok in (a)ll modes
 vim.opt.mouse = "a"
 
 -- file backups (just don't...)
