@@ -109,6 +109,7 @@ return {
                 keymap("n", "grr", function() vim.lsp.buf.references() end, opts)
                 keymap("n", "grn", function() vim.lsp.buf.rename() end, opts)
                 keymap("n", "gca", function() vim.lsp.buf.code_action() end, opts)
+                keymap("n", "<space>lf", vim.lsp.buf.format, opts)
             end
         )
         -- //// return ////
