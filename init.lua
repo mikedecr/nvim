@@ -7,7 +7,7 @@ local modules  = {
     "md.oil",
     "md.projects",
     "md.lsp",
-    "md.git-signs",
+    "md.git",
     "md.cmp",
     "md.supermaven",
     "md.treesitter"
