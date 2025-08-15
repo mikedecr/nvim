@@ -9,15 +9,16 @@ return {
         local qmd = require("quarto")
         qmd.setup({
             codeRunner = {
-                enabled = false
+                enabled = true,
+                default_method="slime"
             }
         })
-        local send_visual = "<Cmd>execute 'set operatorfunc=repl#noop'<CR>:<C-u>call repl#sendvisual(visualmode())<CR>g@l<Cmd>execute 'set operatorfunc=repl#sendline'<CR>"
-
         local opts = { silent = true }
         vim.keymap.set("n", "]c", "/```{<CR>", opts)
         vim.keymap.set("n", "[c", "?```{<CR>", opts)
-        vim.keymap.set("n", "<space>rc", "vic" .. send_visual .. "]c", opts)
+        vim.keymap.set("n", "<space>ru", "<CMD>QuartoSendAbove<CR>", opts)
+        vim.keymap.set("n", "<space>rb", "<CMD>QuartoSendBelow<CR>", opts)
+        vim.keymap.set("n", "<space>ra", "<CMD>QuartoSendAll<CR>", opts)
     end
   },
 }

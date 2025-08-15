@@ -13,7 +13,7 @@ local python_ignores = {
 }
 
 -- quarto is a superset of python ignores
-local quarto_additions = {"E303"}
+local quarto_additions = {"E303", "E402"}
 local quarto_ignores = copy_table(python_ignores)
 for i, qa in pairs(quarto_additions) do
     quarto_ignores[i] = qa
