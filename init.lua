@@ -1,7 +1,7 @@
 local modules  = {
     -- vim/neovim only
-    "md.builtin.options",
-    "md.builtin.maps",
+    "options",
+    "maps",
     -- third-party
     "md.alpha",
     "md.colors",
