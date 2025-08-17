@@ -13,6 +13,7 @@ local modules  = {
     "md.treesitter",
     "md.pairs",
     "md.slime",
+    "md.whichkey"
 }
 
 for _, module in ipairs(modules) do
