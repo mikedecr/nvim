@@ -11,7 +11,8 @@ local modules  = {
     "md.cmp",
     "md.supermaven",
     "md.treesitter",
-    "md.pairs"
+    "md.pairs",
+    "md.slime",
 }
 
 for _, module in ipairs(modules) do
