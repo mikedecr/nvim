@@ -3,6 +3,19 @@ local keymap = vim.keymap.set
 -- noremap is default, but nice to be explicit
 local opts = { noremap = true, silent = true }
 
+local merge_tables = function(tables)
+    local new_table = {}
+    for i, _ in pairs(tables) do
+        for k, v in pairs(tables[i]) do
+            new_table[k] = v
+        end
+    end
+    return new_table
+end
+
+local with_opts = function(table)
+    return merge_tables({opts, table})
+end
 
 -- :::: NORMAL ::::
 
@@ -30,11 +43,19 @@ keymap("v", "<Space>y", '"+y', opts)
 -- create splits
 keymap("n", "<space>sh", "<cmd>split<CR>", opts)
 keymap("n", "<space>sv", "<cmd>vsplit<CR>", opts)
+-- terminal in split
+local hsplit_term = "<cmd>split term://$SHELL<CR>"
+keymap("n", "<space>th", hsplit_term .. "<C-w>H", with_opts({desc = "Terminal left"}))
+keymap("n", "<space>tl", hsplit_term .. "<C-w>L", with_opts({desc = "Terminal right"}))
+keymap("n", "<space>tj", hsplit_term .. "<C-w>J", with_opts({desc = "Terminal down"}))
+keymap("n", "<space>tk", hsplit_term .. "<C-w>K", with_opts({desc = "Terminal up"}))
+keymap("n", "<space>ro", hsplit_term .. "<C-w>H<C-w>p", with_opts({desc = "Terminal left and cursor prev"}))
 -- split navigation
-keymap("n", "sh", "<C-w>h", opts)
-keymap("n", "sj", "<C-w>j", opts)
-keymap("n", "sk", "<C-w>k", opts)
-keymap("n", "sl", "<C-w>l", opts)
+keymap("n", "sh", "<C-w>h", with_opts({desc = "Focus left split"}))
+keymap("n", "sj", "<C-w>j", with_opts({desc = "Focus down split"}))
+keymap("n", "sk", "<C-w>k", with_opts({desc = "Focus up split"}))
+keymap("n", "sl", "<C-w>l", with_opts({desc = "Focus right split"}))
+keymap("n", "sp", "<C-w>p", with_opts({desc = "Focus previous split"}))
 -- resize splits
 keymap("n", "<C-k>", "<cmd>resize +2<cr>", {desc = "Increase window height"})
 keymap("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
