@@ -3,6 +3,10 @@ local modules  = {
     "md.maps",
     "md.colors",
     "md.telescope",
+    -- vim/neovim only
+    "md.builtin.options",
+    "md.builtin.maps",
+    -- third-party
     "md.alpha",
     "md.oil",
     "md.projects",
