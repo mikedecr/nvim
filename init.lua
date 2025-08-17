@@ -1,26 +1,30 @@
 local modules  = {
-    "md.options",
-    "md.maps",
-    "md.colors",
-    "md.telescope",
     -- vim/neovim only
     "md.builtin.options",
     "md.builtin.maps",
     -- third-party
     "md.alpha",
-    "md.oil",
-    "md.projects",
-    "md.lsp",
-    "md.git",
+    "md.colors",
     "md.cmp",
-    "md.supermaven",
-    "md.treesitter",
+    "md.git",
+    "md.lsp",
+    "md.oil",
     "md.pairs",
+    "md.projects",
     "md.quarto",
     "md.slime",
-    "md.whichkey"
+    "md.supermaven",
+    "md.telescope",
+    "md.treesitter",
     "md.whichkey",
     "md.surround",
+    -- surround
+    -- splitjoin
+    -- symlink
+    -- term-edit?
+    -- zen
+    -- trouble(?)
+    -- neoclip
 }
 
 for _, module in ipairs(modules) do
