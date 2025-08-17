@@ -20,8 +20,8 @@ local bold_mikedecr = {
 }
 
 -- required dependencies for this part...
-require("md.telescope")
-require("md.projects")
+require("pkg.telescope")
+require("pkg.projects")
 
 local quick_buttons = {
     dash.button("f", "  file", ":Telescope find_files <CR>"),
