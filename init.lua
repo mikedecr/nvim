@@ -12,6 +12,7 @@ local modules  = {
     "md.supermaven",
     "md.treesitter",
     "md.pairs",
+    "md.quarto",
     "md.slime",
     "md.whichkey"
 }
