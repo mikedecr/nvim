@@ -18,9 +18,8 @@ local modules  = {
     "md.treesitter",
     "md.whichkey",
     "md.surround",
-    -- surround
-    -- splitjoin
-    -- symlink
+    "md.splitjoin",
+    "md.symlink",
     -- term-edit?
     -- zen
     -- trouble(?)
