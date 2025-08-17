@@ -1,7 +1,7 @@
 -- snips
 local luasnip = require("luasnip")
 local make_snip = luasnip.parser.parse_snippet
-local snips = require("md.luasnip")
+local snips = require("pkg.luasnip")
 
 local quarto_snips = {
     -- language blocks

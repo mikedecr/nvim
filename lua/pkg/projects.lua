@@ -26,7 +26,7 @@ project.setup({
 })
 
 -- :::: register as a telescope extension ::::
-require("md.telescope")
+require("pkg.telescope")
 local telescope = require("telescope")
 telescope.load_extension('projects')
 vim.keymap.set("n", "<space>fp", "<cmd>Telescope projects<cr>")
