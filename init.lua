@@ -19,6 +19,8 @@ local modules  = {
     "md.quarto",
     "md.slime",
     "md.whichkey"
+    "md.whichkey",
+    "md.surround",
 }
 
 for _, module in ipairs(modules) do
