@@ -19,6 +19,10 @@ local bold_mikedecr = {
 [[]],
 }
 
+-- required dependencies for this part...
+require("md.telescope")
+require("md.projects")
+
 local quick_buttons = {
     dash.button("f", "  file", ":Telescope find_files <CR>"),
     dash.button("r", "  recent", ":Telescope oldfiles <CR>"),
@@ -27,6 +31,7 @@ local quick_buttons = {
     dash.button("c", "  configure", ":e ~/.config/nvim/init.lua <CR>"),
     dash.button("q", "  quit", ":q<CR>"),
 }
+
 
 -- different themes have different config schema...
 local theme = require("alpha.themes.theta")
