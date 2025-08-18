@@ -3,7 +3,7 @@ vim.pack.add({
 })
 
 require("nvim-treesitter.configs").setup({
-    auto_install = true,
+    auto_install = false,
     sync_install = false, -- only applies to ensure_installed
     ensure_installed = {
         "bash", "gitignore", "haskell", "json", "julia",
