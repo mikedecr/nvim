@@ -4,6 +4,10 @@ vim.pack.add({
     "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
+-- need explicit otter req bc I think my quarto version is too old?
+-- https://github.com/quarto-dev/quarto-nvim/issues/187
+require("otter").setup()
+
 local qmd = require("quarto")
 qmd.setup({
     codeRunner = {
