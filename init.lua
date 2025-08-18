@@ -21,6 +21,15 @@ local modules  = {
     "pkg.splitjoin",
     "pkg.symlink",
     "pkg.zen",
+
+    -- term-edit?
+    -- zen
+    -- trouble(?)
+    -- neoclip
+
+    -- drw-specific
+    "pkg.codeium",
+    "pkg.goose"
 }
 
 for _, module in ipairs(modules) do
