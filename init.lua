@@ -13,8 +13,6 @@ local modules  = {
     "pkg.projects",
     "pkg.quarto",
     "pkg.slime",
-    "pkg.supermaven",
-    "pkg.stan",
     "pkg.telescope",
     "pkg.termedit",
     "pkg.treesitter",
