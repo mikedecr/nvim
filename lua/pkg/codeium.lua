@@ -24,6 +24,10 @@ codeium.setup({
         key_bindings = {
             accept = "<C-f>",
             clear = "<C-h>"
+        },
+        filetypes = {
+            oil = false,
+            TelescopePrompt = false
         }
     }
 })
