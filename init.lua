@@ -1,13 +1,12 @@
 local modules  = {
-    -- vim/neovim only
     "options",
     "maps",
-    -- third-party
     "pkg.alpha",
     "pkg.colors",
     "pkg.cmp",
     "pkg.git",
     "pkg.lsp",
+    "pkg.neoclip",
     "pkg.oil",
     "pkg.pairs",
     "pkg.projects",
@@ -15,15 +14,12 @@ local modules  = {
     "pkg.slime",
     "pkg.supermaven",
     "pkg.telescope",
+    "pkg.termedit",
     "pkg.treesitter",
     "pkg.whichkey",
     "pkg.surround",
     "pkg.splitjoin",
     "pkg.symlink",
-    -- term-edit?
-    -- zen
-    -- trouble(?)
-    -- neoclip
 }
 
 for _, module in ipairs(modules) do
