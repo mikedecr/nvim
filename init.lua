@@ -29,7 +29,8 @@ local modules  = {
 
     -- drw-specific
     "pkg.codeium",
-    "pkg.goose"
+    "pkg.goose",
+    "pkg.avante"
 }
 
 for _, module in ipairs(modules) do
