@@ -36,7 +36,7 @@ vim.g.slime_neovim_ignore_unlisted = false
 
 
 -- called MotionSend but works with textobjects as well
-vim.keymap.set("n", "gz", "<Plug>SlimeMotionSend", { remap = true, silent = false })
-vim.keymap.set("n", "gzz", "<Plug>SlimeLineSend", { remap = true, silent = false })
-vim.keymap.set("x", "gz", "<Plug>SlimeRegionSend", { remap = true, silent = false })
-vim.keymap.set("n", "gzc", "<Plug>SlimeConfig", { remap = true, silent = false })
+vim.keymap.set("n", "<space>rr", "<Plug>SlimeMotionSend", { remap = true, silent = false })
+vim.keymap.set("n", "<space>rl", "<Plug>SlimeLineSend", { remap = true, silent = false })
+vim.keymap.set("x", "<space>rp", "<Plug>SlimeRegionSend", { remap = true, silent = false })
+vim.keymap.set("n", "<space>rc", "<Plug>SlimeConfig", { remap = true, silent = false })
