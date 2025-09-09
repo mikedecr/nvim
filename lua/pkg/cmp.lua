@@ -24,7 +24,6 @@ require("luasnip/loaders/from_vscode").lazy_load()
 --         This is how cmp knows where to look for completions.
 -- menu: String. How the source is annotated in the cmp dropdown menu.
 local sources_menu = {
-    {source = {name = 'luasnip'}, menu = 'Snip'},
     {source = {name = 'nvim_lsp'}, menu = 'lsp'},
     {source = {name = "supermaven"}, menu = "llm"},
     {source = {name = 'otter'}, menu = 'Otter'},
@@ -35,7 +34,8 @@ local sources_menu = {
     -- nvim's builtin Lua runtime API
     {source = {name = 'nvim_lua'}, menu = 'Nvim Lua'},
     -- latex keys to expand unicode string values
-    {source = {name = 'latex_symbols', option = { strategy = 0 }}, menu = 'TeX'}
+    {source = {name = 'latex_symbols', option = { strategy = 0 }}, menu = 'TeX'},
+    {source = {name = 'luasnip'}, menu = 'Snip'},
 }
 
 -- list of cmp sources
