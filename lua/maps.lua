@@ -71,10 +71,10 @@ keymap("n", "dc", "0D", { desc = "Delete text from line" })
 -- TABS
 -- creation
 keymap("n", "<SPACE>tr", "<CMD>tabnew<CR><CMD>terminal<CR>", { desc = "New tab with terminal buffer" })
-keymap("n", "<SPACE>tn", "<CMD>tabnew<CR>", { desc = "New tab" })
+keymap("n", "<SPACE>tt", "<CMD>tabnew<CR>", { desc = "New tab" })
 -- navigation
-keymap("n", "th", "<CMD>tabprev<CR>", { desc = ":tabprev" })
-keymap("n", "tl", "<CMD>tabnext<CR>", { desc = ":tabnext" })
+keymap("n", "<space>tp", "<CMD>tabprev<CR>", { desc = ":tabprev" })
+keymap("n", "<space>tn", "<CMD>tabnext<CR>", { desc = ":tabnext" })
 keymap("n", "tml", "<CMD>tabmove +1<CR>", { desc = ":tabmove +1" })
 keymap("n", "tmh", "<CMD>tabmove -1<CR>", { desc = ":tabmove +1" })
 
