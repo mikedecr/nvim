@@ -3,7 +3,9 @@
     'https://github.com/yetone/avante.nvim',
     'https://github.com/nvim-lua/plenary.nvim',
     'https://github.com/MunifTanjim/nui.nvim',
-    'https://github.com/MeanderingProgrammer/render-markdown.nvim'
+
+    -- in what sense is this "required?" annoying bloat that I don't care for...
+    -- 'https://github.com/MeanderingProgrammer/render-markdown.nvim'
 })
 
 -- Optional dependencies
