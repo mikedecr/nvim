@@ -3,13 +3,8 @@ vim.pack.add({
     "https://github.com/EdenEast/nightfox.nvim",
     "https://github.com/neanias/everforest-nvim",
     "https://github.com/everviolet/nvim",
-    "https://github.com/zekzekus/menguless"
+    "https://github.com/zekzekus/menguless",
+    "https://github.com/rjshkhr/shadow.nvim"
 })
 
-local everforest = require("everforest")
-everforest.setup({
-    background = "medium",
-    dim_inactive_windows = true
-})
-
-everforest.load()
+vim.cmd("colorscheme shadow")
