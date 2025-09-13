@@ -7,4 +7,4 @@ vim.pack.add({
     "https://github.com/rjshkhr/shadow.nvim"
 })
 
-vim.cmd("colorscheme shadow")
+vim.cmd("colorscheme kanagawa-paper-ink")
