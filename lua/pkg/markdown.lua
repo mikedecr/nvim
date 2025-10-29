@@ -14,7 +14,7 @@ require("render-markdown").setup({
         language = true,
         language_info = true,
         language_icon = false,
-        language_pad = 3,
+        language_pad = 0,
         width = "block",
         min_width = colorcol_value,
         border = "thick", -- full height of delimited area
