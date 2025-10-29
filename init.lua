@@ -22,11 +22,6 @@ local modules  = {
     "pkg.symlink",
     "pkg.zen",
 
-    -- term-edit?
-    -- zen
-    -- trouble(?)
-    -- neoclip
-
     -- drw-specific
     "pkg.codeium",
     "pkg.goose",
