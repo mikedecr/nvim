@@ -22,6 +22,7 @@ local modules  = {
     "pkg.surround",
     "pkg.splitjoin",
     "pkg.symlink",
+    "pkg.zen",
 }
 
 for _, module in ipairs(modules) do
