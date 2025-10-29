@@ -7,4 +7,7 @@ vim.pack.add({
     "https://github.com/rjshkhr/shadow.nvim"
 })
 
+require("kanagawa-paper").setup({
+    terminal_colors = true
+})
 vim.cmd("colorscheme kanagawa-paper-ink")
