@@ -6,6 +6,7 @@ local modules  = {
     "pkg.colors",
     "pkg.cmp",
     "pkg.git",
+    "pkg.goose",
     "pkg.lsp",
     "pkg.markdown",
     "pkg.neoclip",
