@@ -6,7 +6,7 @@ vim.pack.add({
 local colorcol_value = tonumber(vim.opt.colorcolumn._value)
 
 require("render-markdown").setup({
-    file_types = { 'markdown', 'quarto' },
+    file_types = { 'markdown', 'quarto', 'avante' },
     enable = false,
     render_modes = true,
     code = {

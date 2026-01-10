@@ -2,6 +2,7 @@ local modules  = {
     "options",
     "maps",
     "pkg.alpha",
+    "pkg.avante",
     "pkg.colors",
     "pkg.cmp",
     "pkg.git",
