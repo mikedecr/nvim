@@ -3,9 +3,8 @@
     'https://github.com/yetone/avante.nvim',
     'https://github.com/nvim-lua/plenary.nvim',
     'https://github.com/MunifTanjim/nui.nvim',
-
     -- in what sense is this "required?" annoying bloat that I don't care for...
-    -- 'https://github.com/MeanderingProgrammer/render-markdown.nvim'
+    'https://github.com/MeanderingProgrammer/render-markdown.nvim'
 })
 
 -- Optional dependencies
@@ -13,7 +12,6 @@ vim.pack.add({
     'https://github.com/hrsh7th/nvim-cmp',
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/HakonHarnes/img-clip.nvim',
-    'https://github.com/zbirenbaum/copilot.lua',
     'https://github.com/stevearc/dressing.nvim',
     'https://github.com/folke/snacks.nvim'
 })
