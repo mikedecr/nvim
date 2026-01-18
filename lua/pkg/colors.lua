@@ -5,6 +5,7 @@ vim.pack.add({
     "https://github.com/everviolet/nvim",
     "https://github.com/zekzekus/menguless",
     "https://github.com/rjshkhr/shadow.nvim",
+    "https://github.com/ramojus/mellifluous.nvim",
     "https://gitlab.com/motaz-shokry/gruvbox.nvim",
     -- minimal
     "https://github.com/hardselius/warlock",
