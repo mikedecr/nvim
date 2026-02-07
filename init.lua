@@ -6,6 +6,7 @@ local modules  = {
     "pkg.bufjump",
     "pkg.colors",
     "pkg.cmp",
+    "pkg.format",
     "pkg.git",
     "pkg.lsp",
     "pkg.markdown",
