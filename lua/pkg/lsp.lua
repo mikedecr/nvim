@@ -17,17 +17,34 @@ vim.lsp.enable({
 
 
 -- lua
-local lua_ls_config = {
-    settings = {
-        Lua = {
-            workspace = {
-                library = vim.api.nvim_get_runtime_file("", true),
-                checkThirdParty = true
+vim.lsp.config(
+    "lua_ls",
+    {
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { "vim" }, -- this won't interrupt goToDef, somehow...
+                },
+                runtime = {
+                    version = "LuaJIT",
+                },
+                workspace = {
+                    library = {
+                        vim.env.VIMRUNTIME, -- lets me gd to nvim builtins
+                        "${3rd}/luv/library",
+                        "${3rd}/nvim/library", -- type checking w/ lua stubs only?
+                        -- vim.api.nvim_get_runtime_file("", true),
+                        -- "${3rd}/nvim/runtime", -- should resolve gbl vim
+                    },
+                    checkThirdParty = false
+                },
+                telemetry = {
+                    enable = false,
+                },
             }
         }
     }
-}
-vim.lsp.config("lua_ls", lua_ls_config)
+)
 
 
 -- python
