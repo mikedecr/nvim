@@ -9,6 +9,15 @@ qmd.setup({
     codeRunner = {
         enabled = true,
         default_method="slime"
+    },
+    lspFeatures = {
+        enabled = true,
+        languages = {
+            "python",
+        },
+        completion = {
+            enabled = true,
+        }
     }
 })
 local opts = { silent = true }
