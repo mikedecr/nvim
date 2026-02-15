@@ -25,9 +25,9 @@ blink.setup({
         providers = {
             supermaven = {
                 module = "blink-cmp-supermaven"
-            }
+            },
+            cmp_nvim_lsp = { module = "cmp-nvim-lsp" }, -- delivers otter via "lsp" default source
         },
-        cmp_nvim_lsp = { module = "cmp-nvim-lsp" }, -- delivers otter via "lsp" default source
     },
     keymap = {
         preset = "none",
