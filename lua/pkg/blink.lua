@@ -3,13 +3,13 @@ vim.pack.add({
     -- compatibility w/ cmp completion sources
     -- blink.compat==2.* for blink 1.*
     { src="https://github.com/saghen/blink.compat", version=vim.version.range("2.*") },
+    -- some pkgs only augment lsp sources via cmp
+    'https://github.com/hrsh7th/nvim-cmp',
+    "https://github.com/hrsh7th/cmp-nvim-lsp",
     -- we need other sources to be available when this file is executed
     "https://github.com/L3MON4D3/LuaSnip",
     "https://github.com/supermaven-inc/supermaven-nvim",
     "https://github.com/huijiro/blink-cmp-supermaven",
-    -- some pkgs only augment lsp sources via cmp
-    'https://github.com/hrsh7th/nvim-cmp',
-    "https://github.com/hrsh7th/cmp-nvim-lsp",
 })
 
 local blink = require("blink.cmp")
