@@ -26,7 +26,7 @@ vim.opt.ignorecase = true           -- ignore by default
 vim.opt.smartcase = true            -- except when using a capital
 vim.opt.wildignorecase = true       -- and when wildcard-completing files/paths
 vim.opt.incsearch = true            -- jump mid-search
-vim.opt.hlsearch = false            -- highlight all pattern matches
+vim.opt.hlsearch = false            -- persist highlights after search
 
 
 -- :: VISUAL ::
@@ -37,16 +37,14 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes" -- always leave room for signcol
 
 -- buffers + splits
-vim.opt.winbar = "%f %m"         -- @ buffer top
-vim.opt.title = true             -- @ terminal tab title
+vim.opt.title = true        -- @ terminal tab title
 vim.opt.splitbelow = true   -- horiz splits below
 vim.opt.splitright = true   -- vertical splits right
 
 -- misc/visual
-vim.opt.cursorline = false
--- vim.cmd "highlight Comment cterm=italic gui=italic"
+vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = "100"    -- right-side ruler
+vim.opt.colorcolumn = "120"    -- right-side ruler
 vim.opt.winborder = "bold"
 
 
