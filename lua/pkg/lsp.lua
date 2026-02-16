@@ -1,4 +1,3 @@
--- lol how to install them...
 vim.pack.add({
     "http://github.com/neovim/nvim-lspconfig",
     "http://github.com/mason-org/mason.nvim",
@@ -10,9 +9,10 @@ require("mason").setup()
 -- NB I think these are eagerly loaded
 -- furthermore I think lua_ls is time-consuming to initialize.
 -- so for efficiency I am loading other servers first
+
 vim.lsp.enable({
-    "pylsp",
-    "lua_ls",
+    "ty",
+    "lua_ls"
 })
 
 
@@ -45,26 +45,6 @@ vim.lsp.config(
         }
     }
 )
-
-
--- python
-local python_ignores = {
-    "E251", -- spaces around params
-    "E306"  -- i don't remember
-}
-local pycodestyle_config = {
-    ignore = python_ignores,
-    maxLineLength = 120 -- people are so needlessly opinionated about this
-}
-vim.lsp.config("pylsp", {
-    settings = {
-        pylsp = {
-            plugins = {
-                pycodestyle = pycodestyle_config,
-            }
-        }
-    }
-})
 
 
 -- keymaps
