@@ -1,5 +1,6 @@
 vim.pack.add({
     "https://github.com/yetone/avante.nvim",
+    "http://github.com/nvim-lua/plenary.nvim",
     "https://github.com/MunifTanjim/nui.nvim",
 })
 
