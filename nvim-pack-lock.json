@@ -159,7 +159,7 @@
       "src": "https://github.com/AckslD/nvim-neoclip.lua"
     },
     "nvim-treesitter": {
-      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
+      "rev": "4d9466677a5ceadef104eaa0fe08d60d91c4e9a7",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-web-devicons": {
@@ -229,6 +229,10 @@
     "term-edit.nvim": {
       "rev": "29c4584c2cef44a3fdcc55860957d081b892a569",
       "src": "https://github.com/chomosuke/term-edit.nvim"
+    },
+    "treesitter-modules.nvim": {
+      "rev": "0cc09da40061051b0186479203faa75052cddab6",
+      "src": "https://github.com/MeanderingProgrammer/treesitter-modules.nvim"
     },
     "vim-bbye": {
       "rev": "25ef93ac5a87526111f43e5110675032dbcacf56",
