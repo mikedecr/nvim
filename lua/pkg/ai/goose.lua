@@ -1,5 +1,6 @@
 vim.pack.add({
     "https://github.com/azorng/goose.nvim",
+    "http://github.com/nvim-lua/plenary.nvim",
     "https://github.com/MeanderingProgrammer/render-markdown.nvim"
 })
 
