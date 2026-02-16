@@ -4,22 +4,12 @@ vim.pack.add({
     "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
-local qmd = require("quarto")
-qmd.setup({
+require("quarto").setup({
     codeRunner = {
-        enabled = true,
         default_method="slime"
     },
-    lspFeatures = {
-        enabled = true,
-        languages = {
-            "python",
-        },
-        completion = {
-            enabled = true,
-        }
-    }
 })
+
 local opts = { silent = true }
 vim.keymap.set("n", "]c", "/```{<CR>", opts)
 vim.keymap.set("n", "[c", "?```{<CR>", opts)
