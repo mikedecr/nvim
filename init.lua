@@ -2,12 +2,10 @@ local modules  = {
     "options",
     "maps",
     "pkg.alpha",
-    "pkg.avante",
     "pkg.bufjump",
     "pkg.colors",
     "pkg.cmp",
     "pkg.git",
-    "pkg.goose",
     "pkg.lsp",
     "pkg.markdown",
     "pkg.neoclip",
@@ -28,7 +26,8 @@ local modules  = {
     -- drw-specific
     "pkg.codeium",
     "pkg.goose",
-    "pkg.avante"
+    "pkg.avante",
+    "pkg.claude",
 }
 
 for _, module in ipairs(modules) do
