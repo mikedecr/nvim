@@ -8,6 +8,10 @@
       "rev": "54e0b255cb2c93555014197c8adc59d631c25696",
       "src": "https://github.com/Alligator/accent.vim"
     },
+    "agentic.nvim": {
+      "rev": "9c40fc5228d22fbde370b723b5a738cbcb68b084",
+      "src": "https://github.com/carlos-algms/agentic.nvim"
+    },
     "alpha-nvim": {
       "rev": "2b3cbcdd980cae1e022409289245053f62fb50f6",
       "src": "https://github.com/goolord/alpha-nvim"

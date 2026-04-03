@@ -14,6 +14,10 @@ vim.pack.add({
 
 local blink = require("blink.cmp")
 blink.setup({
+    -- we must ignore agentic buffers
+    enabled = function()
+        return not vim.tbl_contains({"AgenticInput"}, vim.bo.filetype)
+    end,
     sources = {
         default = { "lsp", "snippets", "buffer", "path", "supermaven" },
         providers = {
