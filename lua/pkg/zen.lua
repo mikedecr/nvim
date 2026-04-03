@@ -10,3 +10,5 @@ zen.setup({
         height = .98
     }
 })
+
+vim.keymap.set("n", "<leader>zm", "<CMD>ZenMode<CR>")
