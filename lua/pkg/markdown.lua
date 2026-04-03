@@ -25,6 +25,11 @@ require("render-markdown").setup({
         icons = false,
         width = "block",
         min_width = colorcol_value,
+    },
+    html = {
+        comment = {
+            conceal = false,
+        }
     }
 })
 
