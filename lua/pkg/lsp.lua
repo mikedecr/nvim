@@ -11,7 +11,7 @@ require("mason").setup()
 -- so for efficiency I am loading other servers first
 
 vim.lsp.enable({
-    "ty",
+    "pyrefly",
     "lua_ls"
 })
 
