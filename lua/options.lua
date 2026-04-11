@@ -1,6 +1,5 @@
 -- :: TEXT ::
 
-
 -- tabstop
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -17,10 +16,6 @@ vim.opt.wrap = false
 
 -- disable comment continuation on (r)eturn, (c)ontinue/wrap, (o)
 vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
-
--- undo
-vim.opt.undodir = ".undo"
-vim.opt.undofile = true
 
 -- buf text search
 vim.opt.ignorecase = true           -- ignore by default
@@ -50,12 +45,13 @@ vim.opt.colorcolumn = "120"    -- right-side ruler
 vim.opt.winborder = "bold"
 
 
--- :: BEHAVIOR ::
+-- :: STATES AND BEHAVIORS ::
 
 vim.g.editorconfig = false
 
--- mouse ok in (a)ll modes
-vim.opt.mouse = "a"
+-- undo
+vim.opt.undodir = ".undo"
+vim.opt.undofile = true
 
 -- file backups (just don't...)
 vim.opt.backup = false
@@ -66,6 +62,9 @@ vim.opt.swapfile = false
 -- but many other plugins use this for e.g. completion timeout
 -- we don't use swapfile so we might as well speed this up (4000ms default!)
 vim.opt.updatetime = 300
+
+-- mouse ok in (a)ll modes
+vim.opt.mouse = "a"
 
 -- yank to local clipboard from remote nvim over ssh
 vim.g.clipboard = "osc52"
