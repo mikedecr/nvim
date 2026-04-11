@@ -39,6 +39,7 @@ keymap("n", "<SPACE>qq", "<CMD>q<enter>", { desc = "Quit file" })
 keymap("n", "<SPACE>y", '"+y', opts)
 keymap("v", "<SPACE>y", '"+y', opts)
 
+
 -- SPLITS
 -- create splits
 keymap("n", "<SPACE>sh", "<CMD>split<CR>", opts)
@@ -46,10 +47,6 @@ keymap("n", "<SPACE>sv", "<CMD>vsplit<CR>", opts)
 -- terminal in split
 local hsplit_term = "<CMD>split term://$SHELL<CR>"
 keymap("n", "<SPACE>th", hsplit_term .. "<C-w>H", with_opts({desc = "Terminal left"}))
-keymap("n", "<SPACE>tl", hsplit_term .. "<C-w>L", with_opts({desc = "Terminal right"}))
-keymap("n", "<SPACE>tj", hsplit_term .. "<C-w>J", with_opts({desc = "Terminal down"}))
-keymap("n", "<SPACE>tk", hsplit_term .. "<C-w>K", with_opts({desc = "Terminal up"}))
-keymap("n", "<SPACE>ro", hsplit_term .. "<C-w>H<C-w>p", with_opts({desc = "Terminal left and cursor prev"}))
 -- split navigation
 keymap("n", "sh", "<C-w>h", with_opts({desc = "Focus left split"}))
 keymap("n", "sj", "<C-w>j", with_opts({desc = "Focus down split"}))
