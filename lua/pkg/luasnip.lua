@@ -20,9 +20,9 @@ local M = {
         luasnip.add_snippets(nil, table)
     end,
     markdown_snips = {
-        luasnip.parser.parse_snippet('block', '```$1\n$0\n```', opts),
-        luasnip.parser.parse_snippet('box', '- [ ] $0'),
+        luasnip.parser.parse_snippet("block", "```$1\n$0\n```", opts),
         luasnip.parser.parse_snippet("pyc", "```{python}\n$0\n```", opts),
+        luasnip.parser.parse_snippet("box", "- [ ] $0"),
     },
 }
 return M
