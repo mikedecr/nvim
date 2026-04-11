@@ -1,3 +1,0 @@
-return {
-    "eigenfoo/stan-vim"
-}
