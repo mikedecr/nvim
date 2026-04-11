@@ -1,5 +1,6 @@
 -- :: TEXT ::
 
+
 -- tabstop
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -42,6 +43,7 @@ vim.opt.splitbelow = true   -- horiz splits below
 vim.opt.splitright = true   -- vertical splits right
 
 -- misc/visual
+vim.o.winbar = "%f %m"
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "120"    -- right-side ruler
