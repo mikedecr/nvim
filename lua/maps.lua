@@ -92,4 +92,4 @@ keymap("v", "p", '"_dP', opts)
 -- :::: TERMINAL ::::
 
 -- exit terminal mode to normal
-keymap("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+keymap("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
