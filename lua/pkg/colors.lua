@@ -12,7 +12,8 @@ vim.pack.add({
     "https://github.com/karoliskoncevicius/distilled-vim",
     "https://github.com/andreypopp/vim-colors-plain",
     "https://github.com/Alligator/accent.vim",
-    "https://github.com/nvim-mini/mini.hues"
+    "https://github.com/nvim-mini/mini.hues",
+    "https://github.com/kungfusheep/mfd.nvim"
 })
 
 require("kanagawa-paper").setup({

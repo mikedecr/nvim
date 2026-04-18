@@ -118,6 +118,10 @@
       "rev": "09072d8edb8f94cc1be63ae2c7ff4ae091189f16",
       "src": "https://github.com/zekzekus/menguless"
     },
+    "mfd.nvim": {
+      "rev": "5d6067159e1b1116a12f34827a353572dbf3bdb9",
+      "src": "https://github.com/kungfusheep/mfd.nvim"
+    },
     "mini.hues": {
       "rev": "fe3e91165fd97ad0e13717d5301b608843c4ab5e",
       "src": "https://github.com/nvim-mini/mini.hues"
