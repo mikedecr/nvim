@@ -1,2 +1,2 @@
-require "pkg.ai.acp"
+require "pkg.ai.amp"
 require "pkg.ai.supermaven"
