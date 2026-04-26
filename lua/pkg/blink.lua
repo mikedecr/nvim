@@ -23,7 +23,6 @@ blink.setup({
         providers = {
             supermaven = { module = "blink-cmp-supermaven" },
         },
-        cmp_nvim_lsp = { module = "cmp-nvim-lsp" },  -- delivers otter via "lsp" default source; but we get startup warning
     },
     keymap = {
         preset = "none",

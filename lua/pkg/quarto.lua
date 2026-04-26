@@ -6,7 +6,16 @@ vim.pack.add({
 
 require("quarto").setup({
     codeRunner = {
-        default_method="slime"
+        default_method = "slime",
+    },
+    -- auto-activates otter.nvim for quarto buffers, which exposes
+    -- embedded-language LSP completions through blink.cmp's "lsp" source.
+    lspFeatures = {
+        enabled = true,
+        chunks = "curly",
+        languages = { "r", "python", "julia", "bash", "html" },
+        completion = { enabled = true },
+        diagnostics = { enabled = true, triggers = { "BufWritePost" } },
     },
 })
 
