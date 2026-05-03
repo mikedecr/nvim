@@ -14,10 +14,11 @@ vim.pack.add({
     "https://github.com/davidosomething/vim-colors-meh",
     "https://github.com/Alligator/accent.vim",
     "https://github.com/nvim-mini/mini.hues",
-    "https://github.com/kungfusheep/mfd.nvim"
+    "https://github.com/kungfusheep/mfd.nvim",
+    "https://github.com/kvrohit/rasmus.nvim",
 })
 
 require("kanagawa-paper").setup({
     terminal_colors = true
 })
-vim.cmd("colorscheme meh")
+vim.cmd("colorscheme mellifluous")

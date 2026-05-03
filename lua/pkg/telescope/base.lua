@@ -28,19 +28,27 @@ telescope.setup({
 })
 telescope.load_extension("live_grep_args")
 
+
 -- keymaps
+
 local builtin = require("telescope.builtin")
-local live_grep_args = require("telescope").extensions.live_grep_args.live_grep_args
-local find_word = function()
-    local word = vim.fn.expand("<cword>")
-    builtin.grep_string({ search = word })
-end
+
 vim.keymap.set("n", "<space>ff", builtin.find_files, {desc = "Tele: files"})
 vim.keymap.set("n", "<space>fo", builtin.oldfiles, {desc = "Tele: recent files"})
 vim.keymap.set("n", "<space>gf", builtin.git_files, {desc = "Tele: git files"})
 vim.keymap.set("n", "<space>gc", builtin.git_commits, {desc = "Tele: git commits"})
 vim.keymap.set("n", "<space>fb", builtin.buffers, {desc = "Tele: buffers"})
-vim.keymap.set("n", "<space>fl", live_grep_args, {desc = "Tele: live grep"})
-vim.keymap.set("n", "<space>fc", builtin.colorscheme, {desc = "Tele: colorscheme"})
-vim.keymap.set("n", "<space>fw", find_word, { desc = "Tele: find word" })
 vim.keymap.set("n", "<space>vh", builtin.help_tags, { desc = "Tele: vim help tags"})
+
+-- maps that require some work
+
+local live_grep_args = require("telescope").extensions.live_grep_args.live_grep_args
+vim.keymap.set("n", "<space>fl", live_grep_args, {desc = "Tele: live grep"})
+
+local find_word = function()
+    local word = vim.fn.expand("<cword>")
+    builtin.grep_string({ search = word })
+end
+vim.keymap.set("n", "<space>fw", find_word, { desc = "Tele: find word" })
+
+-- custom colorscheme picker in neighboring file
