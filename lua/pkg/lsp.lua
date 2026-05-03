@@ -29,14 +29,16 @@ vim.lsp.config(
                     version = "LuaJIT",
                 },
                 workspace = {
-                    library = {
-                        vim.env.VIMRUNTIME, -- lets me gd to nvim builtins
-                        "${3rd}/luv/library",
-                        "${3rd}/nvim/library", -- type checking w/ lua stubs only?
-                        -- vim.api.nvim_get_runtime_file("", true),
-                        -- "${3rd}/nvim/runtime", -- should resolve gbl vim
-                    },
-                    checkThirdParty = false
+                    library = vim.list_extend(
+                        {
+                            vim.env.VIMRUNTIME, -- lets me gd to nvim builtins
+                            "${3rd}/luv/library",
+                            "${3rd}/nvim/library", -- type checking w/ lua stubs only?
+                        },
+                        -- include all installed plugins so gd works on require("telescope") etc.
+                        vim.api.nvim_get_runtime_file("lua", true)
+                    ),
+                    checkThirdParty = false,
                 },
                 telemetry = {
                     enable = false,
