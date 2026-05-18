@@ -7,6 +7,7 @@ vim.pack.add({
     "https://github.com/rjshkhr/shadow.nvim",
     "https://github.com/ramojus/mellifluous.nvim",
     "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    "https://github.com/tssm/fairyfloss.vim",
     -- minimal
     "https://github.com/hardselius/warlock",
     "https://github.com/karoliskoncevicius/distilled-vim",
