@@ -19,6 +19,7 @@ local M = {
         table[language] = snippets
         luasnip.add_snippets(nil, table)
     end,
+    -- defined here bc .md and .qmd will use these?
     markdown_snips = {
         luasnip.parser.parse_snippet('block', '```$1\n$0\n```', opts),
         luasnip.parser.parse_snippet('box', '- [ ] $0'),
