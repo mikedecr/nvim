@@ -12,7 +12,8 @@ require("mason").setup()
 
 vim.lsp.enable({
     "pyrefly",
-    "lua_ls"
+    "lua_ls",
+    "clangd",
 })
 
 
@@ -45,6 +46,34 @@ vim.lsp.config(
         }
     }
 )
+
+
+-- python
+local python_ignores = {
+    "E251", -- spaces around params
+    "E306"  -- i don't remember
+}
+local pycodestyle_config = {
+    ignore = python_ignores,
+    maxLineLength = 120 -- people are so needlessly opinionated about this
+}
+vim.lsp.config("pylsp", {
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = pycodestyle_config,
+            }
+        }
+    }
+})
+
+-- c++
+vim.lsp.config("clangd", {
+    cmd = {
+        "clangd",
+        "--background-index",
+    },
+})
 
 
 -- keymaps
