@@ -32,6 +32,11 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
+local excluded_indentation_filetypes = {
+    "python",
+}
+
+
 
 local tsm = require("treesitter-modules")
 tsm.setup({
