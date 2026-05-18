@@ -12,6 +12,7 @@ local modules  = {
     "pkg.oil",
     "pkg.pairs",
     "pkg.projects",
+    "pkg.python_indent",
     "pkg.quarto",
     "pkg.slime",
     "pkg.telescope",
