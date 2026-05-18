@@ -34,7 +34,7 @@ vim.opt.hlsearch = false            -- persist highlights after search
 -- gutter
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = "yes" -- always leave room for signcol
+vim.opt.signcolumn = "auto:2"  -- always leave room for signcol
 
 -- buffers + splits
 vim.opt.title = true        -- @ terminal tab title
@@ -59,6 +59,9 @@ vim.opt.mouse = "a"
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
+
+-- reload files automatically
+vim.opt.autoread = true
 
 -- originally controls time to write swapfile,
 -- but many other plugins use this for e.g. completion timeout
