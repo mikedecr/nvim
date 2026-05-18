@@ -19,4 +19,4 @@ vim.pack.add({
 require("kanagawa-paper").setup({
     terminal_colors = true
 })
-vim.cmd("colorscheme randomhue")
+vim.cmd("colorscheme nordfox")
