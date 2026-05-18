@@ -3,9 +3,10 @@ vim.pack.add({
     "https://github.com/MeanderingProgrammer/treesitter-modules.nvim"
 })
 
+local excluded_indentation_filetypes = {
+    "python",
+}
 
-local function ts_enable(buf, language)
-end
 
 vim.api.nvim_create_autocmd('FileType', {
     group = vim.api.nvim_create_augroup('treesitter.setup', {}),
@@ -27,15 +28,14 @@ vim.api.nvim_create_autocmd('FileType', {
 
         -- highlighting and indentation
         vim.treesitter.start(buf, language)
-        vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+        -- only enable indentation if not in excluded filetypes
+        if not vim.tbl_contains(excluded_indentation_filetypes, filetype) then
+            vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
 
     end,
 })
-
-local excluded_indentation_filetypes = {
-    "python",
-}
-
 
 
 local tsm = require("treesitter-modules")
