@@ -9,7 +9,7 @@
       "src": "https://github.com/Alligator/accent.vim"
     },
     "alpha-nvim": {
-      "rev": "2b3cbcdd980cae1e022409289245053f62fb50f6",
+      "rev": "6c6a89d5b068b5251c8bdf0dd57bb921bcfeeb09",
       "src": "https://github.com/goolord/alpha-nvim"
     },
     "amp.nvim": {
