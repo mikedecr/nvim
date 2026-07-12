@@ -92,4 +92,5 @@ keymap("v", "p", '"_dP', opts)
 -- :::: TERMINAL ::::
 
 -- exit terminal mode to normal
+keymap("t", "<C-x>", "<Esc>", { desc = "Send escape sequence in terminal mode" })
 keymap("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
