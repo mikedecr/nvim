@@ -8,10 +8,6 @@
       "rev": "54e0b255cb2c93555014197c8adc59d631c25696",
       "src": "https://github.com/Alligator/accent.vim"
     },
-    "agentic.nvim": {
-      "rev": "9c40fc5228d22fbde370b723b5a738cbcb68b084",
-      "src": "https://github.com/carlos-algms/agentic.nvim"
-    },
     "alpha-nvim": {
       "rev": "2b3cbcdd980cae1e022409289245053f62fb50f6",
       "src": "https://github.com/goolord/alpha-nvim"
@@ -65,6 +61,10 @@
     "cmp_luasnip": {
       "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
       "src": "https://github.com/saadparwaiz1/cmp_luasnip"
+    },
+    "codecompanion.nvim": {
+      "rev": "9d985b1cc4e650a676a977ab1f9ed50dc6d0f4d8",
+      "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
       "rev": "c2526f1cde528a66e086ab1668e996d162c75f4f",
@@ -209,6 +209,10 @@
     "shadow.nvim": {
       "rev": "4a4b66968a80bd89723c1ce93643e332cd874e13",
       "src": "https://github.com/rjshkhr/shadow.nvim"
+    },
+    "sidekick.nvim": {
+      "rev": "208e1c5b8170c01fd1d07df0139322a76479b235",
+      "src": "https://github.com/folke/sidekick.nvim"
     },
     "skull-vim": {
       "rev": "abb9d7120c63aad6f9acc26d31c948a93f352e94",

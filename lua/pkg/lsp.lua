@@ -12,7 +12,8 @@ require("mason").setup()
 
 vim.lsp.enable({
     "pyrefly",
-    "lua_ls"
+    "lua_ls",
+    "julia-lsp"
 })
 
 
