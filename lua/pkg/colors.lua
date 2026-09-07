@@ -24,4 +24,4 @@ require("kanagawa-paper").setup({
 vim.cmd("colorscheme mellifluous")
 
 -- custom palette overrides the colorscheme above
-require("colors.theme")
+-- require("colors.theme")
