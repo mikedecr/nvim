@@ -1,6 +1,5 @@
 local modules  = {
     "pkg.alpha",
-    "pkg.ai",
     "pkg.blink",
     "pkg.bufjump",
     "pkg.colors",
