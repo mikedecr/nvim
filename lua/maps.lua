@@ -21,6 +21,7 @@ end
 
 -- edit config
 vim.keymap.set("n", "<SPACE>cc", ":e ~/.config/nvim/init.lua<CR>")
+vim.keymap.set("n", "<SPACE>ca", ":e ~/.agents/<CR>")
 vim.keymap.set("n", "n", "nzz")
 
 -- write & quit
