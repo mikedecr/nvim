@@ -3,7 +3,8 @@ vim.pack.add({"https://github.com/stevearc/oil.nvim"})
 require("oil").setup({
     keymaps = {
         ["<C-p>"] = false,
-        ["<Space>ov"] = "actions.preview"
+        ["<Space>ov"] = "actions.preview",
+        ["<Space><CR>"] = "actions.open_external"
     },
     columns = {"icon", "size", "mtime"}
 })
