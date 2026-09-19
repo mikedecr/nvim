@@ -7,6 +7,8 @@ vim.pack.add({
     "https://github.com/rjshkhr/shadow.nvim",
     "https://github.com/ramojus/mellifluous.nvim",
     "https://gitlab.com/motaz-shokry/gruvbox.nvim",
+    "https://github.com/vague-theme/vague.nvim",
+    "https://github.com/jpwol/thorn.nvim",
     -- minimal
     "https://github.com/hardselius/warlock",
     "https://github.com/karoliskoncevicius/distilled-vim",
@@ -16,12 +18,16 @@ vim.pack.add({
     "https://github.com/nvim-mini/mini.hues",
     "https://github.com/kungfusheep/mfd.nvim",
     "https://github.com/kvrohit/rasmus.nvim",
+    "https://github.com/thallada/farout.nvim",
 })
 
 require("kanagawa-paper").setup({
     terminal_colors = true
 })
-vim.cmd("colorscheme mellifluous")
+vim.cmd("colorscheme thorn")
 
 -- custom palette overrides the colorscheme above
--- require("colors.theme")
+local custom = false
+if custom then
+    require("colors.theme")
+end
