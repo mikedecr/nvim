@@ -1,5 +1,7 @@
+-- e.g. convert a list [a, b, c] to multiline and back
+
 vim.pack.add({
-    "https://github.com/AndrewRadev/splitjoin.vim"
+    "https://github.com/nvim-mini/mini.splitjoin"
 })
 
-vim.g.splitjoin_python_brackets_on_separate_lines = 1
+require("mini.splitjoin").setup({})
