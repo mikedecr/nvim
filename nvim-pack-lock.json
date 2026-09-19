@@ -82,6 +82,10 @@
       "rev": "2eb7c348f880ba93de4d98cae049c9441f5d4d49",
       "src": "https://github.com/neanias/everforest-nvim"
     },
+    "farout.nvim": {
+      "rev": "ebfcb874c3ebdb86fff8f22de4ae0944c3fa2bbc",
+      "src": "https://github.com/thallada/farout.nvim"
+    },
     "friendly-snippets": {
       "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
       "src": "https://github.com/rafamadriz/friendly-snippets"
@@ -129,6 +133,10 @@
     "mini.pairs": {
       "rev": "4089aa6ea6423e02e1a8326a7a7a00159f6f5e04",
       "src": "https://github.com/nvim-mini/mini.pairs"
+    },
+    "mini.splitjoin": {
+      "rev": "9301717c7612ccb72e89629df89416585dd54c9b",
+      "src": "https://github.com/nvim-mini/mini.splitjoin"
     },
     "mini.surround": {
       "rev": "7a8606333affe7ce637a0ba91bbafc46fc42bfa0",
@@ -242,9 +250,21 @@
       "rev": "29c4584c2cef44a3fdcc55860957d081b892a569",
       "src": "https://github.com/chomosuke/term-edit.nvim"
     },
+    "thorn.nvim": {
+      "rev": "e7074d253db38d76c5b709ac29f22c5e508da9d3",
+      "src": "https://github.com/jpwol/thorn.nvim"
+    },
     "treesitter-modules.nvim": {
       "rev": "0cc09da40061051b0186479203faa75052cddab6",
       "src": "https://github.com/MeanderingProgrammer/treesitter-modules.nvim"
+    },
+    "treesj": {
+      "rev": "79aedb401bbdc7e4202f7881eab5f6feb2105b0a",
+      "src": "https://github.com/Wansmer/treesj"
+    },
+    "vague.nvim": {
+      "rev": "f9060fdaf7b20f68575d6f8214da6f1cf0c72825",
+      "src": "https://github.com/vague-theme/vague.nvim"
     },
     "vim-bbye": {
       "rev": "25ef93ac5a87526111f43e5110675032dbcacf56",
