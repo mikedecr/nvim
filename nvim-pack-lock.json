@@ -187,7 +187,7 @@
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "opencode.nvim": {
-      "rev": "a13db1c0364319d3ebde65030005dea9f8a198cc",
+      "rev": "06770e2e3618b82703e3e7af1f2d5dc67bde0002",
       "src": "https://github.com/nickjvandyke/opencode.nvim"
     },
     "otter.nvim": {

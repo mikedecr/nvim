@@ -5,8 +5,8 @@ vim.pack.add({
 -- auto-reload buffers on changes
 vim.o.autoread = true
 
-vim.opencode_opts = {}
-
-vim.keymap.set({ "n", "x" }, "<space>cs", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode..." })
+vim.keymap.set({ "n", "x" }, "<space>cs", function() require("opencode").ask("@this: ") end, { desc = "Ask opencode..." })
 vim.keymap.set({ "n", "x" }, "<space>cx", function() require("opencode").select() end, { desc = "Execute opencode action..." })
-vim.keymap.set({ "n" }, "<space>co", function() require("opencode").toggle() end, { desc = "Toggle opencode" })
+
+-- No plugin API for this: `toggle()` was removed with the bundled terminal manager.
+vim.keymap.set({ "n" }, "<space>co", "<cmd>vsplit term://opencode<cr>", { desc = "Open opencode TUI" })
